@@ -1,0 +1,24 @@
+#!/bin/bash
+
+ratbagctl warbling-mara led 0 set mode on &>/dev/null
+
+case $1 in
+        red) 
+                ratbagctl warbling-mara led 0 set color ff0000 &>/dev/null && razer-cli -c ff0000 &>/dev/null
+                ;;
+        blue)
+                ratbagctl warbling-mara led 0 set color 0000ff &>/dev/null && razer-cli -c 0000ff &>/dev/null
+                ;;
+        green)
+                ratbagctl warbling-mara led 0 set color 00ff00 &>/dev/null && razer-cli -c 00ff00 &>/dev/null
+                ;;
+        white)
+                ratbagctl warbling-mara led 0 set color ffffff &>/dev/null && razer-cli -c ffffff &>/dev/null
+                ;;
+        off)
+                ratbagctl warbling-mara led 0 set color 000000 &>/dev/null && razer-cli -c 000000 &>/dev/null
+                ;;
+        "")
+                echo "Available colors: red, blue, green, white, off"
+                ;;
+esac
