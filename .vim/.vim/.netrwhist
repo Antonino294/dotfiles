@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/antonino'
+let g:netrw_dirhist_2='/home/antonino/Build-Folder'
+let g:netrw_dirhist_3='/home/antonino'
+let g:netrw_dirhist_4='/home/antonino/Musica'
+let g:netrw_dirhist_5='/home/antonino'
+let g:netrw_dirhist_6='/home/antonino/Video/Anime/Monogatari/[08] Kizumonogatari [BD 1080p AAC]'
+let g:netrw_dirhist_7='/home/antonino/.config/fish'
