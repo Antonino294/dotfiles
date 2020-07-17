@@ -45,6 +45,7 @@ compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.c
 #clight && pkill clight && clight
 busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false
 #picom 
+bolt --generate --watch
 #nmcli device wifi con TIM-50257590 password PASS &
 nmtui connect TIM-50257590 && sudo dhclient &
 adb tcpip 5555 && adb connect 192.168.1.2
