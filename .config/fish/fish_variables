@@ -24,11 +24,8 @@ SETUVAR _fish_abbr_jf_2D_start:sudo\x20systemctl\x20start\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_jf_2D_stop:sudo\x20systemctl\x20stop\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_lotto:shuf\x20\x2di\x201\x2d90\x20\x2dn\x205\x20\x7c\x20lolcat\x20\x2da\x20\x2dt
 SETUVAR _fish_abbr_phone:adb\x20connect\x20192\x2e168\x2e1\x2e2
-SETUVAR _fish_abbr_sx:vim\x20\x7e/\x2econfig/sxhkd/sxhkdrc
 SETUVAR _fish_abbr_upD:pkcon\x20refresh
 SETUVAR _fish_abbr_upG:pkcon\x20update
-SETUVAR _fish_abbr_upd:curl\x20\x22https\x3a//ddns\x2epboehm\x2ede/update/lenovob590/9c0e5dd33c00bad665b40c49429bd461d01f3423\x22
-SETUVAR _fish_abbr_work:\x2e/Build\x2dFolder/genact\x2dlinux
 SETUVAR _fish_abbr_wt:curl\x20\x27wttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27
 SETUVAR _fish_abbr_wtr:curl\x20\x27wttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27\x20\x7c\x20lolcat\x20\x2dt\x20\x2da\x20\x2ds\x2075
 SETUVAR _fish_abbr_za:zoxide\x20add

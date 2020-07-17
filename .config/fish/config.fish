@@ -24,9 +24,9 @@ abbr jf-restart "sudo systemctl restart jellyfin.service"
 
 abbr wt "curl 'wttr.in/~Solano+Inferiore?lang=it'"
 
-abbr work "./Build-Folder/genact-linux"
+#abbr work "./Build-Folder/genact-linux"
 
-abbr sx "vim ~/.config/sxhkd/sxhkdrc"
+#abbr sx "vim ~/.config/sxhkd/sxhkdrc"
 
 abbr wtr "curl 'wttr.in/~Solano+Inferiore?lang=it' | lolcat -t -a -s 75"
 
@@ -58,6 +58,10 @@ alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 #alias sxiv "devour sxiv"
 
 alias b "bolt --fzf-search"
+
+alias nnn "env TERM=xterm-256color nnn"
+
+alias glava 'glava --desktop &>/dev/null'
 
 
 #Fisher Workaround
@@ -109,6 +113,33 @@ echo -n (set_color e5c07b --bold )(prompt_pwd) (set_color e06c75)'❯'(set_color
 
 end
 
+
+# stuff
+
+#egrep "^export " ~/.profile | while read e
+#	set var (echo $e | sed -E "s/^export ([A-Z_]+)=(.*)\$/\1/")
+#	set value (echo $e | sed -E "s/^export ([A-Z_]+)=(.*)\$/\2/")
+#	
+#	# remove surrounding quotes if existing
+#	set value (echo $value | sed -E "s/^\"(.*)\"\$/\1/")
+#
+#	if test $var = "PATH"
+#		# replace ":" by spaces. this is how PATH looks for Fish
+#		set value (echo $value | sed -E "s/:/ /g")
+#	
+#		# use eval because we need to expand the value
+#		eval set -xg $var $value
+#
+#		continue
+#	end
+#
+#	# evaluate variables. we can use eval because we most likely just used "$var"
+#	set value (eval echo $value)
+#
+#	#echo "set -xg '$var' '$value' (via '$e')"
+#	set -xg $var $value
+#end
+
 # Paths
 
 set -gx PATH $PATH /home/antonino/.local/bin 
@@ -120,6 +151,9 @@ set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
 
 set -gx EDITOR nvim
 
+export NNN_OPTS="adeox"
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='K:kdeconnect;P:preview-tabbed'
 
 # wal thing (no need with kitty)
 #cat ~/.cache/wal/sequences &  
