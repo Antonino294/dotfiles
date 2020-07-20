@@ -256,8 +256,8 @@ super + b
 super + shift + b
         polybar-msg cmd hide && bspc config top_padding 0
 
-super + ctrl + b
-        .config/polybar/scripts/colors_rofi.sh
+#super + ctrl + b
+#        .config/polybar/scripts/colors_rofi.sh
 
 # restart compton
 
