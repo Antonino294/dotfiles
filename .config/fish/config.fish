@@ -53,7 +53,9 @@ alias cava "env TERM=xterm-256color cava"
 
 alias mpv "devour mpv"
 
-alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias config 'dotbare'
 
 #alias sxiv "devour sxiv"
 
@@ -62,6 +64,8 @@ alias b "bolt --fzf-search"
 alias nnn "env TERM=xterm-256color nnn"
 
 alias glava 'glava --desktop &>/dev/null'
+
+alias dotbare '/home/antonino/.dotbare/dotbare'
 
 
 #Fisher Workaround
@@ -154,6 +158,9 @@ set -gx EDITOR nvim
 export NNN_OPTS="adeox"
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='K:kdeconnect;P:preview-tabbed'
+
+export DOTBARE_DIR="$HOME/.cfg"
+export DOTBARE_TREE="$HOME"
 
 # wal thing (no need with kitty)
 #cat ~/.cache/wal/sequences &  

@@ -81,14 +81,16 @@ Plug 'mhinz/vim-startify'
 "Plug 'tpope/vim-surround'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Plug 'terryma/vim-multiple-cursors'
+Plug 'voldikss/vim-floaterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 "Plug 'Lenovsky/nuake'
 "Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
-Plug 'voldikss/vim-floaterm'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-unimpaired'
+Plug 'kana/vim-operator-user'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -318,17 +320,22 @@ endfun
 call SetupCommandAlias("X","x")
 ""
 
+" Floating Terminal
+let g:floaterm_keymap_toggle = '<F1>'
 
 autocmd BufNewFile *.c,*.cc,*.cpp,*.h call AddTemplate("~/.vim/skeleton.cpp")
 
 autocmd FileType cpp nnoremap <F5> :silent !g++ -o  %:r.out % -std=c++11<Enter>
 autocmd FileType cpp nnoremap <F6> :!./%:r.out<Enter>
+autocmd FileType cpp nnoremap <F7> :ClangFormat<Enter>
+autocmd FileType cpp vnoremap <F7> :ClangFormat<Enter>
 
-" Floating Terminal
-let g:floaterm_keymap_toggle = '<F1>'
-" nnoremap   <silent>   <F1>   :FloatermToggle<CR>
-" command! NNN FloatermNew nnn
-"
+
+" c++ syntax highlighting
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
 nmap <space>e :CocCommand explorer<CR>
 
 hi! Normal ctermbg=NONE guibg=NONE
