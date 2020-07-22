@@ -9,7 +9,7 @@ title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
 
 album=$( cmus-remote -Q | grep tag\ album\ | sed 's/tag album //' )
 
-artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
+#artist=$( cmus-remote -Q | grep tag\ artist\ | sed 's/tag artist //' )
 
 lb=${#album}
 (( lb > 28)) &&
@@ -17,17 +17,17 @@ lb=${#album}
 
 lt=${#title}
 (( lt > 29)) &&
-        title=${title::$(( 30 ))}…
+        title=${title::$(( 29 ))}…
 
 case $status in
         playing)
-                echo "$title  $album"
+                echo "$title   $album"
                 ;;
         paused)
-                echo "$title  $album"
+                echo "$title   $album"
                 ;;
         stopped)
-                echo "$title  $album"
+                echo "$title   $album"
                 ;;
 esac
 
