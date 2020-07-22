@@ -21,13 +21,13 @@ lt=${#title}
 
 case $status in
         playing)
-                echo "$title ▶ $album"
+                echo "$title  $album"
                 ;;
         paused)
-                echo "$title ‖ $album"
+                echo "$title  $album"
                 ;;
         stopped)
-                echo "$title ■ $album"
+                echo "$title  $album"
                 ;;
 esac
 
