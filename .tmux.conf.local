@@ -255,7 +255,7 @@ tmux_conf_battery_vbar_palette='gradient'
 #tmux_conf_battery_status_discharging='↓'    # U+2193
 tmux_conf_battery_status_charging=''    # U+26A1 / U+E00A
 #tmux_conf_battery_status_charging='🔌 '    # U+1F50C
-tmux_conf_battery_status_discharging=' ' # U+1F50B / U+e780
+tmux_conf_battery_status_discharging='' # U+1F50B / U+e780
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
