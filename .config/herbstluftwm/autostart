@@ -8,18 +8,8 @@ hc() {
 
 hc emit_hook reload
 
-feh --randomize --bg-fill ~/Immagini/Landscapes &
-openrazer-daemon &
 xsetroot -cursor_name left_ptr &
-klipper &
-dunst &
-xrdb ~/.Xresources &
-xset -dpms s off &
-compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
-busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false
-bolt --generate --watch &
-nmtui connect TIM-50257590 && sudo dhclient &
-adb tcpip 5555 && adb connect 192.168.1.2
+openrazer-daemon &
 
 pgrep -x sxhkd
 if [[ $? == 1 ]] 
@@ -27,6 +17,19 @@ if [[ $? == 1 ]]
 then
         sxhkd -c .config/herbstluftwm/sxhkdrc &
 fi
+
+
+feh --randomize --bg-fill ~/Immagini/Landscapes &
+klipper &
+dunst &
+xrdb ~/.Xresources &
+#/home/antonino/.config/polybar/launch.sh &
+xset -dpms s off &
+compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
+busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false
+bolt --generate --watch &
+nmtui connect TIM-50257590 && sudo dhclient &
+adb tcpip 5555 && adb connect 192.168.1.2
 
 
 # Uncomment the following lines to use xmobar as the panel
@@ -199,7 +202,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 hc set_monitors 1366x768+0+0
 
 # find the panel
-panel=~/.config/polybar/launch.sh
+panel=~/.config/herbstluftwm/panel.sh
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
