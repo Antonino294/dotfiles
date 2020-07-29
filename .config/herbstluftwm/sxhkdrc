@@ -3,6 +3,11 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# konsole
+
+super + shift + Return
+        konsole
+
 # launch menus
 
 super + @space

@@ -6,6 +6,9 @@
 super + Return
 	kitty
 
+super + shift + Return
+        konsole
+
 # program launcher
 super + @space
         rofi -show drun -modi run,drun -show-icons
