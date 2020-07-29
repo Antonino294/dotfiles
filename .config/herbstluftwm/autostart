@@ -11,6 +11,7 @@ hc emit_hook reload
 xsetroot -cursor_name left_ptr &
 openrazer-daemon &
 
+
 pgrep -x sxhkd
 if [[ $? == 1 ]] 
 
