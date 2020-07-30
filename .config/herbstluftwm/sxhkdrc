@@ -152,6 +152,9 @@ super + shift + b
         polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0"
 
 
+super + ctrl + b
+        kcolorchooser --print | /home/antonino/Build-Folder/Scripts/bar-color.sh
+
 # float window
 
 super + s

@@ -1,7 +1,6 @@
 #!/usr/bin/fish
 
 set PDIR "$HOME/.config/polybar"
-set LAUNCH "polybar-msg cmd restart"
 
 # regex thingy
 set reg '^#[a-fA-f0-9]{6}'
