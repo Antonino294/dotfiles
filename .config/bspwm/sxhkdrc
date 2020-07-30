@@ -24,6 +24,9 @@ super + Escape
 super + ctrl + p
                 feh --randomize --bg-fill ~/Immagini/Landscapes
 
+super + shift + p
+        nitrogen Immagini/Landscapes/
+
 ## wifi
 
 super + alt + w
