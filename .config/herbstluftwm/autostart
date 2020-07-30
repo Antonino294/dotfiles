@@ -20,7 +20,8 @@ then
 fi
 
 
-feh --randomize --bg-fill ~/Immagini/Landscapes &
+#feh --randomize --bg-fill ~/Immagini/Landscapes &
+nitrogen --restore
 klipper &
 dunst &
 xrdb ~/.Xresources &
@@ -188,7 +189,7 @@ hc rule focus=on # normally focus new clients
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-
+hc rule title~'Discord Updater' floating=on
 
 # unlock, just to be sure
 hc unlock
