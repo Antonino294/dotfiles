@@ -18,8 +18,11 @@ super + shift + @space
 
 # random wallpaper
 
+#super + ctrl + p
+#                feh --randomize --bg-fill ~/Immagini/Landscapes
+
 super + ctrl + p
-                feh --randomize --bg-fill ~/Immagini/Landscapes
+        nitrogen --random --set-scaled Immagini/Landscapes/
 
 super + ctrl + shift + p
         nitrogen Immagini/Landscapes/

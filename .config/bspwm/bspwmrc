@@ -34,7 +34,8 @@ then
         sxhkd -c .config/bspwm/sxhkdrc &
 fi
 
-feh --randomize --bg-fill ~/Immagini/Landscapes &
+nitrogen --restore
+#feh --randomize --bg-fill ~/Immagini/Landscapes &
 #wal -i Immagini/Landscapes/ & #& razer-cli -a &
 klipper &
 dunst &

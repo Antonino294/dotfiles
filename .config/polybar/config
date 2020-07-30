@@ -339,7 +339,7 @@ fg-alt = #121314
 
 alpha = #8c000000
 
-shade1 = #E64A19
+shade1 = #acb1b8
 shade2 = #F4511E
 shade3 = #FF5722
 shade4 = #FF7043
@@ -590,7 +590,9 @@ label-monitor = %name%
 
 label-active = %name%
 label-active-foreground = ${color.fg-alt}
-label-active-background = #acb1b8
+;label-active-background = #acb1b8
+
+label-active-background = ${color.shade1}
 
 label-occupied = %icon%
 label-occupied-underline = ${color.fg}
