@@ -97,7 +97,7 @@ call plug#end()
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 autocmd FileType * :silent CocDisable
-autocmd FileType cpp,c :silent CocEnable
+autocmd FileType cpp,c,py :silent CocEnable
 
 "let g:syntastic_cpp_checkers = ['clang_tidy']
 
@@ -324,6 +324,7 @@ call SetupCommandAlias("X","x")
 let g:floaterm_keymap_toggle = '<F1>'
 
 autocmd BufNewFile *.c,*.cc,*.cpp,*.h call AddTemplate("~/.vim/skeleton.cpp")
+autocmd BufNewFile *.py call AddTemplate("~/.vim/skeleton.py")
 
 autocmd FileType cpp nnoremap <F5> :silent !g++ -o  %:r.out % -std=c++11<Enter>
 autocmd FileType cpp nnoremap <F6> :!./%:r.out<Enter>
