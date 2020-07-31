@@ -2,9 +2,11 @@ import re
 import subprocess
 import sys
 
-#file = open("/home/antonino/.config/polybar/config",'r')
+#reg = "^#[a-fA-f0-9]{6}$"
 
-reg = "^#[a-fA-f0-9]{6}"
+# this one also allows for alpha values at the end of the hex value
+
+reg = "(^#[a-fA-f0-9]{6}$|^#[a-fA-f0-9]{8}$)"
 
 color = input("Color Hex: ")
 
