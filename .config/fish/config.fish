@@ -39,7 +39,7 @@ alias clack "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Sin
 
 alias cleck "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Singleplayer' click --repeat 999999 --delay 600 --window 'Minecraft\* 1.15.2 - Singleplayer' 1"
 
-alias kb "OpenRGB & /home/antonino/Build-Folder/KeyboardVisualizer/KeyboardVisualizer"
+alias kb "cd ~/Build-Folder/ && ./KeyboardVisualizer nrml_scl=1 nrml_ofst=0,08 bkgd_mode=0 frgd_mode=18 single_color_mode=11 avg_mode=0 anim_speed=250 -delay=10"
 
 #alias deemix 'python3 /home/antonino/Build-Folder/deemix/server.py'
 
