@@ -127,7 +127,7 @@
     #   %%  Literal %
     # Markup is allowed
 
-    format = "<span color="#d3dae3"><b><big>%s</big></b></span>\n<i><small>%b</small></i>"
+    format = <span color="#d3dae3"><b><big>%s</big></b></span>\n<i><small>%b</small></i>
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".

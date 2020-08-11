@@ -115,3 +115,5 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#source /etc/bash_completion.d/climate_completion

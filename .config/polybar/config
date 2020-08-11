@@ -496,7 +496,7 @@ format-prefix =  :
 format-padding = 1
 
 
-exec = free -mh | grep 'Mem' | cut -d' ' -f20
+exec = free --mega -h | grep 'Mem' | cut -d' ' -f20
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
