@@ -152,6 +152,7 @@ set -gx PATH $PATH /home/antonino/.cargo/bin
 set -gx PATH $PATH /usr/java/jre1.8.0_251/bin
 set -gx PATH $PATH /home/antonino/.local/kitty.app/bin/
 set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
+set -gx PATH $PATH /home/antonino/.gdrive-downloader/bin/
 
 set -gx EDITOR nvim
 
@@ -166,3 +167,5 @@ export DOTBARE_TREE="$HOME"
 #cat ~/.cache/wal/sequences &  
 
 zoxide init fish | source
+
+#thefuck --alias  | source
