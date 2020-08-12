@@ -32,6 +32,8 @@ abbr wtr "curl 'wttr.in/~Solano+Inferiore?lang=it' | lolcat -t -a -s 75"
 
 abbr phone "adb connect 192.168.1.2"
 
+abbr scrcpy "scrcpy -b2M -m800 --shortcut-mod lctrl,rctrl"
+
 
 # aliases
 
@@ -66,6 +68,9 @@ alias nnn "env TERM=xterm-256color nnn"
 alias glava 'glava --desktop &>/dev/null'
 
 alias dotbare '/home/antonino/.dotbare/dotbare'
+
+alias icat "kitty +kitten icat"
+
 
 
 #Fisher Workaround
