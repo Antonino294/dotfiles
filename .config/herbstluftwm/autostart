@@ -192,6 +192,7 @@ hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule title~'Discord Updater' floating=on
 hc rule title~'Sayonara Player' floating=on
+hc rule class~'scrcpy' floating=on
 
 # unlock, just to be sure
 hc unlock
