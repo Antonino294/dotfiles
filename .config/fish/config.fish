@@ -34,6 +34,8 @@ abbr phone "adb connect 192.168.1.2"
 
 abbr scrcpy "scrcpy -b2M -m800 --shortcut-mod lctrl,rctrl"
 
+abbr wal "wal --backend colorz "
+
 
 # aliases
 
