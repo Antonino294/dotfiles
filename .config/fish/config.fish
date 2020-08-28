@@ -22,19 +22,21 @@ abbr jf-stop "sudo systemctl stop jellyfin.service"
 
 abbr jf-restart "sudo systemctl restart jellyfin.service"
 
-abbr wt "curl 'wttr.in/~Solano+Inferiore?lang=it'"
+abbr wt "curl 'it.wttr.in/~Solano Inferiore'"
 
 #abbr work "./Build-Folder/genact-linux"
 
 #abbr sx "vim ~/.config/sxhkd/sxhkdrc"
 
-abbr wtr "curl 'wttr.in/~Solano+Inferiore?lang=it' | lolcat -t -a -s 75"
+abbr wtr "curl 'it.wttr.in/~Solano Inferiore' | lolcat -t -a -s 75"
 
 abbr phone "adb connect 192.168.1.2"
 
 abbr scrcpy "scrcpy -b2M -m800 --shortcut-mod lctrl,rctrl"
 
 abbr wal "wal --backend colorz "
+
+abbr wthr "curl 'it.wttr.in/~Solano Inferiore?tqp0'"
 
 
 # aliases

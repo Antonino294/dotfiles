@@ -28,8 +28,9 @@ SETUVAR _fish_abbr_scrcpy:scrcpy\x20\x2db2M\x20\x2dm800\x20\x2d\x2dshortcut\x2dm
 SETUVAR _fish_abbr_upD:pkcon\x20refresh
 SETUVAR _fish_abbr_upG:pkcon\x20update
 SETUVAR _fish_abbr_wal:wal\x20\x2d\x2dbackend\x20colorz\x20
-SETUVAR _fish_abbr_wt:curl\x20\x27wttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27
-SETUVAR _fish_abbr_wtr:curl\x20\x27wttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27\x20\x7c\x20lolcat\x20\x2dt\x20\x2da\x20\x2ds\x2075
+SETUVAR _fish_abbr_wt:curl\x20\x27it\x2ewttr\x2ein/\x7eSolano\x20Inferiore\x27
+SETUVAR _fish_abbr_wthr:curl\x20\x27it\x2ewttr\x2ein/\x7eSolano\x20Inferiore\x3ftqp0\x27
+SETUVAR _fish_abbr_wtr:curl\x20\x27it\x2ewttr\x2ein/\x7eSolano\x20Inferiore\x27\x20\x7c\x20lolcat\x20\x2dt\x20\x2da\x20\x2ds\x2075
 SETUVAR _fish_abbr_za:zoxide\x20add
 SETUVAR _fish_abbr_zi:z\x20\x2di
 SETUVAR _fish_abbr_zq:zoxide\x20query
