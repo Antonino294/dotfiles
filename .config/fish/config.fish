@@ -49,7 +49,7 @@ alias kb "cd ~/Build-Folder/ && ./KeyboardVisualizer nrml_scl=1 nrml_ofst=0,08 b
 
 #alias deemix 'python3 /home/antonino/Build-Folder/deemix/server.py'
 
-alias deezer 'export DISPLAY=:0 && /home/antonino/Build-Folder/startdeemix.sh'
+alias deezer 'export DISPLAY=:0 && python3 /home/antonino/Build-Folder/deemix-pyweb/deemix-pyweb.py'
 
 alias upd 'curl "https://ddns.pboehm.de/update/lenovob590/9c0e5dd33c00bad665b40c49429bd461d01f3423"'
 
