@@ -231,8 +231,8 @@ tmux_conf_theme_status_left_attr='bold,none,none'
 #tmux_conf_theme_status_right_bg='#282c34,#3e4452,#e06c75' # dark gray, red, white
 
 
-tmux_conf_theme_status_right_fg='#e4e4e4,#1c1c1c,#3a3a3a' # light gray, white, black
-tmux_conf_theme_status_right_bg='#3a3a3a,#ffaf5f,#d75f5f' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#e4e4e4,#e4e4e4,#3a3a3a' # light gray, white, black
+tmux_conf_theme_status_right_bg='#3a3a3a,#4e4e4e,#d75f5f' # dark gray, red, white
 
 tmux_conf_theme_status_right_attr='none,none,bold'
 
