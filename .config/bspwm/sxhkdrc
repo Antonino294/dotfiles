@@ -266,7 +266,7 @@ super + shift + b
         polybar-msg cmd hide && bspc config top_padding 0
 
 super + ctrl + b
-        kcolorchooser --print | python3 /home/antonino/Build-Folder/Scripts/bar-color.py
+        kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor.sh
 
 
 # restart compton

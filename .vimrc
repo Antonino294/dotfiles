@@ -160,11 +160,13 @@ let g:startify_custom_header = startify#pad(startify#fortune#boxed())
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
 
-colorscheme onedark1 "OceanicNext/gruvbox/onedark1
+colorscheme gunmetal-grey "OceanicNext/gruvbox/onedark1
 
 "colorscheme tempus_dusk
 
-let g:airline_theme='onedark' "onedark/gruvbox/hybrid/minimalist/raven/base16_oceanicnext
+"let g:airline_theme='onedark' "onedark/gruvbox/hybrid/minimalist/raven/base16_oceanicnext
+
+let g:airline_theme='minimalist' 
 
 " markdown preview settings
 
@@ -202,10 +204,11 @@ set wrapscan               " Searches wrap around end-of-file.
 set report      =0         " Always report changed lines.
 set synmaxcol =200       " Only highlight the first 200 columns.
 "set numberwidth=1
-highlight Folded ctermbg=NONE
-highlight FoldColumn ctermbg=NONE
-highlight NonText guifg=bg
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+"highlight Folded ctermbg=NONE
+"highlight FoldColumn ctermbg=NONE
+"highlight NonText guifg=bg
+"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 tnoremap <Esc> <C-\><C-n>
 
@@ -339,5 +342,7 @@ let g:cpp_class_decl_highlight = 1
 
 nmap <space>e :CocCommand explorer<CR>
 
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+"hi! Normal ctermbg=NONE guibg=NONE
+"hi! NonText ctermbg=NONE guibg=NONE
+
+colorscheme mountaineer-grey "OceanicNext/gruvbox/onedark1
