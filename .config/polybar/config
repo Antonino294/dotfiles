@@ -79,8 +79,8 @@ foreground = ${color.fg}
 ; doesn't get rounded
 ; Individual top/bottom values can be defined using:
 ;   radius-{top,bottom}
-radius-top = 5.0
-radius-bottom = 5.0
+radius-top = 0.0
+radius-bottom = 0.0
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
@@ -101,7 +101,10 @@ line-color = ${color.shade5}
 ; following horizontal space on the bar:
 ;   width - border-right-size - border-left-size
 border-top-size = 0
-border-color = ${color.shade5}
+border-color = ${color.alpha}
+
+border-bottom-size = 0
+border-bottom-color = ${color.alpha}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:

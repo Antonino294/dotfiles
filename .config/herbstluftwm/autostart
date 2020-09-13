@@ -216,4 +216,4 @@ panel=~/.config/herbstluftwm/panel.sh
 
 "$panel" 0 &
 
-herbstclient pad 0 "29" "0" "0"
+hc pad 0 "29" "0" "0"

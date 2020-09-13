@@ -115,8 +115,13 @@ foreground = '#28a745'
 # not able to restore color definitions on exit, simply restart your terminal to restore colors.
  gradient = 1
  gradient_count = 2
- gradient_color_1 = '#4568dc'
- gradient_color_2 = '#b06ab3'
+
+#gradient_color_1 = '#4568dc'
+#gradient_color_2 = '#b06ab3'
+
+ gradient_color_1 = '#667eea'
+ gradient_color_2 = '#764ba2'
+
 
 [smoothing]
 

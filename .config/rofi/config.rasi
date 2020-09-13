@@ -17,11 +17,11 @@
   blue:       #6eaafb;
   mangenta:   #d886f3;
   cyan:       #6cdcf7;
-  emphasis:   #50536b;
+  emphasis:   #3d3d3d;
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
-  bg:         #282c34;
+  bg:         #232323;
 
   spacing: 0;
   background-color: transparent;
@@ -33,11 +33,11 @@
 window {
   transparency: "real";
   fullscreen: false;
-  background-color: #282c34dd;
+  background-color: #232323dd;
 }
 
 mainbox {
-  padding: 3% 5%;
+  padding: 4% 5%;
 }
 
 inputbar {
@@ -68,8 +68,8 @@ listview {
 element {
   padding: 5px;
   text-color: @text-alt;
-  highlight: bold #95ee8f; /* green */
-  border-radius: 3px;
+  highlight: bold #bbd5be; /* green */
+  border-radius: 0px;
 }
 
 element selected {
