@@ -27,7 +27,8 @@ dunst &
 xrdb ~/.Xresources &
 #/home/antonino/.config/polybar/launch.sh &
 xset -dpms s off &
-compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
+#compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
+picom --vsync
 busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false
 bolt --generate --watch &
 nmtui connect TIM-50257590 && sudo dhclient &

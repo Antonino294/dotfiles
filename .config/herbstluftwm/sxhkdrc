@@ -140,8 +140,11 @@ XF86Launch8
 
 # restart compton
 
+#super + ctrl + c
+#        pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
+
 super + ctrl + c
-        pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
+        pkill picom ; sleep 0.1 ;  picom --vsync
 
 # bar
 

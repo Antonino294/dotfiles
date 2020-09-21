@@ -31,6 +31,8 @@ abbr wt "curl 'it.wttr.in/~Solano Inferiore'"
 abbr wtr "curl 'it.wttr.in/~Solano Inferiore' | lolcat -t -a -s 75"
 
 abbr phone "adb connect 192.168.1.2"
+abbr phone2 "adb connect 192.168.1.11"
+
 
 abbr scrcpy "scrcpy -b2M -m800 --shortcut-mod lctrl,rctrl"
 
@@ -162,6 +164,7 @@ set -gx PATH $PATH /usr/java/jre1.8.0_251/bin
 set -gx PATH $PATH /home/antonino/.local/kitty.app/bin/
 set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
 set -gx PATH $PATH /home/antonino/.gdrive-downloader/bin/
+set -gx PATH $PATH /home/antonino/Build-Folder/jdk-14.0.2+12-jre/bin/
 
 set -gx EDITOR nvim
 
