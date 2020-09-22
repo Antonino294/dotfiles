@@ -272,10 +272,9 @@ super + ctrl + b
 # restart compton
 
 super + ctrl + c
-        pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
+        pkill picom ; sleep 0.1 ; picom --vsync
 
-#        pkill picom ; picom
-
+        #pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
 # move through desktops
 
 XF86Tools
