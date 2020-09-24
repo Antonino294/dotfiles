@@ -161,7 +161,7 @@ super + ctrl + b
 # float window
 
 super + s
-        herbstclient attr clients.focus.floating toggle
+        herbstclient attr clients.focus.floating toggle && herbstclient emit_hook toggle
 
 # gap + pad controls
 

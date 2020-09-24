@@ -57,7 +57,7 @@ alias gotop "ytop"
 
 alias cava "env TERM=xterm-256color cava"
 
-alias mpv "devour mpv"
+#alias mpv "devour mpv"
 
 #alias config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 

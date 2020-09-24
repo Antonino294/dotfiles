@@ -46,6 +46,7 @@ klipper &
 dunst &
 xrdb ~/.Xresources &
 /home/antonino/.config/polybar/launch.sh &
+/home/antonino/Build-Folder/Scripts/bspwm.sh &
 xset -dpms s off &
 #compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
 #clight && pkill clight && clight
