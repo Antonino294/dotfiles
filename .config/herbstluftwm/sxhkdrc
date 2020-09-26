@@ -21,11 +21,13 @@ super + shift + @space
 #super + ctrl + p
 #                feh --randomize --bg-fill ~/Immagini/Landscapes
 
-super + ctrl + p
+super + ctrl + shift + p
         nitrogen --random --set-scaled Immagini/Landscapes/
 
-super + ctrl + shift + p
-        nitrogen
+super + ctrl + p
+        /home/antonino/Build-Folder/Scripts/wal.sh
+
+#        nitrogen
 
 
 ## wifi
