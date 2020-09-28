@@ -10,4 +10,4 @@ color=$(grep '*color10:  ' /home/antonino/.cache/wal/colors.Xresources | sed s/"
 
 sed -i -e "s/shade1 = .*/shade1 = $color/g" $HOME/.config/polybar/config
 
-sleep 0.6; herbstclient pad 0 "29" "0" "0"
+sleep 1; herbstclient pad 0 "29" "0" "0"

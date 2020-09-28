@@ -34,6 +34,7 @@ busctl --expect-reply=false --user set-property org.clight.clight /org/clight/cl
 bolt --generate --watch &
 nmtui connect TIM-50257590 && sudo dhclient &
 adb tcpip 5555 && adb connect 192.168.1.2
+redshift -t 6000:4000 -b 1.0:0.9 &
 #wal -R -s -t -n
 
 
