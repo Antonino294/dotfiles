@@ -158,7 +158,7 @@ super + shift + b
 
 
 super + ctrl + b
-        kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor.sh
+        kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
 
 # float window
 
