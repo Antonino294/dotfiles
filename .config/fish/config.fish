@@ -55,6 +55,8 @@ alias upd 'curl "https://ddns.pboehm.de/update/lenovob590/9c0e5dd33c00bad665b40c
 
 alias gotop "ytop"
 
+alias btop "bpytop"
+
 alias cava "env TERM=xterm-256color cava"
 
 #alias mpv "devour mpv"
