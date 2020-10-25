@@ -21,7 +21,7 @@ fi
 
 
 #feh --randomize --bg-fill ~/Immagini/Landscapes &
-nitrogen --restore
+nitrogen --restore &
 klipper &
 dunst &
 xrdb ~/.Xresources &
@@ -30,10 +30,10 @@ xrdb ~/.Xresources &
 xset -dpms s off &
 picom --vsync --config .config/picom/picom.conf &
 #compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
-busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false
+busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
 bolt --generate --watch &
 nmtui connect TIM-50257590 && sudo dhclient &
-adb tcpip 5555 && adb connect 192.168.1.2
+adb tcpip 5555 && adb connect 192.168.1.2 &
 redshift -t 6000:4000 -b 1.0:0.9 &
 #wal -R -s -t -n
 
@@ -196,7 +196,8 @@ hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule title~'Discord Updater' floating=on
 hc rule title~'Sayonara Player' floating=on
-hc rule class~'scrcpy' floating=on
+hc rule class~'scrcpy' floating=onA
+hc rule floatplacement=center
 
 # unlock, just to be sure
 hc unlock
