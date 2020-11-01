@@ -2,7 +2,6 @@
 
 if ps -C cmus > /dev/null; then
 
-
 status=$( cmus-remote -Q | grep status\ | sed 's/status //' )
 
 title=$( cmus-remote -Q | grep tag\ title\ | sed 's/tag title //' )
@@ -27,7 +26,12 @@ case $status in
                 echo "$title   $album"
                 ;;
         stopped)
+                if [[ $title ]];
+        then
                 echo "$title   $album"
+        else
+                echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮"
+                fi
                 ;;
 esac
 
