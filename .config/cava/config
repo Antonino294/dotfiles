@@ -38,8 +38,11 @@ bar_spacing = 1
 # increasing the will improve the accuracy of the visualization, 
 # but will also make it slower and increase CPU usage
 # anything below 10 and above 13 is considered experimental. 
-FFTbufferSize = 12;
+; FFTbufferSize = 12;
 
+# Seconds with no input before cava goes to sleep mode. Cava will not perform FFT or drawing and
+# only check for input once per second. Cava will wake up once input is detected. 0 = disable.
+; sleep_timer = 0
 
 
 [input]
@@ -52,7 +55,7 @@ FFTbufferSize = 12;
 #
 # For pulseaudio 'source' will be the source. Default: 'auto', which uses the monitor source of the default sink
 # (all pulseaudio sinks(outputs) have 'monitor' sources(inputs) associated with them).
-# 
+#
 # For alsa 'source' will be the capture device.
 # For fifo 'source' will be the path to fifo-file.
 # For shmem 'source' will be /squeezelite-AA:BB:CC:DD:EE:FF where 'AA:BB:CC:DD:EE:FF' will be squeezelite's MAC address
@@ -64,10 +67,14 @@ FFTbufferSize = 12;
 
 ; method = fifo
 ; source = /tmp/mpd.fifo
+; sample_rate = 44100
+; sample_bits = 16
 
 ; method = shmem
 ; source = /squeezelite-AA:BB:CC:DD:EE:FF
 
+; method = portaudio
+; source = auto
 
 [output]
 
@@ -80,8 +87,10 @@ method = ncurses
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
-# 'mono' averages both channels and outputs left to right lowest to highest frequencies.
-; channels = stereo
+# 'mono' outputs left to right lowest to highest frequencies.
+# 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
+channels = mono
+mono_option = average
 
 # Raw output target. A fifo will be created if target does not exist.
 ; raw_target = /dev/stdout
