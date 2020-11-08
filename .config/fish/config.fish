@@ -45,7 +45,9 @@ alias clack "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Sin
 
 alias cleck "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Singleplayer' click --repeat 999999 --delay 600 --window 'Minecraft\* 1.15.2 - Singleplayer' 1"
 
-alias kb "cd ~/Build-Folder/Apps/ && ./OpenRGB_0.3_64_308bb6f9.AppImage --server & &&  ./Keyboard_Visualizer-x86_64.AppImage"
+#alias kb "cd ~/Build-Folder/Apps/ && ./OpenRGB_0.3_64_308bb6f9.AppImage --server & &&  ./Keyboard_Visualizer-x86_64.AppImage"
+
+alias kb "cd ~/Build-Folder/Apps/ && ./Keyboard_Visualizer-x86_64.AppImage"
 
 #alias deemix 'python3 /home/antonino/Build-Folder/deemix/server.py'
 

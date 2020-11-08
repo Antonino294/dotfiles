@@ -35,6 +35,7 @@ bolt --generate --watch &
 nmtui connect TIM-50257590 && sudo dhclient &
 adb tcpip 5555 && adb connect 192.168.1.2 &
 redshift -t 6000:4000 -b 1.0:0.9 &
+rt start &
 #wal -R -s -t -n
 
 

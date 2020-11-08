@@ -346,3 +346,13 @@ nmap <space>e :CocCommand explorer<CR>
 "hi! NonText ctermbg=NONE guibg=NONE
 
 colorscheme mountaineer-grey "OceanicNext/gruvbox/onedark1
+
+" remap caps lock to escape and viceversa
+
+au VimEnter * :silent !setxkbmap -option caps:swapescape
+"au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
+" undo above
+
+au VimLeave * :silent !setxkbmap -option
+"au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
