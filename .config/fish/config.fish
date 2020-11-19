@@ -79,6 +79,8 @@ alias dotbare '/home/antonino/.dotbare/dotbare'
 
 alias icat "kitty +kitten icat"
 
+#alias ls "ls -Isnap"
+
 #alias ambient "color=(kcolorchooser --print) $HOME/Build-Folder/polychromatic/polychromatic-cli -d all -e static --rgb \#$color"
 
 #Fisher Workaround
