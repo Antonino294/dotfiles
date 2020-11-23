@@ -213,7 +213,10 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' ❐ #S |#{prefix}'
-tmux_conf_theme_status_right='#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},} , %R , %d %b | #(/home/antonino/Build-Folder/Scripts/tmuxcmus3.sh) | #{hostname}#{root} '
+#tmux_conf_theme_status_right='#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},} , %R , %d %b | #(/home/antonino/Build-Folder/Scripts/tmuxcmus3.sh) | #{hostname}#{root} '
+
+tmux_conf_theme_status_right='#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},} , %R , %d %b | #(/home/antonino/Build-Folder/Scripts/metadata.sh) | #{hostname}#{root} '
+
 
 # | zscroll -l 35 -d 0.5 -u true ./Build-Folder/Scripts/tmuxcmus2.sh -U 5
 
