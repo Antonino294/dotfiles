@@ -19,7 +19,7 @@ int main()
               {
                       //int n = (int) c[i];
                       
-                      if( (c[i]>='a' && c[i]<='f') || (c[i]<='9' && c[i]>='0') || (c[i]<='A' && c[i]>='F') )
+                      if( (c[i]>='a' && c[i]<='f') || (c[i]>='0' && c[i]<='9') || (c[i]>='A' && c[i]<='F') )
                               b=true;
                       else
                       {
@@ -34,7 +34,6 @@ int main()
                 cout<<"Hex code must start with # and be limited to six characters after it.";
                         return 1;
         }
-
 
         if(b)
                 cout<<c;
