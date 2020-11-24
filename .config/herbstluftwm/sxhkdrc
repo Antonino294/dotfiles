@@ -76,28 +76,28 @@ XF86MonBrightnessDown
 # MPRIS controls
 
 XF86AudioPlay
-       /home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+       /home/antonino/Build-Folder/Scripts/play.sh play #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 XF86AudioNext
-        /home/antonino/Build-Folder/Scripts/next.sh
+        /home/antonino/Build-Folder/Scripts/play.sh next #/home/antonino/Build-Folder/Scripts/next.sh
 
 XF86AudioPrev
-        /home/antonino/Build-Folder/Scripts/prev.sh
+        /home/antonino/Build-Folder/Scripts/play.sh prev #/home/antonino/Build-Folder/Scripts/prev.sh
 
 ctrl + shift + p 
-        /home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+        /home/antonino/Build-Folder/Scripts/play.sh play #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 ctrl + shift + l
-        /home/antonino/Build-Folder/Scripts/next.sh #playerctl next
+        /home/antonino/Build-Folder/Scripts/play.sh next #/home/antonino/Build-Folder/Scripts/next.sh #playerctl next
 
 ctrl + shift + j
-       /home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
+       /home/antonino/Build-Folder/Scripts/play.sh prev #/home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
 
 ctrl + shift + m
-        /home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
+        /home/antonino/Build-Folder/Scripts/play.sh forw #/home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
 
 ctrl + shift + n
-       /home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
+       /home/antonino/Build-Folder/Scripts/play.sh back #/home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
 
 
 
@@ -175,19 +175,19 @@ ctrl + alt + b
 # gap + pad controls
 
 super + plus
-        /home/antonino/Build-Folder/Scripts/increase-gap2.sh
+        /home/antonino/Build-Folder/Scripts/gap.sh gap +
 
 super + minus
-        /home/antonino/Build-Folder/Scripts/decrease-gap2.sh
+        /home/antonino/Build-Folder/Scripts/gap.sh gap -
 
 super + BackSpace
         herbstclient set window_gap 6
 
 super + shift + plus
-       /home/antonino/Build-Folder/Scripts/increase-padding2.sh
+       /home/antonino/Build-Folder/Scripts/gap.sh pad +
 
 super + shift + minus
-        /home/antonino/Build-Folder/Scripts/decrease-padding2.sh
+        /home/antonino/Build-Folder/Scripts/gap.sh pad -
 
 super + shift + BackSpace
         herbstclient set frame_padding 6
