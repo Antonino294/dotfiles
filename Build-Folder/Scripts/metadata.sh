@@ -26,12 +26,7 @@ case $status in
                 echo "$title   $album"
                 ;;
         Stopped)
-                if [[ $title ]];
-        then
-                echo "$title   $album"
-        else
-                echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮"
-                fi
+                [ $title ] &&  echo "$title   $album" || echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮"
                 ;;
 esac
 
