@@ -19,6 +19,12 @@ then
         sxhkd -c .config/herbstluftwm/sxhkdrc &
 fi
 
+pgrep -x redshift
+if [[ $? == 1 ]] 
+
+then
+        redshift -t 6000:4000 -b 1.0:0.9 &
+fi
 
 #feh --randomize --bg-fill ~/Immagini/Landscapes &
 nitrogen --restore &
@@ -34,7 +40,6 @@ busctl --expect-reply=false --user set-property org.clight.clight /org/clight/cl
 bolt --generate --watch &
 nmtui connect TIM-50257590 && sudo dhclient &
 adb tcpip 5555 && adb connect 192.168.1.2 &
-redshift -t 6000:4000 -b 1.0:0.9 &
 rt start &
 #wal -R -s -t -n
 
@@ -167,14 +172,14 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 6
 
-hc attr theme.active.color '#cc241d'
-hc attr theme.normal.color '#36648f'
+hc attr theme.active.color '#8886d5'
+hc attr theme.normal.color '#e1e1e1'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
 hc attr theme.border_width 0
 hc attr theme.floating.border_width 1
-hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color '#a2a8ba'
 hc attr theme.active.outer_color '#a2a8ba'
@@ -188,7 +193,7 @@ hc set focus_crosses_monitor_boundaries 1
 hc set swap_monitors_to_get_tag 1
 hc set auto_detect_monitors 1
 hc set auto_detect_panels 0
-hc set default_frame_layout 1
+hc set default_frame_layout 0
 
 # rules
 hc unrule -F
