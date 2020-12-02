@@ -26,9 +26,7 @@ super + ctrl + shift + p
 
 super + ctrl + p
         /home/antonino/Build-Folder/Scripts/wal.sh
-
 #        nitrogen
-
 
 ## wifi
 
@@ -76,30 +74,36 @@ XF86MonBrightnessDown
 # MPRIS controls
 
 XF86AudioPlay
-       /home/antonino/Build-Folder/Scripts/play.sh play #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+       /home/antonino/Build-Folder/Scripts/play.sh play 
+       #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 XF86AudioNext
-        /home/antonino/Build-Folder/Scripts/play.sh next #/home/antonino/Build-Folder/Scripts/next.sh
+        /home/antonino/Build-Folder/Scripts/play.sh next 
+        #/home/antonino/Build-Folder/Scripts/next.sh
 
 XF86AudioPrev
-        /home/antonino/Build-Folder/Scripts/play.sh prev #/home/antonino/Build-Folder/Scripts/prev.sh
+        /home/antonino/Build-Folder/Scripts/play.sh prev 
+        #/home/antonino/Build-Folder/Scripts/prev.sh
 
 ctrl + shift + p 
-        /home/antonino/Build-Folder/Scripts/play.sh play #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+        /home/antonino/Build-Folder/Scripts/play.sh play 
+        #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 ctrl + shift + l
-        /home/antonino/Build-Folder/Scripts/play.sh next #/home/antonino/Build-Folder/Scripts/next.sh #playerctl next
+        /home/antonino/Build-Folder/Scripts/play.sh next 
+        #/home/antonino/Build-Folder/Scripts/next.sh #playerctl next
 
 ctrl + shift + j
-       /home/antonino/Build-Folder/Scripts/play.sh prev #/home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
+       /home/antonino/Build-Folder/Scripts/play.sh prev 
+       #/home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
 
 ctrl + shift + m
-        /home/antonino/Build-Folder/Scripts/play.sh forw #/home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
+        /home/antonino/Build-Folder/Scripts/play.sh forw 
+        #/home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
 
 ctrl + shift + n
-       /home/antonino/Build-Folder/Scripts/play.sh back #/home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
-
-
+       /home/antonino/Build-Folder/Scripts/play.sh back 
+       #/home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
 
 # volume control
 
@@ -156,7 +160,6 @@ super + b
 super + shift + b
         polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0"
 
-
 super + ctrl + b
         kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
 
@@ -169,8 +172,6 @@ super + s
 
 ctrl + alt + b
         /home/antonino/Build-Folder/Scripts/toggleblur.sh
-
-
 
 # gap + pad controls
 
