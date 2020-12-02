@@ -191,4 +191,4 @@ super + shift + minus
         /home/antonino/Build-Folder/Scripts/gap.sh pad -
 
 super + shift + BackSpace
-        herbstclient set frame_padding 6
+        herbstclient set frame_gap 6
