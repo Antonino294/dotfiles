@@ -192,3 +192,14 @@ super + shift + minus
 
 super + shift + BackSpace
         herbstclient set frame_gap 6
+
+# eq settings
+
+super + ctrl + 1
+        /home/antonino/Build-Folder/Scripts/switcheq.sh 0
+
+super + ctrl + 2
+        /home/antonino/Build-Folder/Scripts/switcheq.sh 1
+
+super + ctrl + 3
+        /home/antonino/Build-Folder/Scripts/switcheq.sh 2
