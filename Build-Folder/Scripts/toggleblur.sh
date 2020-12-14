@@ -1,10 +1,10 @@
 #!/bin/bash
 
-value=$(grep 'strength =' ~/.config/picom/picom.conf | awk '{print $3}')
+value=$(grep ' method = "' ~/.config/picom/picom.conf | awk '{print $3}')
 
-if [[ $value = "5;" ]]
+if [[ $value = '"dual_kawase";' ]]
 then
-        sed -i '/strength = 5;/c\strength = 0;' ~/.config/picom/picom.conf
+        sed -i '/ method = "dual_kawase";/c\ method = "none";' ~/.config/picom/picom.conf
 else
-        sed -i '/strength = 0;/c\strength = 5;' ~/.config/picom/picom.conf
+        sed -i '/ method = "none";/c\ method = "dual_kawase";' ~/.config/picom/picom.conf
 fi
