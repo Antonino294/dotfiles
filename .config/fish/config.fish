@@ -38,6 +38,8 @@ abbr wal "wal --backend colorz "
 
 abbr wthr "curl 'it.wttr.in/~Solano Inferiore?tqp0'"
 
+abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/videoX"
+
 
 # aliases
 

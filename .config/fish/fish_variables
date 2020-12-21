@@ -18,6 +18,7 @@ SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_IP:dig\x20\x2bshort\x20myip\x2eopendns\x2ecom\x20\x40resolver1\x2eopendns\x2ecom\x20\x7c\x20lolcat\x20\x2da\x20\x2dt
 SETUVAR _fish_abbr_WT:curl\x20\x27v2\x2ewttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27
+SETUVAR _fish_abbr_cam:ffmpeg\x20\x2dstream_loop\x20\x2d1\x20\x2dre\x20\x2di\x20output\x2emkv\x20\x20\x2df\x20v4l2\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuv420p\x20/dev/videoX
 SETUVAR _fish_abbr_graphic:export\x20DISPLAY\x3d\x3a0
 SETUVAR _fish_abbr_jf_2D_restart:sudo\x20systemctl\x20restart\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_jf_2D_start:sudo\x20systemctl\x20start\x20jellyfin\x2eservice
