@@ -195,6 +195,8 @@ hc set swap_monitors_to_get_tag 1
 hc set auto_detect_monitors 1
 hc set auto_detect_panels 0
 hc set default_frame_layout 0
+hc set snap_gap 12
+
 
 # rules
 hc unrule -F
