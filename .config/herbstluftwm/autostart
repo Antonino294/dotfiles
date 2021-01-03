@@ -11,19 +11,22 @@ hc emit_hook reload
 xsetroot -cursor_name left_ptr &
 openrazer-daemon &
 
-
 pgrep -x sxhkd
 if [[ $? == 1 ]] 
-
 then
         sxhkd -c .config/herbstluftwm/sxhkdrc &
 fi
 
 pgrep -x redshift
 if [[ $? == 1 ]] 
-
 then
         redshift -t 6000:4000 -b 1.0:0.9 &
+fi
+
+pgrep -x xclickroot
+if [[ $? == 1 ]]
+then
+	xclickroot /home/antonino/Build-Folder/Scripts/menu.sh &
 fi
 
 #feh --randomize --bg-fill ~/Immagini/Landscapes &

@@ -7,13 +7,13 @@ title=$( playerctl --player=cmus,tauon metadata title 2>&1 | sed 's/No player co
 album=$( playerctl --player=cmus,tauon metadata album 2>&1 | sed 's/No player could handle this command//g' )
 
 lb=${#album}
-(( lb > 28)) && album=${album::$(( 28 ))}…
+(( lb > 20)) && album=${album::$(( 20 ))}…
 
 lt=${#title}
-(( lt > 29)) && title=${title::$(( 29 ))}…
+(( lt > 22)) && title=${title::$(( 22 ))}…
 
 case $status in
-        Playing) echo "$title   $album" ;;
-        Paused) echo "$title   $album" ;;
+        Playing) echo "$title   $album" ;;
+        Paused) echo "$title   $album" ;;
         Stopped) [ $title ] &&  echo "$title   $album" || echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮" ;;
 esac

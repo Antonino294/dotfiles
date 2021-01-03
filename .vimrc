@@ -191,7 +191,7 @@ set path+=**
 set wildmenu
 
 set autoindent             " Indent according to previous line.
-set expandtab              " Use spaces instead of tabs.
+" set expandtab              " Use spaces instead of tabs.
 set softtabstop =4         " Tab key indents by 4 spaces.
 set shiftwidth  =8         " >> indents by 8 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
