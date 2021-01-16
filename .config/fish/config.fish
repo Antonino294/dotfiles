@@ -40,6 +40,8 @@ abbr wthr "curl 'it.wttr.in/~Solano Inferiore?tqp0'"
 
 abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/videoX"
 
+abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
+
 
 # aliases
 

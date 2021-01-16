@@ -20,6 +20,7 @@ SETUVAR _fish_abbr_IP:dig\x20\x2bshort\x20myip\x2eopendns\x2ecom\x20\x40resolver
 SETUVAR _fish_abbr_WT:curl\x20\x27v2\x2ewttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27
 SETUVAR _fish_abbr_cam:ffmpeg\x20\x2dstream_loop\x20\x2d1\x20\x2dre\x20\x2di\x20output\x2emkv\x20\x20\x2df\x20v4l2\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuv420p\x20/dev/videoX
 SETUVAR _fish_abbr_graphic:export\x20DISPLAY\x3d\x3a0
+SETUVAR _fish_abbr_ilossh:ssh\x20\x2doKexAlgorithms\x3d\x2bdiffie\x2dhellman\x2dgroup1\x2dsha1\x20Administrator\x40192\x2e168\x2e1\x2e11
 SETUVAR _fish_abbr_jf_2D_restart:sudo\x20systemctl\x20restart\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_jf_2D_start:sudo\x20systemctl\x20start\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_jf_2D_stop:sudo\x20systemctl\x20stop\x20jellyfin\x2eservice

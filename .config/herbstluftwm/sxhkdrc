@@ -16,6 +16,9 @@ super + @space
 super + shift + @space
         bolt --rofi-search
 
+Menu
+	/home/antonino/Build-Folder/Scripts/menu.sh
+
 # random wallpaper
 
 #super + ctrl + p
