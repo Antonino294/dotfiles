@@ -14,6 +14,6 @@ lt=${#title}
 
 case $status in
         Playing) echo "$title   $album" ;;
-        Paused) echo "$title   $album" ;;
+        Paused) echo "$title   $album" ;;
         Stopped) [ $title ] &&  echo "$title   $album" || echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮" ;;
 esac

@@ -38,7 +38,9 @@ abbr wal "wal --backend colorz "
 
 abbr wthr "curl 'it.wttr.in/~Solano Inferiore?tqp0'"
 
-abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/videoX"
+abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video0"
+
+abbr cam2 "ffmpeg -i /dev/videoX -vcodec rawvideo -pix_fmt yuyv422 -vsync 0 -map 0:v -f v4l2  /dev/video0"
 
 abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
 
