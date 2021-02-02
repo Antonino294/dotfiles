@@ -42,8 +42,11 @@ abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pi
 
 abbr cam2 "ffmpeg -i /dev/videoX -vcodec rawvideo -pix_fmt yuyv422 -vsync 0 -map 0:v -f v4l2  /dev/video0"
 
+abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video0"
+
 abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
 
+abbr tickrs "tickrs -pxs GME,PLTR,SLV,BB,AG,AMC,TSLA,BTC-USD,ETH-USD"
 
 # aliases
 
@@ -134,40 +137,17 @@ set fish_pager_color_progress a2a8ba --background=1c1c1c
 
 function fish_prompt 
 
-echo -n (set_color e5c07b --bold )(prompt_pwd) (set_color e06c75)'❯'(set_color e5c07b)'❯'(set_color 61afef)'❯ ' 
+#echo -n (set_color e5c07b --bold )(prompt_pwd) (set_color e06c75)'❯'(set_color e5c07b)'❯'(set_color 61afef)'❯ '
+
+echo -n (set_color FFAF5F --bold )(prompt_pwd) (set_color D75F5F)'❯'(set_color FFAF5F)'❯'(set_color 5F5FFF)'❯ '
+
+# e06c75 - e5c07b - 61afef
 
 end
 
-
-# stuff
-
-#egrep "^export " ~/.profile | while read e
-#	set var (echo $e | sed -E "s/^export ([A-Z_]+)=(.*)\$/\1/")
-#	set value (echo $e | sed -E "s/^export ([A-Z_]+)=(.*)\$/\2/")
-#	
-#	# remove surrounding quotes if existing
-#	set value (echo $value | sed -E "s/^\"(.*)\"\$/\1/")
-#
-#	if test $var = "PATH"
-#		# replace ":" by spaces. this is how PATH looks for Fish
-#		set value (echo $value | sed -E "s/:/ /g")
-#	
-#		# use eval because we need to expand the value
-#		eval set -xg $var $value
-#
-#		continue
-#	end
-#
-#	# evaluate variables. we can use eval because we most likely just used "$var"
-#	set value (eval echo $value)
-#
-#	#echo "set -xg '$var' '$value' (via '$e')"
-#	set -xg $var $value
-#end
-
 # Paths
 
-set -gx PATH $PATH /home/antonino/.local/bin 
+set -gx PATH $PATH /home/antonino/.local/bin
 set -gx PATH $PATH /usr/local/bin
 set -gx PATH $PATH /usr/sbin/
 set -gx PATH $PATH /home/antonino/.cargo/bin

@@ -206,3 +206,17 @@ super + ctrl + 2
 
 super + ctrl + 3
         /home/antonino/Build-Folder/Scripts/switcheq.sh 2
+
+# "layouts"
+
+ctrl + alt + 1
+	/home/antonino/.config/herbstluftwm/layouts/reset
+
+ctrl + alt + 2
+	/home/antonino/.config/herbstluftwm/layouts/centered-master.sh
+
+ctrl + alt + 3
+	/home/antonino/.config/herbstluftwm/layouts/dwindle.sh
+
+ctrl + alt + 4
+	/home/antonino/.config/herbstluftwm/layouts/vertical.sh

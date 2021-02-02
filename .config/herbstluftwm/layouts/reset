@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+hc() {
+    herbstclient "$@"
+}
+
+hc chain \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove \
+    . remove 
