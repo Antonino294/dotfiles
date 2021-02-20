@@ -46,7 +46,17 @@ abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt y
 
 abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
 
-abbr tickrs "tickrs -pxs GME,PLTR,SLV,BB,AG,AMC,TSLA,BTC-USD,ETH-USD"
+abbr tickrs "tickrs -pxs GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
+
+abbr getcompose "rsync -auPe ssh antonino@192.168.1.10:docker-compose.yml Build-Folder/docker-compose.yml"
+
+abbr getmine "rsync -auvrPe ssh antonino@192.168.1.10:Minecraft/ Build-Folder/minecraft-backup/"
+
+abbr syncmusic "rsync -auvrPe ssh Musica/* antonino@192.168.1.10:/home/antonino/Musica/"
+
+abbr syncfoto "rsync -auvrPe ssh Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
+
+abbr srvr "ssh antonino@192.168.1.10"
 
 # aliases
 
@@ -64,7 +74,9 @@ alias deezer 'export DISPLAY=:0 && python3 /home/antonino/Build-Folder/deemix-py
 
 alias upd 'curl "https://ddns.pboehm.de/update/lenovob590/9c0e5dd33c00bad665b40c49429bd461d01f3423"'
 
-alias gotop "ytop"
+#alias gotop "ytop"
+
+alias gotop "btm --battery -cgl"
 
 alias btop "bpytop"
 
@@ -101,13 +113,13 @@ end
 
 #Colors
 
-set fish_color_normal 305d87 
+set fish_color_normal 305d87
 
 set fish_color_autosuggestion d65d0e
 
 set fish_color_param 4c8bd3
 
-set fish_color_command 36648f 
+set fish_color_command 36648f
 
 set fish_color_comment 3b9d7c --bold
 
@@ -119,7 +131,7 @@ set fish_color_escape d2a700 --bold
 
 set fish_color_operator cc241d
 
-#set fish_color_search_match d2a700 
+#set fish_color_search_match d2a700
 
 set fish_color_search_match --background=1c1c1c
 
@@ -135,7 +147,7 @@ set fish_pager_color_progress a2a8ba --background=1c1c1c
 
 # Prompt
 
-function fish_prompt 
+function fish_prompt
 
 #echo -n (set_color e5c07b --bold )(prompt_pwd) (set_color e06c75)'❯'(set_color e5c07b)'❯'(set_color 61afef)'❯ '
 
@@ -167,7 +179,7 @@ export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"
 
 # wal thing (no need with kitty)
-#cat ~/.cache/wal/sequences &  
+#cat ~/.cache/wal/sequences &
 
 zoxide init fish | source
 
