@@ -4,7 +4,7 @@ nitrogen
 
 file=$(grep 'file=' /home/antonino/.config/nitrogen/bg-saved.cfg | sed s/file=//)
 
-wal --backend colorz  -i $file -s -t -n -e
+wal --backend wal -i $file -stne || wal --backend haishoku -i $file -stne
 
 #color=$(grep '*color10:  ' /home/antonino/.cache/wal/colors.Xresources | sed s/"*color10:  "//)
 color=$(grep '*color13:  ' /home/antonino/.cache/wal/colors.Xresources | sed s/"*color13:  "//)
@@ -16,6 +16,8 @@ cd $HOME/Build-Folder/xmenu/ && make install
 
 herbstclient attr theme.floating.active.color $color
 sed -i -e "s/hc attr theme.active.color .*/hc attr theme.active.color \'$color\'/g" $HOME/.config/herbstluftwm/autostart
+
+pywalfox update > /dev/null 2>&1
 
 
 sleep 1; herbstclient pad 0 "29" "0" "0"

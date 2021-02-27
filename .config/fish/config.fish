@@ -30,7 +30,7 @@ abbr wt "curl 'it.wttr.in/~Solano Inferiore'"
 
 abbr wtr "curl 'it.wttr.in/~Solano Inferiore' | lolcat -t -a -s 75"
 
-abbr phone "adb connect 192.168.1.2"
+abbr phone "adb connect 192.168.1.12"
 
 abbr scrcpy "scrcpy -b2M -m800 --shortcut-mod lctrl,rctrl"
 

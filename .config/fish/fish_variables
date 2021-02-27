@@ -29,7 +29,7 @@ SETUVAR _fish_abbr_jf_2D_restart:sudo\x20systemctl\x20restart\x20jellyfin\x2eser
 SETUVAR _fish_abbr_jf_2D_start:sudo\x20systemctl\x20start\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_jf_2D_stop:sudo\x20systemctl\x20stop\x20jellyfin\x2eservice
 SETUVAR _fish_abbr_lotto:shuf\x20\x2di\x201\x2d90\x20\x2dn\x205\x20\x7c\x20lolcat\x20\x2da\x20\x2dt
-SETUVAR _fish_abbr_phone:adb\x20connect\x20192\x2e168\x2e1\x2e2
+SETUVAR _fish_abbr_phone:adb\x20connect\x20192\x2e168\x2e1\x2e12
 SETUVAR _fish_abbr_phone2:adb\x20connect\x20192\x2e168\x2e1\x2e11
 SETUVAR _fish_abbr_scrcpy:scrcpy\x20\x2db2M\x20\x2dm800\x20\x2d\x2dshortcut\x2dmod\x20lctrl\x2crctrl
 SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e10
