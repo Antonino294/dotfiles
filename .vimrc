@@ -35,7 +35,7 @@ set signcolumn=yes
 set cmdheight=1
 set shortmess+=aoOWFc
 set splitbelow splitright
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 set hidden
 let s:hidden_all = 1
 
@@ -129,7 +129,7 @@ let g:mkdx#settings = {
     \ 'enter': { 'shift': 1 },
     \ 'links': { 'external': { 'enable': 1 } },
     \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
-    \ 'fold': { 'enable': 1 } 
+    \ 'fold': { 'enable': 1 }
     \}
 
 let g:mkdp_preview_options = {
@@ -166,7 +166,7 @@ let g:onedark_terminal_italics=1
 
 "let g:airline_theme='onedark' "onedark/gruvbox/hybrid/minimalist/raven/base16_oceanicnext
 
-let g:airline_theme='minimalist' 
+let g:airline_theme='minimalist'
 
 " markdown preview settings
 
@@ -240,7 +240,7 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 
 " Auto-compile R Markdown and other shortcuts
 
-autocmd BufWritePost *.Rmd silent :RMarkdown pdf 
+autocmd BufWritePost *.Rmd silent :RMarkdown pdf
 
 autocmd FileType markdown nnoremap <silent> <F5> :MarkdownPreview<CR>
 autocmd FileType markdown nnoremap <silent> <F7> :execute 'silent !pandoc % -o %:r.pdf'<CR>

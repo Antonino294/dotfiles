@@ -69,10 +69,12 @@ super + alt + b
 # control brightness
 
 XF86MonBrightnessUp
-        brightlight -i 30
+	brightnessctl set 5%+
+        #brightlight -i 30
 
 XF86MonBrightnessDown
-        brightlight -d 30
+	brightnessctl set 5%-
+        #brightlight -d 30
 
 # MPRIS controls
 
