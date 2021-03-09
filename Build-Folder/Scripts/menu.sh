@@ -1,7 +1,7 @@
 #!/bin/sh
 BAT="$(acpi -i | head -n1 | awk '{print $4}')"
 VOL="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')"
-BRI="$(brightlight -p | awk '{print $5}')"
+BRI="$(brightnessctl i | grep % | sed 's/.*(\(.*\))/\1/')"
 
 cat <<EOF | xmenu | sh &
 Rofi		rofi -show drun -modi run,drun -show-icons
