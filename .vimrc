@@ -29,7 +29,7 @@ set shell=/usr/bin/fish
 set nu rnu
 set noru
 set nosmd   " short for 'showmode'
-set laststatus=0
+"set laststatus=0
 set noshowcmd
 set signcolumn=yes
 set cmdheight=1
@@ -91,6 +91,7 @@ Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-unimpaired'
 Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
@@ -356,3 +357,9 @@ colorscheme mountaineer-grey "OceanicNext/gruvbox/onedark1
 
 "au VimLeave * :silent !setxkbmap -option
 "au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+"if exists('g:started_by_firenvim')
+"  set laststatus=0
+"else
+"  set laststatus=2
+"endif

@@ -1,19 +1,19 @@
 
 /* The module to use. A module is a set of shaders used to produce
    the visualizer. The structure for a module is the following:
-   
+ 
    module_name [directory]
        1.frag [file: fragment shader],
        2.frag [file: fragment shader],
        ...
-       
+
    Shaders are loaded in numerical order, starting at '1.frag',
    continuing indefinitely. The results of each shader (except
    for the final pass) is given to the next shader in the list
    as a 2D sampler.
-   
+
    See documentation for more details. */
-#request mod radial
+#request mod bars
 
 /* Window hints */
 #request setfloating  false
@@ -22,11 +22,11 @@
 #request setmaximized false
 
 /* Set window background opacity mode. Possible values are:
-   
+
    "native" - True transparency provided by the compositor. Can
               reduce performance on some systems, depending on
               the compositor used.
-   
+
    "xroot"  - Maintain a copy of the root window's pixmap
               (usually the desktop background) to provide a
               pseudo-transparent effect. Useful when no compositor
@@ -49,7 +49,7 @@
 #request settitle "GLava"
 
 /* Window geometry (x, y, width, height) */
-#request setgeometry 0 0 1368 768
+#request setgeometry -3 0 1373 768
 
 /* Window background color (RGBA format).
    Does not work with `setopacity "xroot"` */
@@ -69,7 +69,7 @@
    will do nothing, but you can use "!+" and "!-" to stack on top
    or below other windows.
 */
-#request setxwintype "normal"
+#request setxwintype "desktop"
 
 /* (X11 only) EWMH Window state atoms (multiple can be specified).
    Possible values are:
@@ -178,9 +178,10 @@
    smooth the data, as accuracy beyond this setting is mostly
    meaningless for visual purposes.
 */
+
 #request setsamplesize 512
 
-/* Audio buffer size to be used for processing and shaders. 
+/* Audio buffer size to be used for processing and shaders.
    Increasing this value can have the effect of adding 'gravity'
    to FFT output, as the audio signal will remain in the buffer
    longer.
@@ -192,7 +193,7 @@
 /* PulseAudio sample rate. Lower values can add 'gravity' to
    FFT output, but can also reduce accuracy. Most hardware
    samples at 44100Hz.
-   
+
    Lower sample rates also can make output more choppy, when
    not using interpolation. It's generally OK to leave this
    value unless you have a strange PulseAudio configuration.
@@ -205,7 +206,7 @@
 /* Enable GPU acceleration of the audio buffer's fourier transform.
    This drastically reduces CPU usage, but should be avoided on
    old integrated graphics hardware.
-   
+
    Enabling this also enables acceleration for post-FFT processing
    effects, such as gravity, averaging, windowing, and interpolation. */
 #request setaccelfft false
@@ -214,23 +215,23 @@
    Force window geometry (locking the window in place), useful
    for some pesky WMs that try to reposition the window when
    embedding in the desktop.
-   
+
    This routinely sends X11 events and should be avoided. */
 #request setforcegeometry false
 
 /*                    ** DEPRECATED **
    Force window to be raised (focused in some WMs), useful for
    WMs that have their own stacking order for desktop windows.
-   
+
    This routinely sends X11 events and should be avoided. */
 #request setforceraised false
 
 /*                    ** DEPRECATED **
-   Scale down the audio buffer before any operations are 
+   Scale down the audio buffer before any operations are
    performed on the data. Higher values are faster.
-   
+
    This value can affect the output of various transformations,
    since it applies (crude) averaging to the data when shrinking
    the buffer. It is reccommended to use `setsamplerate` and
    `setsamplesize` to improve performance or accuracy instead. */
-#request setbufscale 1
+//#request setbufscale 1

@@ -15,4 +15,3 @@ else
 fi
 
 herbstclient pad 0 "29" "0" "0"
-#echo "Bars launched..."
