@@ -15,8 +15,8 @@ color1=$(grep '*color13:  ' $HOME/.cache/wal/colors.Xresources | sed s/"*color13
 color2=$(grep '*color15:  ' $HOME/.cache/wal/colors.Xresources | sed s/"*color15:  "//)
 color3=$(grep '*color0:  ' $HOME/.cache/wal/colors.Xresources | sed s/"*color0:  "//)
 
-sed -i -e "s/#define color1 #.*/#define color1 $color1/g; \
-	s/#define color2 #.*/#define color2 $color2/g" \
+sed -i -e "s/#define color1 #.*/#define color1 $color2/g; \
+	s/#define color2 #.*/#define color2 $color1/g" \
 	$HOME/.config/glava/bars.glsl
 
 sed -i -e "s/ gradient_color_1 = '#.*'/ gradient_color_1 = '$color1'/g; \
@@ -33,8 +33,12 @@ sed -i -e "s/\.border_color = .*/.border_color = \"$color1\",/g; \
 sed -i -e "s/hc attr theme.active.color1 .*/hc attr theme.active.color \'$color1\'/g" \
 	$HOME/.config/herbstluftwm/autostart
 
+sed -i -e "s/background = \"#.*\"/background = \"$color3\"/g; s/frame_color = \"#.*\"/frame_color = \"$color1\"/g" \
+	$HOME/.config/dunst/dunstrc
+
 herbstclient attr theme.floating.active.color $color1
 pgrep -x cava && pkill -USR1 cava
 pgrep -x glava && pkill -USR1 glava
+killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
 make install -C $HOME/Build-Folder/xmenu/
 pywalfox update > /dev/null 2>&1
