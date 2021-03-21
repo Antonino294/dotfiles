@@ -223,6 +223,8 @@ ctrl + alt + 3
 ctrl + alt + 4
 	/home/antonino/.config/herbstluftwm/layouts/vertical.sh
 
+# audio visualizer
+
 ctrl + alt + c
 	pkill glava ; glava --desktop
 

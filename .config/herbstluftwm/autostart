@@ -154,7 +154,8 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 6
 
-hc attr theme.active.color '#B0B0B0'
+hc attr theme.active.color '#7586BD'
+hc attr theme.floating.active.color '#7586BD'
 hc attr theme.normal.color '#e1e1e1'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0

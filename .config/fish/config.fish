@@ -72,7 +72,7 @@ alias kb "cd ~/Build-Folder/Apps/ && ./Keyboard_Visualizer-x86_64.AppImage"
 
 alias deezer 'export DISPLAY=:0 && python3 /home/antonino/Build-Folder/deemix-pyweb/deemix-pyweb.py'
 
-alias upd 'curl "https://ddns.pboehm.de/update/lenovob590/9c0e5dd33c00bad665b40c49429bd461d01f3423"'
+#alias upd 'curl "https://ddns.pboehm.de/update/lenovob590/9c0e5dd33c00bad665b40c49429bd461d01f3423"'
 
 #alias gotop "ytop"
 
@@ -100,6 +100,7 @@ alias dotbare '/home/antonino/.dotbare/dotbare'
 
 alias icat "kitty +kitten icat"
 
+alias ls "exa"
 #alias ls "ls -Isnap"
 
 #alias ambient "color=(kcolorchooser --print) $HOME/Build-Folder/polychromatic/polychromatic-cli -d all -e static --rgb \#$color"
@@ -173,7 +174,7 @@ set -gx EDITOR nvim
 
 export NNN_OPTS="adeox"
 export NNN_FIFO=/tmp/nnn.fifo
-export NNN_PLUG='K:kdeconnect;P:preview-tabbed'
+export NNN_PLUG='K:kdeconnect;P:preview-tui'
 
 export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"

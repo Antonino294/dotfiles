@@ -9,24 +9,19 @@ headphones=1
 echo -n "Setting EQ to "
 if [[ $1 == 1 || $1 == M40X || $1 == m40 || $1 == headphones ]]; then
 	echo "Audio-Techinca M40X."
-        notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">M40X</span></b>"
-        amixer -q sset Master 80
+	notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">M40X</span></b>"
+	amixer -q sset Master 80
 	headphones=1
 elif [[ $1 == 2 || $1 == T2 || $1 == tin || $1 == t2 ]]; then
 	echo "TinAudio T2."
-        notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">Tin T2</span></b>"
-        amixer -q sset Master 75
+	notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">Tin T2</span></b>"
+	amixer -q sset Master 75
 	headphones=2
 elif [[ $1 == 0 || $1 == none || $1 == off || $1 == disable ]]; then
-        echo "Disabling EQ."
-        notify-send -t 2000 "EQ Settings" "EQ Settings <b><span foreground=\"#ff4a52\">Disabled</span></b>"
-        amixer -q sset Master 65
-        headphones=0
-#elif [[ $1 == 4 || $5 == hd599 ]]; then
-#	echo "Sennheiser HD 599."
-#	headphones=4
-#else
-#	echo "Sennheiser HD 660 s."
+	echo "Disabling EQ."
+	notify-send -t 2000 "EQ Settings" "EQ Settings <b><span foreground=\"#ff4a52\">Disabled</span></b>"
+	amixer -q sset Master 65
+	headphones=0
 fi
 
 eqdir=~/.config/ladspa_dsp
@@ -38,5 +33,7 @@ fi
 
 sed -i "s/eq[0-9]*.txt/$eqfile/" $eqdir/config
 
+gstat=$(pgrep -x glava)
 systemctl --user restart pulseaudio.service
 polybar-msg cmd restart > /dev/null 2>&1
+[[ -n "$gstat" ]] && glava --desktop

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ "ps -C tauonmb > /dev/null" || "ps -C cmus > /dev/null" ]] &&
+ps -C tauonmb > /dev/null || ps -C cmus > /dev/null &&
 
 status=$( playerctl --player=cmus,tauon status 2>&1 | sed 's/No player could handle this command//g' )
 title=$( playerctl --player=cmus,tauon metadata title 2>&1 | sed 's/No player could handle this command//g' )
