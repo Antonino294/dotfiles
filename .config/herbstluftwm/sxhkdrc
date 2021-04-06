@@ -176,7 +176,7 @@ super + s
 # toggle blur
 
 ctrl + alt + b
-        /home/antonino/Build-Folder/Scripts/toggleblur.sh
+        /home/antonino/Build-Folder/Scripts/toggleblur.sh && notify-send -t 1500 "Blur." "Blur Toggled."
 
 # gap + pad controls
 
@@ -206,8 +206,11 @@ super + ctrl + 1
 super + ctrl + 2
         /home/antonino/Build-Folder/Scripts/switcheq.sh 1
 
-super + ctrl + 3
+super + ctrl + 4
         /home/antonino/Build-Folder/Scripts/switcheq.sh 2
+
+super + ctrl + 3
+        /home/antonino/Build-Folder/Scripts/switcheq.sh 3
 
 # "layouts"
 

@@ -1,8 +1,8 @@
 /* Note: to only render a single channel, see `setmirror` in `rc.glsl`. */
 #define ALPHA 0.9
 
-#define color1 #c5c8df
-#define color2 #7586BD
+#define color1 #ede6e1
+#define color2 #C7B6A5
 
 /* Center line thickness (pixels) */
 #define C_LINE 0
@@ -19,7 +19,7 @@
    correctly on X11 with `"native"` transparency */
 #define USE_ALPHA 0
 /* How quickly the gradient transitions, in pixels */
-#define GRADIENT 80
+#define GRADIENT 120
 /* Bar color. By default this provides a blue-white gradient. */
 #define COLOR (@fg:mix(color2, color1, clamp(d / GRADIENT, 0, 1)))*ALPHA
 /* Outline color. By default this provides a 'glint' outline based on the bar color */

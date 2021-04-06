@@ -40,7 +40,7 @@ abbr wthr "curl 'it.wttr.in/~Solano Inferiore?tqp0'"
 
 abbr cam "ffmpeg -stream_loop -1 -re -i output.mkv  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video0"
 
-abbr cam2 "ffmpeg -i /dev/videoX -vcodec rawvideo -pix_fmt yuyv422 -vsync 0 -map 0:v -f v4l2  /dev/video0"
+abbr cam2 "ffmpeg -i /dev/videoX -vcodec rawvideo -pix_fmt yuyv422 -vsync 0 -map 0:v -f v4l2 /dev/video0"
 
 abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video0"
 
@@ -48,15 +48,15 @@ abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.1
 
 abbr tickrs "tickrs -pxs GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
-abbr getcompose "rsync -auPe ssh antonino@192.168.1.10:docker-compose.yml Build-Folder/docker-compose.yml"
+abbr getcompose "rsync -auPe ssh antonino@192.168.1.191:docker-compose.yml Build-Folder/docker-compose.yml"
 
-abbr getmine "rsync -auvrPe ssh antonino@192.168.1.10:Minecraft/ Build-Folder/minecraft-backup/"
+abbr getmine "rsync -auvrPe ssh antonino@192.168.1.191:Minecraft/ Build-Folder/minecraft-backup/"
 
-abbr syncmusic "rsync -auvrPe ssh Musica/* antonino@192.168.1.10:/home/antonino/Musica/"
+abbr syncmusic "rsync -auvrPe ssh Musica/* antonino@192.168.1.191:/home/antonino/Musica/"
 
 abbr syncfoto "rsync -auvrPe ssh Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
 
-abbr srvr "ssh antonino@192.168.1.10"
+abbr srvr "ssh antonino@192.168.1.191"
 
 # aliases
 

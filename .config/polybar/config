@@ -1,9 +1,9 @@
-;	    ____        __      __              
+;	    ____        __      __
 ;	   / __ \____  / /_  __/ /_  ____ ______
 ;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
-;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
-;	/_/    \____/_/\__, /_.___/\__,_/_/     
-;	              /____/                    
+;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /
+;	/_/    \____/_/\__, /_.___/\__,_/_/
+;	              /____/
 
 ;; Global WM Settings
 
@@ -53,7 +53,7 @@ height = 23
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
-; 50%:-10, this will result in an offset in the x or y direction 
+; 50%:-10, this will result in an offset in the x or y direction
 ; of 50% minus 10 pixels
 
 ;;offset-x = -1.5%
@@ -72,10 +72,10 @@ foreground = ${color.fg}
 
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
-;;background-0 = 
+;;background-0 =
 
 ; Value used for drawing rounded corners
-; Note: This shouldn't be used together with border-size because the border 
+; Note: This shouldn't be used together with border-size because the border
 ; doesn't get rounded
 ; Individual top/bottom values can be defined using:
 ;   radius-{top,bottom}
@@ -151,10 +151,10 @@ font-3 = Noto Sans CJK JP:size=8:antialias=true;0
 ;checknetwork updates window_switch launcher powermenu sysmenu menu
 ;;
 ;; Bars
-;cpu_bar memory_bar filesystem_bar mpd_bar 
-;volume brightness battery_bar 
+;cpu_bar memory_bar filesystem_bar mpd_bar
+;volume brightness battery_bar
 
-modules-left = workspaces
+modules-left = ewmh
 ; mpd_i mpd
 modules-center = title
 modules-right = memory cpu alsa battery network wired-network date
@@ -174,7 +174,7 @@ dim-value = 1.0
 ; If the value is empty or undefined, the atom value
 ; will be created from the following template: polybar-[BAR]_[MONITOR]
 ; NOTE: The placeholders are not available for custom values
-wm-name = 
+wm-name =
 
 ; Locale used to localize various module data (e.g. date)
 ; Expects a valid libc locale, for example: sv_SE.UTF-8
@@ -204,7 +204,7 @@ tray-maxsize = 16
 ; background color is defined using `tray-background`
 tray-transparent = false
 
-; Background color for the tray container 
+; Background color for the tray container
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
@@ -233,7 +233,7 @@ wm-restack = bspwm
 
 ; Set a DPI values used when rendering text
 ; This only affects scalable fonts
-; dpi = 
+; dpi =
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.
@@ -241,8 +241,8 @@ enable-ipc = true
 
 ; Fallback click handlers that will be called if
 ; there's no matching module handler found.
-click-left = 
-click-middle = 
+click-left =
+click-middle =
 click-right =
 ;;scroll-up =
 ;;scroll-down =
@@ -255,8 +255,8 @@ double-click-right =
 ; - default   : The default pointer as before, can also be an empty string (default)
 ; - pointer   : Typically in the form of a hand
 ; - ns-resize : Up and down arrows, can be used to indicate scrolling
-cursor-click = 
-cursor-scroll = 
+cursor-click =
+cursor-scroll =
 
 ;; WM Workspace Specific
 
@@ -307,8 +307,8 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
-format-foreground = 
-format-background = 
+format-foreground =
+format-background =
 format-underline =
 format-overline =
 format-spacing =
@@ -322,11 +322,11 @@ pseudo-transparency = false
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;
-;;	   ______      __               
+;;	   ______      __
 ;;	  / ____/___  / /___  __________
 ;;	 / /   / __ \/ / __ \/ ___/ ___/
-;;	/ /___/ /_/ / / /_/ / /  (__  ) 
-;;	\____/\____/_/\____/_/  /____/  
+;;	/ /___/ /_/ / / /_/ / /  (__  )
+;;	\____/\____/_/\____/_/  /____/
 ;;
 ;; Created By Aditya Shakya @adi1090x
 ;;
@@ -342,20 +342,20 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #7586BD
-shade2 = #F4511E
-shade3 = #FF5722
+shade1 = #C7B6A5
+shade2 = #ede6e1
+shade3 = #9B969B
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;
-;;	    __  ___          __      __         
+;;	    __  ___          __      __
 ;;	   /  |/  /___  ____/ /_  __/ /__  _____
 ;;	  / /|_/ / __ \/ __  / / / / / _ \/ ___/
-;;	 / /  / / /_/ / /_/ / /_/ / /  __(__  ) 
-;;	/_/  /_/\____/\__,_/\__,_/_/\___/____/  
+;;	 / /  / / /_/ / /_/ / /_/ / /  __(__  )
+;;	/_/  /_/\____/\__,_/\__,_/_/\___/____/
 ;;
 ;; Created By Aditya Shakya @adi1090x
 ;;
@@ -493,7 +493,7 @@ type = custom/script
 interval = 3
 
 format = <label>
-format-prefix =  : 
+format-prefix =  :
 ;format-background = ${color.shade6}
 ;format-foreground = ${color.fg-alt}
 format-padding = 1
@@ -570,11 +570,11 @@ ramp-signal-3 = 說
 ramp-signal-4 = 說
 
 
-#ramp-signal-1 = |
-#ramp-signal-2 = ||
-#ramp-signal-3 = |||
-#ramp-signal-4 = ||||
-#ramp-signal-5 = |||||
+#ramp-signal-1 = I
+#ramp-signal-2 = II
+#ramp-signal-3 = III
+#ramp-signal-4 = IV
+#ramp-signal-5 = V
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -675,7 +675,7 @@ format-disconnected = <label-disconnected>
 format-disconnected-padding = 0
 
 label-connected = 
-label-disconnected = 
+label-disconnected =
 
 ; Only applies if <ramp-signal> is used
 
@@ -685,13 +685,57 @@ label-disconnected =
 #ramp-signal-3 = 說
 #ramp-signal-4 = 說
 
+[module/ewmh]
+type = internal/xworkspaces
+
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+;reverse-scroll = false
+
+icon-0 = 1;
+format = <label-state>
+label-monitor = %name%
+
+
+label-active = %name%
+label-active-foreground = ${color.fg-alt}
+label-active-background = ${color.shade1}
+;label-active-underline= ${color.shade3}
+label-active-padding = 2
+
+
+
+label-occupied = %name%
+label-occupied-foreground = ${color.fg}
+label-occupied-background = ${color.bg}
+label-occupied-underline = ${color.shade3}
+label-occupied-padding = 2
+
+
+
+label-urgent = %name%
+label-urgent-foreground = {color.fg}
+label-urgent-background = {color.bg}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 2
+
+
+
+label-empty = %name%
+label-empty-foreground = ${color.fg}
+label-empty-background = ${color.bg}
+label-empty-padding = 2
+;format-foreground = #ABABAB
+;format-background = #101010
+
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
 ;;	   / ____/ __ \/ ____/
-;;	  / __/ / / / / /_    
-;;	 / /___/ /_/ / __/    
-;;	/_____/\____/_/       
+;;	  / __/ / / / / /_
+;;	 / /___/ /_/ / __/
+;;	/_____/\____/_/
 ;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

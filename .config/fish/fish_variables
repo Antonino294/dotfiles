@@ -19,10 +19,10 @@ SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_IP:dig\x20\x2bshort\x20myip\x2eopendns\x2ecom\x20\x40resolver1\x2eopendns\x2ecom\x20\x7c\x20lolcat\x20\x2da\x20\x2dt
 SETUVAR _fish_abbr_WT:curl\x20\x27v2\x2ewttr\x2ein/\x7eSolano\x2bInferiore\x3flang\x3dit\x27
 SETUVAR _fish_abbr_cam:ffmpeg\x20\x2dstream_loop\x20\x2d1\x20\x2dre\x20\x2di\x20output\x2emkv\x20\x20\x2df\x20v4l2\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuv420p\x20/dev/video0
-SETUVAR _fish_abbr_cam2:ffmpeg\x20\x2di\x20/dev/videoX\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuyv422\x20\x2dvsync\x200\x20\x2dmap\x200\x3av\x20\x2df\x20v4l2\x20\x20/dev/video0
+SETUVAR _fish_abbr_cam2:ffmpeg\x20\x2di\x20/dev/videoX\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuyv422\x20\x2dvsync\x200\x20\x2dmap\x200\x3av\x20\x2df\x20v4l2\x20/dev/video0
 SETUVAR _fish_abbr_cam3:ffmpeg\x20\x2dloop\x201\x20\x2dre\x20\x2di\x20image\x2ejpeg\x20\x20\x2df\x20v4l2\x20\x2dvcodec\x20rawvideo\x20\x2dpix_fmt\x20yuv420p\x20/dev/video0
-SETUVAR _fish_abbr_getcompose:rsync\x20\x2dauPe\x20ssh\x20antonino\x40192\x2e168\x2e1\x2e10\x3adocker\x2dcompose\x2eyml\x20Build\x2dFolder/docker\x2dcompose\x2eyml
-SETUVAR _fish_abbr_getmine:rsync\x20\x2dauvrPe\x20ssh\x20antonino\x40192\x2e168\x2e1\x2e10\x3aMinecraft/\x20Build\x2dFolder/minecraft\x2dbackup/
+SETUVAR _fish_abbr_getcompose:rsync\x20\x2dauPe\x20ssh\x20antonino\x40192\x2e168\x2e1\x2e191\x3adocker\x2dcompose\x2eyml\x20Build\x2dFolder/docker\x2dcompose\x2eyml
+SETUVAR _fish_abbr_getmine:rsync\x20\x2dauvrPe\x20ssh\x20antonino\x40192\x2e168\x2e1\x2e191\x3aMinecraft/\x20Build\x2dFolder/minecraft\x2dbackup/
 SETUVAR _fish_abbr_graphic:export\x20DISPLAY\x3d\x3a0
 SETUVAR _fish_abbr_ilossh:ssh\x20\x2doKexAlgorithms\x3d\x2bdiffie\x2dhellman\x2dgroup1\x2dsha1\x20Administrator\x40192\x2e168\x2e1\x2e11
 SETUVAR _fish_abbr_jf_2D_restart:sudo\x20systemctl\x20restart\x20jellyfin\x2eservice
@@ -32,9 +32,9 @@ SETUVAR _fish_abbr_lotto:shuf\x20\x2di\x201\x2d90\x20\x2dn\x205\x20\x7c\x20lolca
 SETUVAR _fish_abbr_phone:adb\x20connect\x20192\x2e168\x2e1\x2e12
 SETUVAR _fish_abbr_phone2:adb\x20connect\x20192\x2e168\x2e1\x2e11
 SETUVAR _fish_abbr_scrcpy:scrcpy\x20\x2db2M\x20\x2dm800\x20\x2d\x2dshortcut\x2dmod\x20lctrl\x2crctrl
-SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e10
+SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e191
 SETUVAR _fish_abbr_syncfoto:rsync\x20\x2dauvrPe\x20ssh\x20Immagini/Importante/\x2a\x20/media/antonino/eb4a5748\x2da9c9\x2d4896\x2da22e\x2de99ed5794954/home/antonino/Backup/Immagini/
-SETUVAR _fish_abbr_syncmusic:rsync\x20\x2dauvrPe\x20ssh\x20Musica/\x2a\x20antonino\x40192\x2e168\x2e1\x2e10\x3a/home/antonino/Musica/
+SETUVAR _fish_abbr_syncmusic:rsync\x20\x2dauvrPe\x20ssh\x20Musica/\x2a\x20antonino\x40192\x2e168\x2e1\x2e191\x3a/home/antonino/Musica/
 SETUVAR _fish_abbr_tickrs:tickrs\x20\x2dpxs\x20GME\x2cAMC\x2cPLTR\x2cSLV\x2cBB\x2cAG\x2cTSLA\x2cBTC\x2dUSD\x2cETH\x2dUSD
 SETUVAR _fish_abbr_upD:pkcon\x20refresh
 SETUVAR _fish_abbr_upG:pkcon\x20update
