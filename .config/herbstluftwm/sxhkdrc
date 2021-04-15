@@ -75,6 +75,18 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	brightnessctl set 5%-
         #brightlight -d 30
+	
+# control fan
+
+shift + XF86MonBrightnessUp
+	fanctrl +32
+
+shift + XF86MonBrightnessDown
+	fanctrl -32
+
+XF86WebCam
+	fanctrl auto
+
 
 # MPRIS controls
 
