@@ -132,7 +132,7 @@
 
 /* Frame limiter, set to the frames per second (FPS) desired or
    simply set to zero (or lower) to disable the frame limiter. */
-#request setframerate 60
+#request setframerate 80
 
 /* Suspends rendering if a fullscreen window is focused while
    GLava is still visible (ie. on another monitor). This prevents
@@ -149,7 +149,7 @@
    by pulseaudio, and require transformations to be re-applied
    (thus being a good measure of how much work your CPU has to
    perform over time) */
-#request setprintframes false
+#request setprintframes true
 
 /* PulseAudio sample buffer size. Lower values result in more
    frequent audio updates (also depends on sampling rate), but
@@ -179,7 +179,7 @@
    meaningless for visual purposes.
 */
 
-#request setsamplesize 512
+#request setsamplesize 1024
 
 /* Audio buffer size to be used for processing and shaders.
    Increasing this value can have the effect of adding 'gravity'
@@ -188,6 +188,7 @@
 
    This value has a _massive_ effect on FFT performance and
    quality for some modules. */
+
 #request setbufsize 4096
 
 /* PulseAudio sample rate. Lower values can add 'gravity' to
@@ -201,6 +202,7 @@
    This option does nothing when using the "fifo" audio
    backend. Instead, an ideal rate should be be configured
    in the application generating the output. */
+
 #request setsamplerate 22050
 
 /* Enable GPU acceleration of the audio buffer's fourier transform.

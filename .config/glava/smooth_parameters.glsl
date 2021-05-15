@@ -9,7 +9,7 @@
 
 /* The type of formula to use for weighting values when smoothing.
    Possible values:
-   
+
    - circular     heavily rounded points
    - sinusoidal   rounded at both low and high weighted values
                     like a sine wave
@@ -19,7 +19,7 @@
 #define ROUND_FORMULA sinusoidal
 
 /* The sampling mode for processing raw FFT input:
-   
+
    - average     averages all the inputs in the sample range for
                    a given point. Produces smooth output, but peaks
                    are not well represented
@@ -55,7 +55,7 @@
 /* How many frames to queue and run through the average function.
    Increasing this value will create latency between the audio and the
    animation, but will make for much smoother results. */
-#request setavgframes 5
+#request setavgframes 6
 
 /* Whether to window frames ran through the average function (new & old
    frames are weighted less). This massively helps smoothing out
@@ -64,7 +64,7 @@
 
 /* Gravity step, higher values means faster drops. The step is applied
    in a rate independant method like so:
-   
+
    val -= (gravitystep) * (seconds per update) */
 #request setgravitystep 3 * 1
 

@@ -1,0 +1,215 @@
+live-filter ACK KIRISHIMA      
+bind common mlb_click_bar player-pause
+bind mlb_click_bar player-pause
+colorscheme 1dark
+colorscheme test
+live-filter 
+refresh 
+set softvol=true
+live-filter
+live-filter 恢复
+set lib_sort=genre albumartist album tracknumber
+set lib_sort=genre album artist tracknumber
+set lib_sort=genre artist album tracknumber
+filter genre="*metal*"
+filter genre="*rock,metal*"
+filter genre="*rock*"&genre="*metal*"
+filter genre="*rock metal*"
+filter genre="*rock*"
+filter genre=*rock*
+filter genre=rock
+filter
+live-filter ~rock
+set lib_sort=genre album tracknumber
+filter ff
+live-filter moon tone
+filter 
+filter mo
+q
+set aaa_mode=album
+colorscheme cyan
+filter usion
+set auto_expand_albums_follow=true
+set auto_expand_albums_search=true
+set auto_expand_albums_selcur=true
+set auto_expand_albums_selcur=false
+set auto_expand_albums_search=false
+set auto_expand_albums_follow=false
+set confirm_run=true
+set confirm_run=false
+set follow=true
+set lib_sort=album tracknumber
+set lib_sort=artist album tracknumber
+set lib_sort=artist album discnumber tracknumber title
+set lib_sort=artist album discnumber tracknumber
+set lib_sort=22album discnumber tracknumber
+set lib_sort=album discnumber tracknumber
+set pl_sort=
+set show_current_bitrate=true
+set show_current_bitrate=false
+set auto_reshuffle=true
+set auto_reshuffle=false
+set play_sorted=true
+set play_sorted=false
+set play_library=true
+set play_library=false
+bind -f common 3 view playlist
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_current= %l - %02n. %t %= %{?show_current_bitrate & bitrate>=0? %{bitrate} kbps|%{codec}}
+set format_current= %l - %02n. %t %= %{?show_current_bitrate & bitrate>=0? %{bitrate} kbps|%{codec}
+set format_current= %l - %02n. %t %= %{bitrate}Kbps@%{codec} %{?show_current_bitrate & bitrate>=0? %{bitrate} kbps|%{codec}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? [ %{bitrate} kbps | %{codec} ] }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}%{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? [ %{bitrate} kbps | %{codec} ] }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? [ %{bitrate} kbps | %{codec} ] }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_current= %l - %02n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %l - %0n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %l - %n02. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %l - %n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %l - %a - %n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %l %a - %n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %a - %n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %A - %n. %t %= %{bitrate}Kbps@%{codec} 
+set format_current= %n. %t - %A %= %{bitrate}Kbps@%{codec} 
+set format_current= %n. %t - %l %= %{bitrate}Kbps@%{codec} 
+set format_current= %n. %t - %l %= %{bitrate}Kbps@%{codec}  
+set format_current= %n. %t - %l %= %{bitrate}Kbps@%{codec}
+set format_current= %t - %l %= %{bitrate}Kbps@%{codec}
+set format_current= %a - %l - %t%= %{bitrate}Kbps@%{codec}
+set format_current= %a - %l - %t%= %{bitrate}Kbps @%{codec}
+set format_current= %a - %l - %t%= %{bitrate}Kbps @ %{codec}
+set format_current= %a - %l - %t%= %{bitrate}Kbps
+ 5:35 - 155:38:05 vol: 100  [0 kbps]/[flac]                                                                                             all from library | CF  
+%a - %l - %t%= %{bitrate}Kbps
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps|%{codec} }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? [%{bitrate} kbps]/[%{codec}] }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? [%{bitrate} kbps] }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline=%{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
+set format_statusline=gparse/CHANGELOG.md
+set format_statusline= 
+set format_statusline= %%
+set format_statusline= DEFAULT
+set format_statusline= at %{bpm}BPM %= [%{bitrate} Kbps] [%{codec}]
+set format_statusline== at %{bpm}BPM %= [%{bitrate} Kbps] [%{codec}]
+set format_statusline=
+set format_statusline==
+set format_statusline
+set format_statusline==%s  at %{bpm} BPM %= [%{bitrate} Kbps] [%{codec}]
+unset format_statusline
+nset format_statusline==%s  at %{bpm} BPM %= [%{bitrate} Kbps]
+set format_statusline==  at %{bpm} BPM %= [%{bitrate} Kbps] [%{codec}]
+set format_current= %t - %l 
+set format_statusline== at %{bpm} %= [%{bitrate} Kbps] [%{codec}]
+set format_current= %t - %l %= [%{bitrate} Kbps] [%{codec}]
+set format_current= %t - %l %= [%{bitrate} Kbps] %{codec}
+set format_current= %t - %l %= [%{bitrate} Kbps]
+set format_current= %t - %a %= [%{bitrate} Kbps]
+set format_current= %t - %a - %= [%{bitrate} Kbps]
+set format_current= %t - %a - %t%= [%{bitrate} Kbps]
+set format_current= %a - %l - %t%= [%{bitrate} Kbps]
+set format_current= %a - %l - %t%= [%{bitrate}Kbps]
+set format_current= %a - %l - %t%= [%{bitrate}]Kbps
+set format_current= %a - %l - %02n. %= %{bitrate}Kbps
+set format_current= %a - %l - %02n. %t%= %{bitrate}Kbps
+set format_current= %n. %-30t %40F (%y)%= %d
+set format_current= %a - %l - %02n. %t%= %{bitrate}Kbp 
+set format_current= %a - %l - %02n. %t%= %{bitrate}Kbps 
+x
+bind -f common ^Y win-scroll-up
+set replaygain_limit=false
+filter F
+set mouse=false
+set mpris=true
+set mpris=false
+set mouse=true
+set status_display_program=
+set status_display_program=/home/antonino/Build-Folder/Scripts/tmuxcmus2.sh
+set show_current_bitrate=[true]
+set replaygain=album
+echo {}
+set output_plugin=pulse
+set replaygain=disabled
+set softvol=false
+set time_show_leading_zero=false
+set time_show_leading_zero=true
+set smart_artist_sort=true
+set smart_artist_sort=false
+set smart_artist_sort=falaw
+set show_playback_position=true
+set show_playback_position=false
+set scroll_offset=1
+echo %a
+echo $a
+echo {%a}
+bind common <key> raise-vte
+right-view
+clear 
+live-filter anubasu
+live-filter moon-
+live-filter Moon-Tone
+live-filt
+live-filter a
+li
+live-filter Epigra
+rand 
+colorscheme gruvbox
+filter rFfC
+bind common r toggle repeat
+unbind common r
+raise-vte
+bind common r repeat
+bind common R shell ~/Build-Folder/Scripts/cmusupd.sh
+unbind common R
+bind common R ~/Build-Folder/Scripts/cmusupd.sh
+bind R
+bind
+unbind ~/Build-Folder/Scripts/cmusupd.sh r
+unbind r
+unbind  ~/Build-Folder/Scripts/cmusupd.sh r
+unbind 'shell ~/Build-Folder/Scripts/cmusupd.sh' r
+unbind shell ~/Build-Folder/Scripts/cmusupd.sh r
+unbind 
+help
+e
+colorscheme jellybeans
+colorscheme onedark
+colorscheme night
+fe
+colorscheme groove_grove
+colorscheme illyria-dark
+colorscheme solarized-light
+colorscheme solarized-dark
+colorscheme gruvbox-alt
+colorscheme green-mono-88
+colorscheme tomorrow
+colorscheme zenburn
+colorscheme green
+colorscheme gray-88
+colorscheme dracula
+colorscheme default
+update-cache
+rm
+colorscheme theme
+colorscheme :q
+colorscheme xterm-white
+bind -f common r shell ~/Build-Folder/Scripts/cmusupd.sh
+a ~/Musica
+update-cache -f
+clear
+win-update-cache
+update-cache 
+set lib_sort="album discnumber tracknumber"
+set lib_sort=album
+set lib_sort
+set lib_sort 
+set lib_sort 1
+set lib_sort album
+set lib_sort album discnumber tracknumber
+bind -f common ^C :q
+shell 
+bind -f common x player-play
+toggle MPRIS
+mpris
+toggle mpris
+help colorscheme
+colorscheme 

@@ -1,4 +1,4 @@
-# reload config 
+# reload config
 
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -6,15 +6,15 @@ super + Escape
 # konsole
 
 super + shift + Return
-        konsole
+	konsole
 
 # launch menus
 
 super + @space
-        rofi -show drun -modi run,drun -show-icons
+	rofi -show drun -modi run,drun -show-icons
 
 super + shift + @space
-        bolt --rofi-search
+	bolt --rofi-search
 
 @Menu
 	/home/antonino/Build-Folder/Scripts/menu.sh
@@ -25,64 +25,64 @@ super + shift + @space
 #                feh --randomize --bg-fill ~/Immagini/Landscapes
 
 super + ctrl + shift + p
-        nitrogen --random --set-scaled Immagini/Landscapes/
+	nitrogen --random --set-scaled Immagini/Landscapes/
 
 super + ctrl + p
-        /home/antonino/Build-Folder/Scripts/wal.sh
+	/home/antonino/Build-Folder/Scripts/wal.sh
 #        nitrogen
 
 ## wifi
 
 super + alt + w
-        /home/antonino/Build-Folder/nmcli-rofi/nmcli-rofi
+	/home/antonino/Build-Folder/nmcli-rofi/nmcli-rofi
 
 ## lock
 
 ctrl + alt + l
-        betterlockscreen -l #-u -b 0.5 ~/Immagini/Landscapes/
+	betterlockscreen -l #-u -b 0.5 ~/Immagini/Landscapes/
 
 ## powermenu
 
 super + shift + p
-        rofi -show power-menu -modi power-menu:rofi-power-menu
+	rofi -show power-menu -modi power-menu:rofi-power-menu
 
 ## clight
 
 # adjust ambient
 
 super + alt + l
-        busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Capture "bb" false false && notify-send -t 1750 "Adjusting Backlight..."
+	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Capture "bb" false false && notify-send -t 1750 "Adjusting Backlight..."
 
 super + alt + P
-        busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" true && notify-send -t 3000 "Dimmer" "OFF"
+	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" true && notify-send -t 3000 "Dimmer" "OFF"
 
 super + alt + p
-        busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" false && notify-send -t 3000 "Dimmer" "ON"
+	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" false && notify-send -t 3000 "Dimmer" "ON"
 
 super + alt + B
-        busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" true  && notify-send -t 3000 "Backlight Calibration" "Off"
+	busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" true  && notify-send -t 3000 "Backlight Calibration" "Off"
 
 super + alt + b
-        busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false && notify-send -t 3000 "Backlight Calibration" "On"
+	busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false && notify-send -t 3000 "Backlight Calibration" "On"
 
 
 # control brightness
 
 XF86MonBrightnessUp
 	brightnessctl set 5%+
-        #brightlight -i 30
+	#brightlight -i 30
 
 XF86MonBrightnessDown
 	brightnessctl set 5%-
-        #brightlight -d 30
-	
+	#brightlight -d 30
+
 # control fan
 
-shift + XF86MonBrightnessUp
-	fanctrl +32
-
-shift + XF86MonBrightnessDown
-	fanctrl -32
+#shift + XF86MonBrightnessUp
+#	fanctrl +32
+#
+#shift + XF86MonBrightnessDown
+#	fanctrl -32
 
 XF86WebCam
 	fanctrl auto
@@ -91,138 +91,138 @@ XF86WebCam
 # MPRIS controls
 
 XF86AudioPlay
-       /home/antonino/Build-Folder/Scripts/play.sh play 
-       #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+	/home/antonino/Build-Folder/Scripts/play.sh play
+	#/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 XF86AudioNext
-        /home/antonino/Build-Folder/Scripts/play.sh next 
-        #/home/antonino/Build-Folder/Scripts/next.sh
+	/home/antonino/Build-Folder/Scripts/play.sh next
+	#/home/antonino/Build-Folder/Scripts/next.sh
 
 XF86AudioPrev
-        /home/antonino/Build-Folder/Scripts/play.sh prev 
-        #/home/antonino/Build-Folder/Scripts/prev.sh
+	/home/antonino/Build-Folder/Scripts/play.sh prev
+	#/home/antonino/Build-Folder/Scripts/prev.sh
 
-ctrl + shift + p 
-        /home/antonino/Build-Folder/Scripts/play.sh play 
-        #/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
+ctrl + shift + p
+	/home/antonino/Build-Folder/Scripts/play.sh play
+	#/home/antonino/Build-Folder/Scripts/play-pause.sh #playerctl play-pause
 
 ctrl + shift + l
-        /home/antonino/Build-Folder/Scripts/play.sh next 
-        #/home/antonino/Build-Folder/Scripts/next.sh #playerctl next
+	/home/antonino/Build-Folder/Scripts/play.sh next
+	#/home/antonino/Build-Folder/Scripts/next.sh #playerctl next
 
 ctrl + shift + j
-       /home/antonino/Build-Folder/Scripts/play.sh prev 
-       #/home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
+	/home/antonino/Build-Folder/Scripts/play.sh prev
+	#/home/antonino/Build-Folder/Scripts/prev.sh #playerctl previous
 
 ctrl + shift + m
-        /home/antonino/Build-Folder/Scripts/play.sh forw 
-        #/home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
+	/home/antonino/Build-Folder/Scripts/play.sh forw
+	#/home/antonino/Build-Folder/Scripts/forw.sh #playerctl position 10+
 
 ctrl + shift + n
-       /home/antonino/Build-Folder/Scripts/play.sh back 
-       #/home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
+	/home/antonino/Build-Folder/Scripts/play.sh back
+	#/home/antonino/Build-Folder/Scripts/back.sh #playerctl position 10-
 
 # volume control
 
 XF86AudioRaiseVolume
-        amixer -q sset Master 5%+
+	amixer -q sset Master 5%+
 
 XF86AudioLowerVolume
-        amixer -q sset Master 5%-
+	amixer -q sset Master 5%-
 
 XF86AudioMute
-        amixer -D pulse set Master 1+ toggle
+	amixer -D pulse set Master 1+ toggle
 
 # mic volume
 
 shift+XF86AudioRaiseVolume
-       amixer -q sset Master 5%+ 
+	amixer -q sset Master 5%+
 
 shift+XF86AudioLowerVolume
-        amixer -q sset Master 5%-
+	amixer -q sset Master 5%-
 
 shift+XF86AudioMute
-        pactl set-source-mute 1 toggle
+	pactl set-source-mute 1 toggle
 
 # move through desktops
 
 XF86Tools
-        xdotool key super+1
+	xdotool key super+1
 
 XF86Launch5
-        xdotool key super+2
+	xdotool key super+2
 
 XF86Launch6
-        xdotool key super+3
+	xdotool key super+3
 
 XF86Launch7
-        xdotool key super+4
+	xdotool key super+4
 
 XF86Launch8
-        xdotool key super+5
+	xdotool key super+5
 
 # restart compton
 
 #super + ctrl + c
-#        pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
+#   pkill compton ; compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf
 
 super + ctrl + c
-        pkill picom ; sleep 0.1 ;  picom --vsync
+	pkill picom ; sleep 0.1 ;  picom --vsync
 
 # bar
 
 super + b
-        polybar-msg cmd show && herbstclient pad 0 "29" "0" "0"
+	polybar-msg cmd show && herbstclient pad 0 "29" "0" "0"
 
 super + shift + b
-        polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0"
+	polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0"
 
 super + ctrl + b
-        kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
+	kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
 
 # float window
 
 super + s
-        herbstclient attr clients.focus.floating toggle && herbstclient emit_hook toggle
+	herbstclient attr clients.focus.floating toggle && herbstclient emit_hook toggle
 
 # toggle blur
 
 ctrl + alt + b
-        /home/antonino/Build-Folder/Scripts/toggleblur.sh && notify-send -t 1500 "Blur." "Blur Toggled."
+	/home/antonino/Build-Folder/Scripts/toggleblur.sh && notify-send -t 1500 "Blur." "Blur Toggled."
 
 # gap + pad controls
 
 super + plus
-        /home/antonino/Build-Folder/Scripts/gap.sh gap +
+	/home/antonino/Build-Folder/Scripts/gap.sh gap +
 
 super + minus
-        /home/antonino/Build-Folder/Scripts/gap.sh gap -
+	/home/antonino/Build-Folder/Scripts/gap.sh gap -
 
 super + BackSpace
-        herbstclient set window_gap 6
+	herbstclient set window_gap 6
 
 super + shift + plus
-       /home/antonino/Build-Folder/Scripts/gap.sh pad +
+	/home/antonino/Build-Folder/Scripts/gap.sh pad +
 
 super + shift + minus
-        /home/antonino/Build-Folder/Scripts/gap.sh pad -
+	/home/antonino/Build-Folder/Scripts/gap.sh pad -
 
 super + shift + BackSpace
-        herbstclient set frame_gap 6
+	herbstclient set frame_gap 6
 
 # eq settings
 
 super + ctrl + 1
-        /home/antonino/Build-Folder/Scripts/switcheq.sh 0
+	/home/antonino/Build-Folder/Scripts/switcheq.sh 0
 
 super + ctrl + 2
-        /home/antonino/Build-Folder/Scripts/switcheq.sh 1
+	/home/antonino/Build-Folder/Scripts/switcheq.sh 1
 
 super + ctrl + 4
-        /home/antonino/Build-Folder/Scripts/switcheq.sh 2
+	/home/antonino/Build-Folder/Scripts/switcheq.sh 2
 
 super + ctrl + 3
-        /home/antonino/Build-Folder/Scripts/switcheq.sh 3
+	/home/antonino/Build-Folder/Scripts/switcheq.sh 3
 
 # "layouts"
 

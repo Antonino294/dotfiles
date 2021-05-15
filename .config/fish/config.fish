@@ -48,13 +48,13 @@ abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.1
 
 abbr tickrs "tickrs -pxs GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
-abbr getcompose "rsync -auPe ssh antonino@192.168.1.191:docker-compose.yml Build-Folder/docker-compose.yml"
+abbr getcompose "rsync -auPe ssh antonino@192.168.1.191:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
 
-abbr getmine "rsync -auvrPe ssh antonino@192.168.1.191:Minecraft/ Build-Folder/minecraft-backup/"
+abbr getmine "rsync -auvrPe ssh antonino@192.168.1.191:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
 
-abbr syncmusic "rsync -auvrPe ssh Musica/* antonino@192.168.1.191:/home/antonino/Musica/"
+abbr syncmusic "rsync -auvrPe ssh /home/antonino/Musica/* antonino@192.168.1.191:/home/antonino/Musica/"
 
-abbr syncfoto "rsync -auvrPe ssh Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
+abbr syncfoto "rsync -auvrPe ssh /home/antonino/Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
 
 abbr srvr "ssh antonino@192.168.1.191"
 
@@ -66,7 +66,7 @@ alias cleck "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Sin
 
 #alias kb "cd ~/Build-Folder/Apps/ && ./OpenRGB_0.3_64_308bb6f9.AppImage --server & &&  ./Keyboard_Visualizer-x86_64.AppImage"
 
-alias kb "cd ~/Build-Folder/Apps/ && ./Keyboard_Visualizer-x86_64.AppImage"
+alias kb "~/Build-Folder/Apps/Keyboard_Visualizer-x86_64.AppImage"
 
 #alias deemix 'python3 /home/antonino/Build-Folder/deemix/server.py'
 
@@ -94,7 +94,7 @@ alias b "bolt --fzf-search"
 
 alias nnn "env TERM=xterm-256color nnn"
 
-alias glava 'glava --desktop &>/dev/null'
+#alias glava 'glava --desktop &>/dev/null'
 
 alias dotbare '/home/antonino/.dotbare/dotbare'
 
