@@ -1,5 +1,5 @@
 //  Nome File   :  <<filename>>
 //  Autore      :  Antonino Carbone
-//  Data        :  <<date>> 
+//  Data        :  <<date>>
 //  Descrizione :  DescrizioneInteressante
 
