@@ -245,3 +245,17 @@ ctrl + alt + c
 
 ctrl + alt + v
 	pkill glava
+
+# screenshots
+
+#Print
+#	scrot
+#
+#shift + Print
+#	scrot --line style=solid,width=2 --select
+
+Print
+	spectacle
+
+shift + Print
+	spectacle -r

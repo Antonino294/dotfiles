@@ -42,6 +42,7 @@ fi
 sed -i "s/eq[0-9]*.txt/$eqfile/" $eqdir/config
 
 gstat=$(pgrep -x glava)
+pkill -USR1 cava
 systemctl --user restart pulseaudio.service
 polybar-msg cmd restart > /dev/null 2>&1
 [[ -n "$gstat" ]] && glava --desktop
