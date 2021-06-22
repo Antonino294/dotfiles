@@ -48,15 +48,15 @@ abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.1
 
 abbr tickrs "tickrs -pxs GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
-abbr getcompose "rsync -auPe ssh antonino@192.168.1.191:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
+abbr getcompose "rsync -auPe ssh antonino@192.168.1.192:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
 
-abbr getmine "rsync -auvrPe ssh antonino@192.168.1.191:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
+abbr getmine "rsync -auvrPe ssh antonino@192.168.1.192:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
 
-abbr syncmusic "rsync -auvrPe ssh /home/antonino/Musica/* antonino@192.168.1.191:/home/antonino/Musica/"
+abbr syncmusic "rsync -auvrPe ssh /home/antonino/Musica/* antonino@192.168.1.192:/home/antonino/Musica/"
 
 abbr syncfoto "rsync -auvrPe ssh /home/antonino/Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
 
-abbr srvr "ssh antonino@192.168.1.191"
+abbr srvr "ssh antonino@192.168.1.192"
 
 # aliases
 
