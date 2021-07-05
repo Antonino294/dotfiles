@@ -6,10 +6,10 @@ mode=$(printf "fill\ncenter\ntile\nscale\nno-xinerama" | rofi -dmenu)
 
 feh --bg-"$mode" "$file"
 
-wal --backend wal -i "$file" -stne ||
+wal --backend wal -i "$file" -stne --saturate 0.5 ||
 wal --backend haishoku -i "$file" -stne ||
-wal --backend colorz -i "$file" -stne ||
-wal --backend colorthief -i "$file" -stne
+wal --backend colorz -i "$file" -stne --saturate 1.0 ||
+wal --backend colorthief -i "$file" -stne --saturate 1.0
 
 color1=$(grep '\*color13:' "$HOME"/.cache/wal/colors.Xresources | sed s/"*color13:  "//)
 color2=$(grep '\*color15:' "$HOME"/.cache/wal/colors.Xresources | sed s/"*color15:  "//)
@@ -50,3 +50,4 @@ pgrep -x glava && pkill -USR1 glava
 killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
 make install -C "$HOME"/Build-Folder/xmenu/
 pywalfox update > /dev/null 2>&1
+/home/antonino/Build-Folder/Scripts/waltauon.sh
