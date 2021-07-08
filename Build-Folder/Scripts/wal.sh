@@ -1,12 +1,16 @@
 #!/bin/sh
 xrdb -load .cache/wal/colors.Xresources
 
-file=$(ls -t -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto)
+case "$1" in
+	rand) file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) ;;
+	*) file=$(ls -t -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto) ;;
+esac
+
 mode=$(printf "fill\ncenter\ntile\nscale\nno-xinerama" | rofi -dmenu)
 
 feh --bg-"$mode" "$file"
 
-wal --backend wal -i "$file" -stne --saturate 0.5 ||
+wal --backend wal -i "$file" -stne --saturate 0.3 ||
 wal --backend haishoku -i "$file" -stne ||
 wal --backend colorz -i "$file" -stne --saturate 1.0 ||
 wal --backend colorthief -i "$file" -stne --saturate 1.0
@@ -50,4 +54,4 @@ pgrep -x glava && pkill -USR1 glava
 killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
 make install -C "$HOME"/Build-Folder/xmenu/
 pywalfox update > /dev/null 2>&1
-/home/antonino/Build-Folder/Scripts/waltauon.sh
+/home/antonino/Build-Folder/Scripts/waltauon.sh &

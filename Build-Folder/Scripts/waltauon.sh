@@ -21,9 +21,9 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 
 		s/.*gallery highlight/$color6 gallery highlight/g; \
 
-		s/.*seek bar/$color5,140 seek bar/g; \
+		s/.*seek bar/$color5,200 seek bar/g; \
 
-		s/.*volume bar/$color6,130 volume bar/g; \
+		s/.*volume bar/$color6,180 volume bar/g; \
 
 		s/.*music vis/$color3 music vis/g; \
 
@@ -32,5 +32,6 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 
 #sed -i -e "s/.*track playing/$color0 track playing/g" $src2
 #sed -i -e "s/.*playlist panel/$color1 playlist panel/g" $src2
+#ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
 
-ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
+ps -C tauonmb && xdotool search --sync --onlyvisible --class "Tauon Music Box" key F10
