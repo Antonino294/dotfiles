@@ -641,7 +641,7 @@ exec = ~/.config/polybar/scripts/layout.sh
 interval = 0.1
 
 format = <label>
-format-prefix = L:
+format-prefix = 禎 :
 format-padding = 2
 
 click-left = xdotool key --delay 0 alt+space
