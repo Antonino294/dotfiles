@@ -34,4 +34,4 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 #sed -i -e "s/.*playlist panel/$color1 playlist panel/g" $src2
 #ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
 
-ps -C tauonmb && xdotool search --sync --onlyvisible --class "Tauon Music Box" key F10
+ps -C tauonmb && ps -C xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" key F10
