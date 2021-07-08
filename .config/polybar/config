@@ -157,7 +157,7 @@ font-3 = Noto Sans CJK JP:size=8:antialias=true;0
 modules-left = ewmh
 ; mpd_i mpd
 modules-center = title
-modules-right = memory cpu alsa battery network wired-network date
+modules-right = layout memory cpu alsa battery network wired-network date
 ;; colors network
 
 ; The separator will be inserted between the output of each module
@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #599BDE
-shade2 = #e7cadf
-shade3 = #3486D6
+shade1 = #cf876f
+shade2 = #e6dad2
+shade3 = #c78357
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91
@@ -633,6 +633,22 @@ content-foreground = #CC6666
 content-padding = 2
 
 click-left = ~/.config/polybar/scripts/colors_rofi.sh &
+
+[module/layout]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/layout.sh
+interval = 0.1
+
+format = <label>
+format-prefix = L:
+format-padding = 2
+
+click-left = xdotool key --delay 0 alt+space
+
+;; click-left = herbstclient cycle_layout +1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/title]
 type = internal/xwindow

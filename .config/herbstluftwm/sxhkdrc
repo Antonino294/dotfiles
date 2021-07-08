@@ -39,7 +39,7 @@ super + alt + w
 ## lock
 
 ctrl + alt + l
-	betterlockscreen -l #-u -b 0.5 ~/Immagini/Landscapes/
+	betterlockscreen -l blur && betterlockscreen -u ~/Immagini/Landscapes/ #-u -b 0.5 ~/Immagini/Landscapes/
 
 ## powermenu
 
