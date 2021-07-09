@@ -25,7 +25,7 @@ super + shift + @space
 #                feh --randomize --bg-fill ~/Immagini/Landscapes
 
 super + ctrl + shift + p
-	nitrogen --random --set-scaled Immagini/Landscapes/
+	/home/antonino/Build-Folder/Scripts/wal.sh rand fill
 
 super + ctrl + p
 	/home/antonino/Build-Folder/Scripts/wal.sh

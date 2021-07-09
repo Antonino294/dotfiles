@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #cf876f
-shade2 = #e6dad2
-shade3 = #c78357
+shade1 = #dcd4bf
+shade2 = #e9e5d8
+shade3 = #d6cab3
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91
@@ -638,7 +638,7 @@ click-left = ~/.config/polybar/scripts/colors_rofi.sh &
 type = custom/script
 
 exec = ~/.config/polybar/scripts/layout.sh
-interval = 0.1
+interval = 0.3
 
 format = <label>
 format-prefix = 禎 :
@@ -647,6 +647,20 @@ format-padding = 2
 click-left = xdotool key --delay 0 alt+space
 
 ;; click-left = herbstclient cycle_layout +1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-cava.py -f 60 -b 12 -e ffffff -c stereo
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-redshift-temp]
+type = custom/script
+exec = ~/.config/polybar/scripts/redshift.sh
+interval = 60
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -6,7 +6,15 @@ case "$1" in
 	*) file=$(ls -t -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto) ;;
 esac
 
-mode=$(printf "fill\ncenter\ntile\nscale\nno-xinerama" | rofi -dmenu)
+case "$2" in
+	fill) mode=fill ;;
+	center) mode=center ;;
+	tile) mode=tile ;;
+	scale) mode=scale ;;
+	*) mode=$(printf "fill\ncenter\ntile\nscale" | rofi -dmenu) ;;
+esac
+
+#mode=$(printf "fill\ncenter\ntile\nscale\nno-xinerama" | rofi -dmenu)
 
 feh --bg-"$mode" "$file"
 
@@ -55,3 +63,4 @@ killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
 make install -C "$HOME"/Build-Folder/xmenu/
 pywalfox update > /dev/null 2>&1
 /home/antonino/Build-Folder/Scripts/waltauon.sh &
+#pkill picom ; picom --vsync --config .config/picom/picom.conf &

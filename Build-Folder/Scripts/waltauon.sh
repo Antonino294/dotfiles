@@ -27,11 +27,16 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 
 		s/.*music vis/$color3 music vis/g; \
 
-		s/.*track line/$color0 track line/g" \
+		s/.*track line/$color0 track line/g \
+
+		s/.*mini text 1/$color0 mini text 1/g \
+
+		s/.*mini text 2/$color6 mini text 2/g" \
 		"$HOME"/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/wal2.ttheme
 
 #sed -i -e "s/.*track playing/$color0 track playing/g" $src2
 #sed -i -e "s/.*playlist panel/$color1 playlist panel/g" $src2
 #ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
 
-ps -C tauonmb && ps -C xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" key F10
+export DISPLAY=:0
+ps -C tauonmb && ps -C xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" sleep 0.2 key F10
