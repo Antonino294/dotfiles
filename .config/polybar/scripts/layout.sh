@@ -1,6 +1,6 @@
 #!/bin/sh
 
-l=$(herbstclient layout | grep FOCUS | awk '{print $2}')
+l=$(herbstclient layout | awk '/FOCUS/{print $2}')
 
 case $l in
 	vertical:) echo  " 充" ;;

@@ -39,4 +39,4 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 #ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
 
 export DISPLAY=:0
-ps -C tauonmb && ps -C xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" sleep 0.2 key F10
+pgrep -x tauonmb > /dev/null && pgrep -x xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" sleep 0.2 key F10 >/dev/null

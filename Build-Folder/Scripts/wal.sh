@@ -1,12 +1,32 @@
 #!/bin/sh
 xrdb -load .cache/wal/colors.Xresources
 
-case "$1" in
-	rand) file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) ;;
+while getopts "hrm:b:" o; do
+	case "${o}" in
+		r) r_flag=1 ;;
+		m) m_flag="${OPTARG}" ;;
+		b) b_flag="${OPTARG}" ;;
+		h)
+			echo -e "usage: \
+			-h\tshow this message
+			-r\tchoose random image
+			-m\tchoose feh bg mode
+			-b\twal backend, check wal --backend"
+			exit 1
+			;;
+		*)
+			echo "oopsie doopsie you fucked up the arguments"
+			exit 1
+			;;
+	esac
+done
+
+case "$r_flag" in
+	1) file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) ;;
 	*) file=$(ls -t -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto) ;;
 esac
 
-case "$2" in
+case "$m_flag" in
 	fill) mode=fill ;;
 	center) mode=center ;;
 	tile) mode=tile ;;
@@ -14,14 +34,21 @@ case "$2" in
 	*) mode=$(printf "fill\ncenter\ntile\nscale" | rofi -dmenu) ;;
 esac
 
-#mode=$(printf "fill\ncenter\ntile\nscale\nno-xinerama" | rofi -dmenu)
+[ -z "$file" ] && file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1)
 
 feh --bg-"$mode" "$file"
 
-wal --backend wal -i "$file" -stne --saturate 0.3 ||
-wal --backend haishoku -i "$file" -stne ||
-wal --backend colorz -i "$file" -stne --saturate 1.0 ||
-wal --backend colorthief -i "$file" -stne --saturate 1.0
+case "$b_flag" in
+	wal) wal --backend wal -i "$file" -stne --saturate 0.4 ;;
+	haishoku) wal --backend haishoku -i "$file" -stne ;;
+	colorz) wal --backend colorz -i "$file" -stne --saturate 0.6 ;;
+	colorthief) wal --backend colorthief -i "$file" -stne --saturate 1.0 ;;
+
+	*)	wal --backend wal -i "$file" -stne --saturate 0.4 ||
+		wal --backend haishoku -i "$file" -stne ||
+		wal --backend colorz -i "$file" -stne --saturate 0.6 ||
+		wal --backend colorthief -i "$file" -stne --saturate 1.0 ;;
+esac
 
 color1=$(grep '\*color13:' "$HOME"/.cache/wal/colors.Xresources | sed s/"*color13:  "//)
 color2=$(grep '\*color15:' "$HOME"/.cache/wal/colors.Xresources | sed s/"*color15:  "//)
@@ -57,10 +84,13 @@ sed -i -e "s/background = \"#.*\"/background = \"$color3\"/g; \
 herbstclient attr theme.active.color "$color1"
 herbstclient attr theme.floating.active.color "$color1"
 herbstclient attr theme.normal.color "$color2"
+
 pgrep -x cava && pkill -USR1 cava
 pgrep -x glava && pkill -USR1 glava
-killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
-make install -C "$HOME"/Build-Folder/xmenu/
-pywalfox update > /dev/null 2>&1
-/home/antonino/Build-Folder/Scripts/waltauon.sh &
+
+make install -C "$HOME"/Build-Folder/xmenu/ >/dev/null
+pywalfox update >/dev/null 2>&1
+/home/antonino/Build-Folder/Scripts/waltauon.sh >/dev/null &
 #pkill picom ; picom --vsync --config .config/picom/picom.conf &
+
+killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
