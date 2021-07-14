@@ -101,6 +101,8 @@ alias dotbare '/home/antonino/.dotbare/dotbare'
 alias icat "kitty +kitten icat"
 
 alias ls "exa"
+
+alias clipstudio "wine /home/antonino/.wine/drive_c/Program\ Files/CELSYS/CLIP\ STUDIO\ 1.5/CLIP\ STUDIO\ PAINT/CLIPStudioPaint.exe"
 #alias ls "ls -Isnap"
 
 #alias ambient "color=(kcolorchooser --print) $HOME/Build-Folder/polychromatic/polychromatic-cli -d all -e static --rgb \#$color"

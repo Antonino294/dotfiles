@@ -21,8 +21,8 @@ pgrep -x xclickroot || xclickroot /home/antonino/Build-Folder/Scripts/menu.sh &
 pkill picom ; picom --vsync --config .config/picom/picom.conf &
 dunst &
 klipper &
-openrazer-daemon &
-jellyfin-mpv-shim &
+#openrazer-daemon &
+pkill jellyfin-mpv-shim ; jellyfin-mpv-shim &
 busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
 nmtui connect TIM-50257590 && sudo dhclient &
 #compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
@@ -155,9 +155,9 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 6
 
-hc attr theme.active.color '#dcd4bf'
-hc attr theme.floating.active.color '#dcd4bf'
-hc attr theme.normal.color '#e9e5d8'
+hc attr theme.active.color '#8b94cd'
+hc attr theme.floating.active.color '#8b94cd'
+hc attr theme.normal.color '#cbcede'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
@@ -195,7 +195,7 @@ hc rule title~'Discord Updater' floating=on
 hc rule title~'Sayonara Player' floating=on
 hc rule title~'sxiv' floating=on
 hc rule class~'scrcpy' floating=on
-hc rule class~'clipstudiopaint.exe' floating=on
+#hc rule class~'clipstudiopaint.exe' manage=off
 hc rule floatplacement=center
 
 

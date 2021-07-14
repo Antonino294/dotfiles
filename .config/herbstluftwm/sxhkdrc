@@ -25,10 +25,10 @@ super + shift + @space
 #                feh --randomize --bg-fill ~/Immagini/Landscapes
 
 super + ctrl + shift + p
-	/home/antonino/Build-Folder/Scripts/wal.sh -rm fill
+	wal.sh -rm fill
 
 super + ctrl + p
-	/home/antonino/Build-Folder/Scripts/wal.sh -m fill
+	wal.sh -m fill
 #        nitrogen
 
 ## wifi

@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #dcd4bf
-shade2 = #e9e5d8
-shade3 = #d6cab3
+shade1 = #8b94cd
+shade2 = #cbcede
+shade3 = #8898cc
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91
@@ -446,13 +446,33 @@ type = internal/cpu
 
 interval = 0.5
 
-format = <label>
+format = <ramp-load>
 format-prefix =  :
 ;format-background = ${color.shade5}
 ;format-foreground = ${color.fg-alt}
 format-padding = 1
 
 label = " %percentage%%"
+
+ramp-load-spacing = 0
+ramp-load-0 =" ▁"
+ramp-load-1 =" ▂"
+ramp-load-2 =" ▃"
+ramp-load-3 =" ▄"
+ramp-load-4 =" ▅"
+ramp-load-5 =" ▆"
+ramp-load-6 =" ▇"
+ramp-load-7 =" █"
+
+ramp-coreload-spacing = 0
+ramp-coreload-0 =" ▁"
+ramp-coreload-1 =" ▂"
+ramp-coreload-2 =" ▃"
+ramp-coreload-3 =" ▄"
+ramp-coreload-4 =" ▅"
+ramp-coreload-5 =" ▆"
+ramp-coreload-6 =" ▇"
+ramp-coreload-7 =" █"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -548,7 +568,7 @@ interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 ;format-connected-background = ${color.shade2}
 ;format-connected-foreground = ${color.fg-alt}
 format-connected-padding = 1
@@ -558,23 +578,23 @@ format-disconnected = <label-disconnected>
 ;format-disconnected-foreground = ${color.fg-alt}
 format-disconnected-padding = 1
 
-label-connected = %essid%
+label-connected = 說 %essid%
 label-disconnected = ﲁ
 
 ; Only applies if <ramp-signal> is used
 
-ramp-signal-0 = 說
+ramp-signal-0 = ̸̸說
 ramp-signal-1 = 說
 ramp-signal-2 = 說
 ramp-signal-3 = 說
 ramp-signal-4 = 說
 
 
-#ramp-signal-1 = I
-#ramp-signal-2 = II
-#ramp-signal-3 = III
-#ramp-signal-4 = IV
-#ramp-signal-5 = V
+;ramp-signal-1 = I
+;ramp-signal-2 = II
+;ramp-signal-3 = III
+;ramp-signal-4 = IV
+;ramp-signal-5 = V
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

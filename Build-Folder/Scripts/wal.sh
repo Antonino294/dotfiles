@@ -7,15 +7,15 @@ while getopts "hrm:b:" o; do
 		m) m_flag="${OPTARG}" ;;
 		b) b_flag="${OPTARG}" ;;
 		h)
-			echo -e "usage: \
-			-h\tshow this message
-			-r\tchoose random image
-			-m\tchoose feh bg mode
-			-b\twal backend, check wal --backend"
+			echo  "usage:"
+			echo  "  -h\tshow this message"
+			echo  "  -r\tchoose random image"
+			echo  "  -m\tchoose feh bg mode"
+			echo  "  -b\twal backend, check wal --backend"
 			exit 1
 			;;
 		*)
-			echo "oopsie doopsie you fucked up the arguments"
+			echo "Unknown option specified. Exiting..."
 			exit 1
 			;;
 	esac
