@@ -21,7 +21,7 @@ pgrep -x xclickroot || xclickroot /home/antonino/Build-Folder/Scripts/menu.sh &
 pkill picom ; picom --vsync --config .config/picom/picom.conf &
 dunst &
 klipper &
-#openrazer-daemon &
+openrazer-daemon &
 pkill jellyfin-mpv-shim ; jellyfin-mpv-shim &
 busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
 nmtui connect TIM-50257590 && sudo dhclient &
@@ -156,9 +156,9 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 6
 
-hc attr theme.active.color '#a86e48'
-hc attr theme.floating.active.color '#a86e48'
-hc attr theme.normal.color '#e4c7a6'
+hc attr theme.active.color '#4f99b3'
+hc attr theme.floating.active.color '#4f99b3'
+hc attr theme.normal.color '#d3d6d9'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
