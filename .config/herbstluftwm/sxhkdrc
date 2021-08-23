@@ -125,10 +125,10 @@ ctrl + shift + n
 # volume control
 
 XF86AudioRaiseVolume
-	amixer -q sset Master 5%+
+	amixer -q sset Master 2dB+
 
 XF86AudioLowerVolume
-	amixer -q sset Master 5%-
+	amixer -q sset Master 2dB-
 
 XF86AudioMute
 	amixer -D pulse set Master 1+ toggle

@@ -348,7 +348,7 @@ set -sg escape-time 0
 set -g base-index 1
 setw -g pane-base-index 1
 # terminal shite
-set -g default-terminal "tmux-256color"
+set -g default-terminal "tmux-256color" #tmux-256color
 set -ga terminal-overrides ",*256col*:Tc"
 set-option -g xterm-keys on
 ## COLORSCHEME: gruvbox dark
