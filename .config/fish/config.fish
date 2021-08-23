@@ -180,6 +180,7 @@ export NNN_PLUG='K:kdeconnect;P:preview-tui'
 
 export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"
+export GCM_CREDENTIAL_STORE="cache"
 
 # wal thing (no need with kitty)
 #cat ~/.cache/wal/sequences &
