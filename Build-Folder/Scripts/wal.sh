@@ -91,6 +91,7 @@ pgrep -x glava && pkill -USR1 glava
 
 make install -C "$HOME"/Build-Folder/xmenu/ >/dev/null
 pywalfox update >/dev/null 2>&1
-/home/antonino/Build-Folder/Scripts/waltauon.sh >/dev/null &
+$HOME/Build-Folder/Scripts/waltauon.sh >/dev/null &
+genzathurarc > "$HOME"/.config/zathura/zathurarc &
 
 killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."

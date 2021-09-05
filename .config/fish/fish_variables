@@ -35,7 +35,6 @@ SETUVAR _fish_abbr_scrcpy:scrcpy\x20\x2db2M\x20\x2dm800\x20\x2d\x2dshortcut\x2dm
 SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e192
 SETUVAR _fish_abbr_syncfoto:rsync\x20\x2dauvrPe\x20ssh\x20/home/antonino/Immagini/Importante/\x2a\x20/media/antonino/eb4a5748\x2da9c9\x2d4896\x2da22e\x2de99ed5794954/home/antonino/Backup/Immagini/
 SETUVAR _fish_abbr_syncmusic:rsync\x20\x2dauvrPe\x20ssh\x20/home/antonino/Musica/\x2a\x20antonino\x40192\x2e168\x2e1\x2e192\x3a/home/antonino/Musica/
-SETUVAR _fish_abbr_tickrs:tickrs\x20\x2dpxs\x20GME\x2cAMC\x2cPLTR\x2cSLV\x2cBB\x2cAG\x2cTSLA\x2cBTC\x2dUSD\x2cETH\x2dUSD
 SETUVAR _fish_abbr_upD:pkcon\x20refresh
 SETUVAR _fish_abbr_upG:pkcon\x20update
 SETUVAR _fish_abbr_wal:wal\x20\x2d\x2dbackend\x20colorz\x20

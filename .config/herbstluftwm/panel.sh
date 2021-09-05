@@ -15,3 +15,4 @@ else
 fi
 
 herbstclient pad 0 "29" "0" "0"
+herbstclient pad 1 "29" "0" "0"

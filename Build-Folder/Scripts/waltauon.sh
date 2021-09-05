@@ -1,5 +1,5 @@
 #!/bin/sh
-src=/home/antonino/.cache/wal/colors-putty.reg
+src=$HOME/.cache/wal/colors-putty.reg
 
 color0=$(grep "Colour0" $src | cut -d\" -f4)
 #color1=$(grep "Colour2\"" $src | cut -d\" -f4)

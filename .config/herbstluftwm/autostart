@@ -106,11 +106,17 @@ for i in ${!tag_names[@]} ; do
     fi
 done
 
-# cycle through tags
-hc keybind $Mod-period use_index +1 --skip-visible
-hc keybind $Mod-comma  use_index -1 --skip-visible
+# monitor
 
-hc keybind Control-Shift-d use_index +1 --skip-visible
+hc keybind $Mod-Alt-1	    shift_to_monitor 0
+hc keybind $Mod-Alt-2	    shift_to_monitor 1
+
+
+# cycle through tags
+hc keybind $Mod-period use_index +1
+hc keybind $Mod-comma  use_index -1
+
+hc keybind Control-Shift-d use_index +1
 
 
 
@@ -134,7 +140,7 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # focus
-#hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle +1
@@ -156,9 +162,9 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 6
 
-hc attr theme.active.color '#9c78c5'
-hc attr theme.floating.active.color '#9c78c5'
-hc attr theme.normal.color '#d7cede'
+hc attr theme.active.color '#81a7c8'
+hc attr theme.floating.active.color '#81a7c8'
+hc attr theme.normal.color '#e2eef5'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
@@ -224,3 +230,4 @@ panel=~/.config/herbstluftwm/panel.sh
 "$panel" 0 &
 
 hc pad 0 "29" "0" "0"
+hc pad 1 "29" "0" "0"

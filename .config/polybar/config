@@ -25,7 +25,7 @@ margin-top = 0
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+monitor = ${env:MONITOR:}
 
 ; Use the specified monitor as a fallback if the main one is not found.
 monitor-fallback =
@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #4f99b3
-shade2 = #d3d6d9
-shade3 = #488aa8
+shade1 = #81a7c8
+shade2 = #e2eef5
+shade3 = #5788b7
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91

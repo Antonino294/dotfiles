@@ -46,8 +46,6 @@ abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt y
 
 abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
 
-abbr tickrs "tickrs -pxs GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
-
 abbr getcompose "rsync -auPe ssh antonino@192.168.1.192:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
 
 abbr getmine "rsync -auvrPe ssh antonino@192.168.1.192:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
@@ -106,6 +104,14 @@ alias clipstudio "wine /home/antonino/.wine/drive_c/Program\ Files/CELSYS/CLIP\ 
 #alias ls "ls -Isnap"
 
 #alias ambient "color=(kcolorchooser --print) $HOME/Build-Folder/polychromatic/polychromatic-cli -d all -e static --rgb \#$color"
+
+alias youtube-dl "yt-dlp"
+
+alias tickrs "tickrs -pxs XMR-EUR,GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
+
+alias rand16 "head -c 512 /dev/urandom | base64 | head -c 20 | tr -d \[:punct:\] ; echo"
+
+alias rand32 "head -c 1024 /dev/urandom | base64 | shuf | head -c 64 | tr -d \[:punct:\] | shuf --random-source=(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1)"
 
 #Fisher Workaround
 if not functions -q fisher

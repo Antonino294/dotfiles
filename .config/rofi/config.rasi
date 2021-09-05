@@ -1,101 +1,73 @@
-/*
- * ROFI One Dark
- *
- * Based on OneDark.vim (https://github.com/joshdick/onedark.vim)
- *
- * Author: Benjamin Stauss
- * User: me-benni
- *
- */
-
+@import "~/.cache/wal/colors-rofi-dark"
 
 * {
-  black:      #000000;
-  red:        #eb6e67;
-  green:      #95ee8f;
-  yellow:     #f8c456;
-  blue:       #6eaafb;
-  mangenta:   #d886f3;
-  cyan:       #6cdcf7;
-  emphasis:   #3d3d3d;
-  text:       #dfdfdf;
-  text-alt:   #b2b2b2;
-  fg:         #abb2bf;
-  bg:         #232323;
-
-  spacing: 0;
-  background-color: transparent;
-
-  font: "FantasqueSansMono Nerd Font 14";
-  text-color: @text;
+	spacing: 0;
+	background-color: transparent;
+	font: "FantasqueSansMono Nerd Font 14";
+	text-color: @normal-foreground;
+	separatorcolor: transparent;
+	normal-background: transparent;
 }
 
-window {
-  transparency: "real";
-  fullscreen: false;
-  background-color: #232323dd;
-  //background-color: #151515dd;
+#window {
+	transparency: "real";
+	fullscreen: false;
+	background-color: @background;
+	border-radius: 4px;
 }
 
-mainbox {
-  padding: 4% 5%;
+#mainbox {
+	padding: 4% 5%;
 }
 
-inputbar {
-  margin: 0px 0px 20px 0px;
-  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+#inputbar {
+	margin: 0px 0px 20px 0px;
+	children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
-prompt {
-  text-color: @white;
+#prompt {
+	text-color: @normal-foreground;
 }
 
-textbox-prompt-colon {
-  expand: false;
-  str: ":";
-  text-color: @text-alt;
+#textbox-prompt-colon {
+	expand: false;
+	str: ":";
+	text-color: @normal-foreground;
 }
 
-entry {
-  margin: 0px 10px;
+#entry {
+	margin: 0px 10px;
 }
 
-listview {
-  spacing: 5px;
-  dynamic: true;
-  scrollbar: false;
+#listview {
+	spacing: 5px;
+	dynamic: true;
+	scrollbar: false;
 }
 
-element {
-  padding: 5px;
-  text-color: @text-alt;
-  highlight: bold #bbd5be; /* green */
-  border-radius: 0px;
+#element {
+	padding: 5px;
+	//highlight: bold #bbd5be; /* green */
+	border-radius: 2px;
+	border: 0px;
+	background-color: transparent;
 }
 
-element selected {
-  background-color: @emphasis;
-  text-color: @text;
+#element.normal.normal {
+	background-color: transparent;
+	text-color: @normal-foreground;
 }
 
-element urgent, element selected urgent {
-  text-color: @red;
+element alternate.normal {
+	background-color: transparent;
+	text-color: @normal-foreground;
 }
 
-element active, element selected active {
-  text-color: @purple;
+element-text {
+	cursor:           inherit;
+	highlight:        inherit;
+	text-color:       inherit;
 }
 
-message {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
-  border: 1px;
-  border-color: @cyan;
-}
 
-button selected {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
-}
+
