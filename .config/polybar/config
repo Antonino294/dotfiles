@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #81a7c8
-shade2 = #e2eef5
-shade3 = #5788b7
+shade1 = #be69aa
+shade2 = #ddcddb
+shade3 = #b450ab
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91

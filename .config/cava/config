@@ -89,7 +89,7 @@ method = ncurses
 # 'stereo' mirrors both channels with low frequencies in center.
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
-channels = stereo
+channels = mono
 mono_option = average
 
 # Raw output target. A fifo will be created if target does not exist.
@@ -128,8 +128,8 @@ foreground = '#28a745'
 #gradient_color_1 = '#4568dc'
 #gradient_color_2 = '#b06ab3'
 
- gradient_color_1 = '#4f99b3'
- gradient_color_2 = '#d3d6d9'
+ gradient_color_1 = '#be69aa'
+ gradient_color_2 = '#ddcddb'
 
 
 [smoothing]

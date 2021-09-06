@@ -9,51 +9,54 @@
 	normal-background: transparent;
 }
 
-#window {
+window {
 	transparency: "real";
 	fullscreen: false;
 	background-color: @background;
-	border-radius: 4px;
+	border-radius: 0.8%;
+	padding: 8;
 }
 
-#mainbox {
+mainbox {
 	padding: 4% 5%;
 }
 
-#inputbar {
+inputbar {
 	margin: 0px 0px 20px 0px;
+	padding: 0px;
 	children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
-#prompt {
+prompt {
 	text-color: @normal-foreground;
 }
 
-#textbox-prompt-colon {
+textbox-prompt-colon {
 	expand: false;
 	str: ":";
 	text-color: @normal-foreground;
+	margin:     0px 0.3000em 0.0000em 0.0000em ;
 }
 
-#entry {
-	margin: 0px 10px;
+entry {
+	margin: 0px 0px;
 }
 
-#listview {
+listview {
 	spacing: 5px;
 	dynamic: true;
 	scrollbar: false;
 }
 
-#element {
+element {
 	padding: 5px;
-	//highlight: bold #bbd5be; /* green */
 	border-radius: 2px;
 	border: 0px;
 	background-color: transparent;
+	cursor: default;
 }
 
-#element.normal.normal {
+element.normal.normal {
 	background-color: transparent;
 	text-color: @normal-foreground;
 }
@@ -63,11 +66,42 @@ element alternate.normal {
 	text-color: @normal-foreground;
 }
 
-element-text {
-	cursor:           inherit;
-	highlight:        inherit;
-	text-color:       inherit;
+element-icon {
+	size: 1.05em;
+	cursor: pointer;
 }
 
+element.normal.urgent {
+	background-color: @urgent-background;
+	text-color: @urgent-foreground;
+}
 
+element.normal.active {
+	background-color: @active-background;
+	text-color: @active-foreground;
+}
 
+element.selected.normal {
+	background-color: @selected-normal-background;
+	text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+	background-color: @selected-urgent-background;
+	text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+	background-color: @selected-active-background;
+	text-color: @selected-active-foreground;
+}
+
+element.alternate.urgent {
+	background-color: @alternate-urgent-background;
+	text-color: @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+	background-color: @alternate-active-background;
+	text-color: @alternate-active-foreground;
+}

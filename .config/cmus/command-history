@@ -1,3 +1,4 @@
+colorscheme 
 live-filter ACK KIRISHIMA      
 bind common mlb_click_bar player-pause
 bind mlb_click_bar player-pause
@@ -212,4 +213,3 @@ toggle MPRIS
 mpris
 toggle mpris
 help colorscheme
-colorscheme 
