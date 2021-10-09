@@ -27,8 +27,6 @@ sed -i -e "	s/.*track artist/$color6 track artist/g; \
 
 #sed -i -e "s/.*track playing/$color0 track playing/g" $src2
 #sed -i -e "s/.*playlist panel/$color1 playlist panel/g" $src2
-#ps -C tauonmb && d=$(xdotool get_desktop) && xdotool search --class "Tauon Music Box" windowactivate sleep 0.35 key --window %@ F10 set_desktop "$d"
 
 export DISPLAY=:0
-#pgrep -x tauonmb > /dev/null && pgrep -x xdotool || xdotool search --sync --onlyvisible --class "Tauon Music Box" sleep 0.3 key F10 >/dev/null
 pgrep -x xdotool > /dev/null || { pgrep -x tauonmb && xdotool search --sync --onlyvisible --class "Tauon Music Box" sleep 0.3 key F10 >/dev/null; }

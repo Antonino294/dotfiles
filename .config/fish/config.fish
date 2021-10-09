@@ -46,17 +46,21 @@ abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt y
 
 abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
 
-abbr getcompose "rsync -auPe ssh antonino@192.168.1.192:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
+abbr getcompose "rsync -auP -e 'ssh -p 44619' antonino@192.168.1.192:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
 
-abbr getmine "rsync -auvrPe ssh antonino@192.168.1.192:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
+abbr getmine "rsync -auvrP -e 'ssh -p 44619' antonino@192.168.1.192:Minecraft/ /home/antonino/Build-Folder/minecraft-backup/"
 
-abbr syncmusic "rsync -auvrPe ssh /home/antonino/Musica/* antonino@192.168.1.192:/home/antonino/Musica/"
+abbr syncmusic "rsync -auvrP -e 'ssh -p 44619' /home/antonino/Musica/* antonino@192.168.1.192:/home/antonino/Musica/"
 
-abbr syncfoto "rsync -auvrPe ssh /home/antonino/Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
+abbr syncfoto "rsync -auvrP -e 'ssh -p 44619' /home/antonino/Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
 
 abbr srvr "ssh antonino@192.168.1.192"
 
+abbr pix "wget --referer='https://pixiv.net' "
+
 # aliases
+
+alias burp "java --illegal-access=permit -noverify -javaagent:'$HOME/Build-Folder/Burp Suite Pro/burploader.jar' -jar '$HOME/Build-Folder/Burp Suite Pro/burpsuite_pro_v2021.8.4.jar' 2>/dev/null"
 
 alias clack "export DISPLAY=:0 && xdotool key --window 'Minecraft\* 1.15.2 - Singleplayer' Escape mousedown --window 'Minecraft\* 1.15.2 - Singleplayer' 3"
 
@@ -106,6 +110,8 @@ alias clipstudio "wine /home/antonino/.wine/drive_c/Program\ Files/CELSYS/CLIP\ 
 #alias ambient "color=(kcolorchooser --print) $HOME/Build-Folder/polychromatic/polychromatic-cli -d all -e static --rgb \#$color"
 
 alias youtube-dl "yt-dlp"
+
+alias less "less -S"
 
 alias tickrs "tickrs -pxs XMR-EUR,GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
@@ -177,6 +183,7 @@ set -gx PATH $PATH /home/antonino/.local/kitty.app/bin/
 set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
 set -gx PATH $PATH /home/antonino/.gdrive-downloader/bin/
 set -gx PATH $PATH /home/antonino/Build-Folder/jdk-14.0.2+12-jre/bin/
+set -gx PATH $PATH /home/antonino/.nexustools/
 
 set -gx EDITOR nvim
 

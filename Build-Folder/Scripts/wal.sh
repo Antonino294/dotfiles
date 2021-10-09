@@ -7,15 +7,15 @@ while getopts "hrm:b:" o; do
 		m) m_flag="${OPTARG}" ;;
 		b) b_flag="${OPTARG}" ;;
 		h)
-			echo  "usage:"
-			echo  "  -h\tshow this message"
-			echo  "  -r\tchoose random image"
-			echo  "  -m\tchoose feh bg mode (fill/center/tile/scale)"
-			echo  "  -b\twal backend (wal/haishoku/colorz/colorthief)"
-			exit 1
+			printf  "usage:\n"
+			printf  " -h\tshow this message\n"
+			printf  " -r\tchoose random image\n"
+			printf  " -m\tchoose feh bg mode (fill/center/tile/scale)\n"
+			printf  " -b\twal backend (wal/haishoku/colorz/colorthief)\n"
+			exit 0
 			;;
 		*)
-			echo "Unknown option specified. Exiting..."
+			printf "Unknown option specified. Exiting...\n"
 			exit 1
 			;;
 	esac
@@ -45,13 +45,15 @@ case "$b_flag" in
 	colorz) wal --backend colorz -i "$file" -stne --saturate 0.6 -q ;;
 	colorthief) wal --backend colorthief -i "$file" -stne --saturate 1.0 -q ;;
 
-	*)	wal --backend wal -i "$file" -stne --saturate 0.4 -q ||
+	auto)	wal --backend wal -i "$file" -stne --saturate 0.4 -q ||
 		wal --backend haishoku -i "$file" -stne -q ||
 		wal --backend colorz -i "$file" -stne --saturate 0.6 -q ||
 		wal --backend colorthief -i "$file" -stne -q ;;
+
+	*) wal --backend $(printf "wal\nhaishoku\ncolorz\ncolorthief" | rofi -dmenu) -i "$file" -stne --saturate 0.4 -q;;
 esac
 
-. $HOME/.cache/wal/colors.sh
+. "$HOME"/.cache/wal/colors.sh
 
 sed -i -e "s/#define color1 #.*/#define color1 $color15/g; \
 	s/#define color2 #.*/#define color2 $color13/g" \
@@ -76,19 +78,21 @@ sed -i -e "s/hc attr theme.active.color .*/hc attr theme.active.color \'$color13
 	"$HOME"/.config/herbstluftwm/autostart
 
 sed -i -e "s/background = \"#.*\"/background = \"$color0\"/g; \
-	s/frame_color = \"#.*\"/frame_color = \"$color13\"/g" \
+	s/frame_color = \"#.*\"/frame_color = \"$color13\"/g; \
+	s/highlight = \"#.*\"/highlight = \"$color15\"/g" \
 	"$HOME"/.config/dunst/dunstrc
 
 herbstclient attr theme.active.color "$color13"
 herbstclient attr theme.floating.active.color "$color13"
 herbstclient attr theme.normal.color "$color15"
 
-pgrep -x cava && pkill -USR1 cava
-pgrep -x glava && pkill -USR1 glava
+pgrep -x cava >/dev/null && pkill -USR1 cava
+pgrep -x glava >/dev/null && pkill -USR1 glava
 
 make install -C "$HOME"/Build-Folder/xmenu/ >/dev/null
 pywalfox update >/dev/null
-$HOME/Build-Folder/Scripts/waltauon.sh >/dev/null &
+"$HOME"/Build-Folder/Scripts/waltauon.sh >/dev/null &
 genzathurarc > "$HOME"/.config/zathura/zathurarc &
 
-killall dunst ; notify-send -t 2500 "Reload Complete." "Applied changes."
+#pkill dunst ; { dunst & disown; } && dunstify -t 2500 "Reload Complete." "Applied changes."
+pkill dunst ; nohup dunst >/dev/null 2>&1 & sleep 0.10 && dunstify -t 2500 "Reload Complete." "Applied changes." # <- what in the fuck is this

@@ -11,10 +11,7 @@ super + shift + Return
 # launch menus
 
 super + @space
-	rofi -show drun -modi run,drun -show-icons
-
-super + shift + @space
-	bolt --rofi-search
+	rofi -show drun -modi drun,filebrowser,window,run -show-icons
 
 @Menu
 	/home/antonino/Build-Folder/Scripts/menu.sh
@@ -25,10 +22,10 @@ super + shift + @space
 #                feh --randomize --bg-fill ~/Immagini/Landscapes
 
 super + ctrl + shift + p
-	wal.sh -rm fill
+	wal.sh -rm fill -b auto
 
 super + ctrl + p
-	wal.sh -m fill
+	wal.sh -m fill -b auto
 #        nitrogen
 
 ## wifi
@@ -51,29 +48,31 @@ super + shift + p
 # adjust ambient
 
 super + alt + l
-	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Capture "bb" false false && notify-send -t 1750 "Adjusting Backlight..."
+	busctl --user call org.clight.clight /org/clight/clight org.clight.clight Capture "bb" false false && notify-send -t 1750 "Adjusting Backlight..."
 
 super + alt + P
-	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" true && notify-send -t 3000 "Dimmer" "OFF"
+	busctl --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" true && notify-send -t 3000 "Dimmer" "OFF"
 
 super + alt + p
-	busctl --expect-reply=false --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" false && notify-send -t 3000 "Dimmer" "ON"
+	busctl --user call org.clight.clight /org/clight/clight org.clight.clight Inhibit "b" false && notify-send -t 3000 "Dimmer" "ON"
 
 super + alt + B
-	busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" true  && notify-send -t 3000 "Backlight Calibration" "Off"
+	busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" true  && notify-send -t 3000 "Backlight Calibration" "Off"
 
 super + alt + b
-	busctl --expect-reply=false --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false && notify-send -t 3000 "Backlight Calibration" "On"
+	busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false && notify-send -t 3000 "Backlight Calibration" "On"
 
 
 # control brightness
 
 XF86MonBrightnessUp
-	brightnessctl set 5%+
+	busctl --user call org.clight.clight /org/clight/clight org.clight.clight IncBl d 0.05
+	#brightnessctl set 5%+
 	#brightlight -i 30
 
 XF86MonBrightnessDown
-	brightnessctl set 5%-
+	busctl --user call org.clight.clight /org/clight/clight org.clight.clight DecBl d 0.05
+	#brightnessctl set 5%-
 	#brightlight -d 30
 
 # control fan
@@ -125,10 +124,10 @@ ctrl + shift + n
 # volume control
 
 XF86AudioRaiseVolume
-	amixer -q sset Master 2dB+
+	amixer -q sset Master 2dB+ && "$HOME"/Build-Folder/Scripts/vol.sh
 
 XF86AudioLowerVolume
-	amixer -q sset Master 2dB-
+	amixer -q sset Master 2dB- && "$HOME"/Build-Folder/Scripts/vol.sh
 
 XF86AudioMute
 	amixer -D pulse set Master 1+ toggle

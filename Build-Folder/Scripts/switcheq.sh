@@ -13,14 +13,14 @@ if [[ $1 == 1 || $1 == M40X || $1 == m40 || $1 == headphones ]]; then
 	amixer -q sset Master 75
 	headphones=1
 
-elif [[ $1 == 2 || $1 == T2 || $1 == tin || $1 == t2 ]]; then
-	echo "TinAudio T2."
+elif [[ $1 == 3 || $1 == T2B || $1 == tinB || $1 == t2B ]]; then
+	echo "TinAudio T2"
 	notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">Tin T2</span></b>"
-	amixer -q sset Master 70
+	amixer -q sset Master 75%
 	headphones=2
 
-elif [[ $1 == 3 || $1 == T2B || $1 == tinB || $1 == t2B ]]; then
-	echo "TinAudio T2 (Alt)."
+elif [[ $1 == 2 || $1 == T2 || $1 == tin || $1 == t2 ]]; then
+	echo "TinAudio T2. (Alt)."
 	notify-send -t 2000 "EQ Settings" "EQ Settings changed to <b><span foreground=\"#ff4a52\">Tin T2 (Alt)</span></b>"
 	amixer -q sset Master 70
 	headphones=3
