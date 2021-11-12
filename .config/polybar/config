@@ -342,9 +342,9 @@ fg-alt = #121314
 
 alpha = #98000000
 
-shade1 = #d0b893
-shade2 = #f2efdf
-shade3 = #c5ac79
+shade1 = #ac4aac
+shade2 = #debaba
+shade3 = #9145a0
 shade4 = #FF7043
 shade5 = #FF8A65
 shade6 = #FFAB91
@@ -481,7 +481,7 @@ type = internal/date
 
 interval = 1.0
 
-time = %a %H:%M
+time = %a %H:%M:%S
 time-alt =   %d/%m/%Y
 
 format = <label>

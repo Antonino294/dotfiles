@@ -178,10 +178,7 @@ cue:///home/antonino/Musica/[Demetori]/2018.08.10 [DECD-0013] 瑰狂鬱嵂 [C94]
 /home/antonino/Musica/Mittsies - Helltaker OST/08. Vitality (VIP Edit).flac
 /home/antonino/Musica/Mittsies - Helltaker OST/09. Epitomize (Sinner's VIP).flac
 /home/antonino/Musica/Mittsies - Helltaker OST/10. Brimstone.flac
-/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Missing The Affection/Moon-Tone - Missing The Affection.flac
-/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Glow/Moon-Tone - Glow.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Alone With You/Moon-Tone - Alone With You.flac
-/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Watching You Grow/Moon-Tone - Watching You Grow.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - AltarNations/Moon-Tone - AltarNations - 01 Invoking the Senses.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - AltarNations/Moon-Tone - AltarNations - 02 Arorua.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - AltarNations/Moon-Tone - AltarNations - 03 Soul Light.flac
@@ -307,6 +304,7 @@ cue:///home/antonino/Musica/[Demetori]/2018.08.10 [DECD-0013] 瑰狂鬱嵂 [C94]
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Ghost Writers/Moon-Tone - Ghost Writers - 08 Nuclear Medicine.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Ghost Writers/Moon-Tone - Ghost Writers - 09 Wednesdays Weekend.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Ghost Writers/Moon-Tone - Ghost Writers - 10 Missing Midnight.flac
+/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Glow/Moon-Tone - Glow.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Hiphop Mix of UFO/Moon-Tone - Hiphop Mix of UFO - 01 Captain of Style.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Hiphop Mix of UFO/Moon-Tone - Hiphop Mix of UFO - 02 Life Ruined.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Hiphop Mix of UFO/Moon-Tone - Hiphop Mix of UFO - 03 Rain On My Hood.flac
@@ -343,6 +341,7 @@ cue:///home/antonino/Musica/[Demetori]/2018.08.10 [DECD-0013] 瑰狂鬱嵂 [C94]
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Macabre Beats/Moon-Tone - Macabre Beats - 04 Macabre 4.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Macabre Beats/Moon-Tone - Macabre Beats - 05 Macabre 5.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Macabre Beats/Moon-Tone - Macabre Beats - 06 Macabre 6.flac
+/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Missing The Affection/Moon-Tone - Missing The Affection.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Someday You'll Shine/Moon-Tone - Someday You'll Shine - 01 Someday You'll Shine.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Someday You'll Shine/Moon-Tone - Someday You'll Shine - 02 Watashi No Mono.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Someday You'll Shine/Moon-Tone - Someday You'll Shine - 03 Anata No Mono.flac
@@ -424,6 +423,7 @@ cue:///home/antonino/Musica/[Demetori]/2018.08.10 [DECD-0013] 瑰狂鬱嵂 [C94]
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Unreleased Beats/Moon-Tone - Unreleased Beats - 11 Grateful deaf Lofi.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Unreleased Beats/Moon-Tone - Unreleased Beats - 12 Uncertain Times.flac
 /home/antonino/Musica/[Moon-Tone]/Moon-Tone - Unreleased Beats/Moon-Tone - Unreleased Beats - 13 Corana Beats.flac
+/home/antonino/Musica/[Moon-Tone]/Moon-Tone - Watching You Grow/Moon-Tone - Watching You Grow.flac
 /home/antonino/Musica/SPACELECTRO/SPACELECTRO - TOHO INST EDM10 -The 10th Anniversary (FLAC)/01. Spacelectro - TOHO INST EDM10 -The 10th Anniversary-  東方インストEDM10 DISC1 15Track.flac
 /home/antonino/Musica/SPACELECTRO/SPACELECTRO - TOHO INST EDM10 -The 10th Anniversary (FLAC)/02. Spacelectro - TOHO INST EDM10 -The 10th Anniversary-  東方インストEDM10 DISC2 15Track.flac
 /home/antonino/Musica/SPACELECTRO/SPACELECTRO - TOHO INST EDM10 -The 10th Anniversary (FLAC)/03. Spacelectro - TOHO INST EDM10 -The 10th Anniversary-  Check This Out.flac

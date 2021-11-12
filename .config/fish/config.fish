@@ -54,7 +54,7 @@ abbr syncmusic "rsync -auvrP -e 'ssh -p 44619' /home/antonino/Musica/* antonino@
 
 abbr syncfoto "rsync -auvrP -e 'ssh -p 44619' /home/antonino/Immagini/Importante/* /media/antonino/eb4a5748-a9c9-4896-a22e-e99ed5794954/home/antonino/Backup/Immagini/"
 
-abbr srvr "ssh antonino@192.168.1.192"
+abbr srvr "ssh antonino@192.168.1.192 -p 44619"
 
 abbr pix "wget --referer='https://pixiv.net' "
 
@@ -79,8 +79,6 @@ alias deezer 'export DISPLAY=:0 && python3 /home/antonino/Build-Folder/deemix-py
 #alias gotop "ytop"
 
 alias gotop "btm --battery -cgl"
-
-alias btop "bpytop"
 
 alias cava "env TERM=xterm-256color cava"
 

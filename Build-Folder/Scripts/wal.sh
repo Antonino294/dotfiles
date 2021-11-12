@@ -50,10 +50,10 @@ case "$b_flag" in
 		wal --backend colorz -i "$file" -stne --saturate 0.6 -q ||
 		wal --backend colorthief -i "$file" -stne -q ;;
 
-	*) wal --backend $(printf "wal\nhaishoku\ncolorz\ncolorthief" | rofi -dmenu) -i "$file" -stne --saturate 0.4 -q;;
+	*) wal --backend "$(printf "wal\nhaishoku\ncolorz\ncolorthief" | rofi -dmenu)" -i "$file" -stne --saturate 0.4 -q;;
 esac
 
-. "$HOME"/.cache/wal/colors.sh
+. $HOME/.cache/wal/colors.sh
 
 sed -i -e "s/#define color1 #.*/#define color1 $color15/g; \
 	s/#define color2 #.*/#define color2 $color13/g" \
@@ -92,6 +92,7 @@ pgrep -x glava >/dev/null && pkill -USR1 glava
 make install -C "$HOME"/Build-Folder/xmenu/ >/dev/null
 pywalfox update >/dev/null
 "$HOME"/Build-Folder/Scripts/waltauon.sh >/dev/null &
+"$HOME"/Build-Folder/Scripts/walbtop.sh >/dev/null &
 genzathurarc > "$HOME"/.config/zathura/zathurarc &
 
 #pkill dunst ; { dunst & disown; } && dunstify -t 2500 "Reload Complete." "Applied changes."

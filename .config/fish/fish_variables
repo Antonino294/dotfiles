@@ -34,7 +34,7 @@ SETUVAR _fish_abbr_phone:adb\x20connect\x20192\x2e168\x2e1\x2e177
 SETUVAR _fish_abbr_phone2:adb\x20connect\x20192\x2e168\x2e1\x2e11
 SETUVAR _fish_abbr_pix:wget\x20\x2d\x2dreferer\x3d\x27https\x3a//pixiv\x2enet\x27\x20
 SETUVAR _fish_abbr_scrcpy:scrcpy\x20\x2db2M\x20\x2dm800\x20\x2d\x2dshortcut\x2dmod\x20lctrl\x2crctrl
-SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e192
+SETUVAR _fish_abbr_srvr:ssh\x20antonino\x40192\x2e168\x2e1\x2e192\x20\x2dp\x2044619
 SETUVAR _fish_abbr_syncfoto:rsync\x20\x2dauvrP\x20\x2de\x20\x27ssh\x20\x2dp\x2044619\x27\x20/home/antonino/Immagini/Importante/\x2a\x20/media/antonino/eb4a5748\x2da9c9\x2d4896\x2da22e\x2de99ed5794954/home/antonino/Backup/Immagini/
 SETUVAR _fish_abbr_syncmusic:rsync\x20\x2dauvrP\x20\x2de\x20\x27ssh\x20\x2dp\x2044619\x27\x20/home/antonino/Musica/\x2a\x20antonino\x40192\x2e168\x2e1\x2e192\x3a/home/antonino/Musica/
 SETUVAR _fish_abbr_upD:pkcon\x20refresh

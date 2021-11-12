@@ -1,7 +1,8 @@
 #!/bin/sh
 BAT="$(acpi -i | head -n1 | awk '{print $4}')"
 VOL="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')"
-BRI="$(brightnessctl i | grep % | sed 's/.*(\(.*\))/\1/')"
+B="$(cat /sys/class/backlight/intel_backlight/brightness)"
+BRI="$(echo "scale=2; ($B/4437)*100" | bc)"
 
 cat <<EOF | xmenu | sh &
 Rofi		rofi -show drun -modi run,drun -show-icons
@@ -18,6 +19,6 @@ Kill Program	xkill
 Shutdown	poweroff
 Reboot		reboot
 
-BAT:$BAT VOL:$VOL BRI:$BRI
+BAT:$BAT VOL:$VOL BRI:$BRI%
 $(date +'%a %d/%m %R')
 EOF
