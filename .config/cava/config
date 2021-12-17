@@ -25,25 +25,20 @@ bars = 0
 bar_width = 1
 bar_spacing = 1
 
+# For SDL width and space between bars is in pixels, defaults are:
+; bar_width = 20
+; bar_spacing = 5
 
 # Lower and higher cutoff frequencies for lowest and highest bars
 # the bandwidth of the visualizer.
 # Note: there is a minimum total bandwidth of 43Mhz x number of bars.
 # Cava will automatically increase the higher cutoff if a too low band is specified.
 lower_cutoff_freq = 20
-higher_cutoff_freq = 18000
-
-# FFT buffer is set in the exponent of 2 and must be between 8 - 16, 8 = 256, 16 = 65536
-# this is the audio buffer used to create the spectrum
-# increasing the will improve the accuracy of the visualization,
-# but will also make it slower and increase CPU usage
-# anything below 10 and above 13 is considered experimental.
-; FFTbufferSize = 12;
+higher_cutoff_freq = 19000
 
 # Seconds with no input before cava goes to sleep mode. Cava will not perform FFT or drawing and
 # only check for input once per second. Cava will wake up once input is detected. 0 = disable.
 ; sleep_timer = 0
-
 
 [input]
 
@@ -78,18 +73,20 @@ higher_cutoff_freq = 18000
 
 [output]
 
-# Ouput method. Can be 'ncurses', 'noncurses' or 'raw'.
+# Ouput method. Can be 'ncurses', 'noncurses', 'raw' or 'sdl'.
 # 'noncurses' is for systems that does not suport ncurses.
 # 'raw' is an 8 or 16 bit (configurable via the 'bit_format' option) data
 # stream of the bar heights that can be used to send to other applications.
 # 'raw' defaults to 200 bars, which can be adjusted in the 'bars' option above.
+#
+# 'sdl' uses the Simple DirectMedia Layer to render in a graphical context.
 method = ncurses
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
-channels = mono
+channels = stereo
 mono_option = average
 
 # Raw output target. A fifo will be created if target does not exist.
@@ -109,7 +106,11 @@ data_format = ascii
 ; bar_delimiter = 59
 ; frame_delimiter = 10
 
-
+# sdl window size and position. -1,-1 is centered.
+; sdl_width = 1000
+; sdl_height = 500
+; sdl_x = -1
+; sdl_y= -1
 
 [color]
 
@@ -118,6 +119,10 @@ data_format = ascii
 # terminal that can change color definitions such as Gnome-terminal or rxvt.
 ; background = black
 foreground = '#28a745'
+
+# SDL only support hex code colors, these are the default:
+; background = '#111111'
+; foreground = '#33cccc'
 
 # Gradient mode, only hex defined colors are supported, background must also be defined in hex
 # or remain commented out. 1 = on, 0 = off. Warning: for certain terminal emulators cava will
@@ -128,8 +133,8 @@ foreground = '#28a745'
 #gradient_color_1 = '#4568dc'
 #gradient_color_2 = '#b06ab3'
 
- gradient_color_1 = '#ac4aac'
- gradient_color_2 = '#debaba'
+ gradient_color_1 = '#34347b'
+ gradient_color_2 = '#cbbab4'
 
 
 [smoothing]
@@ -144,7 +149,7 @@ waves = 0
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".
-gravity = 100
+gravity = 90
 
 
 # In bar height, bars that would have been lower that this will not be drawn.

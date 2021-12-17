@@ -40,4 +40,4 @@ sed -i -e "	s/theme\[main_fg\]=.*/theme\[main_fg\]=\"$foreground\"/g; \
 		s/theme\[upload_end]=.*/theme\[upload_end]=\"$color7\"/g" \
 		"$HOME"/.config/btop/themes/wal.theme
 
-scp -P $port .config/btop/themes/wal.theme antonino@192.168.1.192:.config/btop/themes/wal.theme &>/dev/null
+scp -P $port "$HOME"/.config/btop/themes/wal.theme antonino@192.168.1.192:.config/btop/themes/wal.theme &>/dev/null

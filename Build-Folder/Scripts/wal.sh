@@ -1,5 +1,5 @@
 #!/bin/sh
-xrdb -load .cache/wal/colors.Xresources
+xrdb -load "$HOME"/.cache/wal/colors.Xresources
 
 while getopts "hrm:b:" o; do
 	case "${o}" in
@@ -23,7 +23,7 @@ done
 
 case "$r_flag" in
 	1) file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) ;;
-	*) file=$(ls -t -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto -g 470x470) ;;
+	*) file=$(ls -c -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto -g 470x470) ;;
 esac
 
 case "$m_flag" in
