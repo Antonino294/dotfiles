@@ -35,7 +35,7 @@ set signcolumn=yes
 set cmdheight=1
 set shortmess+=aoOWFc
 set splitbelow splitright
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 set hidden
 let s:hidden_all = 1
 
@@ -52,9 +52,9 @@ filetype indent on
 
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'justmao945/vim-clang'
 "Plugin 'vim-pandoc/vim-rmarkdown'
 "Plugin 'vim-syntastic/syntastic'
-Plugin 'justmao945/vim-clang'
 "Plugin 'aperezdc/vim-template'
 
 call vundle#end()            " required
@@ -64,34 +64,24 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'tpope/vim-eunuch'
-"Plug 'tpope/vim-speeddating'
-"Plug 'tpope/vim-repeat'
-"Plug 'ervandew/supertab'
 Plug 'farmergreg/vim-lastplace'
-"Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-"Plug 'rakr/vim-one'
-"Plug 'mcchrish/nnn.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'SidOfc/mkdx'
 Plug 'miyakogi/conoline.vim'
 Plug 'mhinz/vim-startify'
-"Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-"Plug 'terryma/vim-multiple-cursors'
 Plug 'voldikss/vim-floaterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
-"Plug 'Lenovsky/nuake'
-"Plug 'mhartington/oceanic-next'
+Plug 'dylanaraps/wal.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-unimpaired'
 Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
-"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+"Plug 'tpope/vim-eunuch'
+"Plug 'tpope/vim-repeat'
 
 call plug#end()
 
@@ -192,6 +182,7 @@ set path+=**
 set wildmenu
 
 set autoindent             " Indent according to previous line.
+set so=25
 " set expandtab              " Use spaces instead of tabs.
 set softtabstop =4         " Tab key indents by 4 spaces.
 set shiftwidth  =8         " >> indents by 8 spaces.

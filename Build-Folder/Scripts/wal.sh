@@ -40,17 +40,17 @@ feh --bg-"$mode" "$file"
 pkill -USR1 picom
 
 case "$b_flag" in
-	wal) wal --backend wal -i "$file" -stne --saturate 0.4 -q ;;
-	haishoku) wal --backend haishoku -i "$file" -stne -q ;;
-	colorz) wal --backend colorz -i "$file" -stne --saturate 0.6 -q ;;
-	colorthief) wal --backend colorthief -i "$file" -stne --saturate 1.0 -q ;;
+	wal) wal --backend wal -i "$file" -sne --saturate 0.4 -q ;;
+	haishoku) wal --backend haishoku -i "$file" -sne -q ;;
+	colorz) wal --backend colorz -i "$file" -sne --saturate 0.6 -q ;;
+	colorthief) wal --backend colorthief -i "$file" -sne --saturate 1.0 -q ;;
 
-	auto)	wal --backend wal -i "$file" -stne --saturate 0.4 -q ||
-		wal --backend haishoku -i "$file" -stne -q ||
-		wal --backend colorz -i "$file" -stne --saturate 0.6 -q ||
-		wal --backend colorthief -i "$file" -stne -q ;;
+	auto)	wal --backend wal -i "$file" -sne --saturate 0.4 -q ||
+		wal --backend haishoku -i "$file" -sne -q ||
+		wal --backend colorz -i "$file" -sne --saturate 0.6 -q ||
+		wal --backend colorthief -i "$file" -sne -q ;;
 
-	*) wal --backend "$(printf "wal\nhaishoku\ncolorz\ncolorthief" | rofi -dmenu)" -i "$file" -stne --saturate 0.4 -q;;
+	*) wal --backend "$(printf "wal\nhaishoku\ncolorz\ncolorthief" | rofi -dmenu)" -i "$file" -sne --saturate 0.4 -q;;
 esac
 
 . $HOME/.cache/wal/colors.sh
@@ -93,6 +93,7 @@ make install -C "$HOME"/Build-Folder/xmenu/ >/dev/null
 pywalfox update >/dev/null
 "$HOME"/Build-Folder/Scripts/waltauon.sh >/dev/null &
 "$HOME"/Build-Folder/Scripts/walbtop.sh >/dev/null &
+"$HOME"/Build-Folder/Scripts/walcopyq.sh >/dev/null &
 genzathurarc > "$HOME"/.config/zathura/zathurarc &
 
 #pkill dunst ; { dunst & disown; } && dunstify -t 2500 "Reload Complete." "Applied changes."

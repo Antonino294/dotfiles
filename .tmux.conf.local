@@ -304,7 +304,7 @@ tmux_conf_battery_status_discharging='' # U+1F50B / U+e780
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
-tmux_conf_theme_clock_colour='#61afef'  # light blue
+tmux_conf_theme_clock_colour='#a4464b'  # light blue
 tmux_conf_theme_clock_style='24'
 
 
@@ -367,7 +367,7 @@ unbind '"'
 unbind %
 
 # Pane Swapping
-bind-key -n S-Up swap-pane -U 
+bind-key -n S-Up swap-pane -U
 bind-key -n S-Down swap-pane -D
 #bind-key -n S-Left swap-pane -L
 #bind-key -n S-Right swap-pane -R

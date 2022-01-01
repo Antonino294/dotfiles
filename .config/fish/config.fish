@@ -111,6 +111,8 @@ alias youtube-dl "yt-dlp"
 
 alias less "less -S"
 
+alias sxiv "nsxiv"
+
 alias tickrs "tickrs -pxs XMR-EUR,GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
 alias rand16 "head -c 512 /dev/urandom | base64 | head -c 20 | tr -d \[:punct:\] ; echo"
@@ -192,6 +194,7 @@ export NNN_PLUG='K:kdeconnect;P:preview-tui'
 export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"
 export GCM_CREDENTIAL_STORE="cache"
+export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
 # wal thing (no need with kitty)
 #cat ~/.cache/wal/sequences &
@@ -199,3 +202,4 @@ export GCM_CREDENTIAL_STORE="cache"
 zoxide init fish | source
 
 #thefuck --alias  | source
+"$HOME"/.cache/wal/colors-tty.sh

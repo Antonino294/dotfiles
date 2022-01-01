@@ -1,0 +1,1 @@
+/home/antonino/.cache/wal/colors-wal.vim

@@ -33,6 +33,11 @@ super + ctrl + p
 super + alt + w
 	/home/antonino/Build-Folder/nmcli-rofi/nmcli-rofi
 
+## clipboard
+
+ctrl + Return
+	copyq show
+
 ## lock
 
 ctrl + alt + l
