@@ -176,13 +176,13 @@ super + ctrl + c
 # bar
 
 super + b
-	polybar-msg cmd show && herbstclient pad 0 "29" "0" "0" && herbstclient pad 1 "29" "0" "0"
+	/home/antonino/Build-Folder/Scripts/togglebar.sh
 
-super + shift + b
-	polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0" && herbstclient pad 1 "0" "0" "0"
+#super + shift + b
+#	polybar-msg cmd hide && herbstclient pad 0 "0" "0" "0"
 
-super + ctrl + b
-	kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
+#super + ctrl + b
+#	kcolorchooser --print | /home/antonino/Build-Folder/Scripts/barcolor2.sh
 
 # float window
 
