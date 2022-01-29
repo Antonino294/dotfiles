@@ -91,6 +91,11 @@ XF86MonBrightnessDown
 XF86WebCam
 	fanctrl auto
 
+# Toggle notifications
+
+XF86Display
+	dunstctl set-paused toggle
+
 
 # MPRIS controls
 

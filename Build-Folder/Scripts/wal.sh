@@ -95,6 +95,7 @@ pywalfox update >/dev/null
 "$HOME"/Build-Folder/Scripts/walbtop.sh >/dev/null &
 "$HOME"/Build-Folder/Scripts/walcopyq.sh >/dev/null &
 genzathurarc > "$HOME"/.config/zathura/zathurarc &
+herbstclient pad 0 "29" "0" "0" &
 
 #pkill dunst ; { dunst & disown; } && dunstify -t 2500 "Reload Complete." "Applied changes."
 pkill dunst ; nohup dunst >/dev/null 2>&1 & sleep 0.10 && dunstify -t 2500 "Reload Complete." "Applied changes." # <- what in the fuck is this

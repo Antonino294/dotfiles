@@ -157,7 +157,7 @@ font-3 = Noto Sans CJK JP:size=8:antialias=true;0
 modules-left = ewmh
 ; mpd_i mpd
 modules-center = title
-modules-right = layout memory cpu alsa battery network wired-network date
+modules-right = DnD layout memory cpu alsa battery network wired-network date
 ;; colors network
 
 ; The separator will be inserted between the output of each module
@@ -488,7 +488,7 @@ format = <label>
 format-background = ${color.bg}
 format-foreground = ${color.fg}
 #${color.shade1}
-format-padding = 3
+format-padding = 2
 
 label = %time%
 
@@ -667,6 +667,15 @@ format-padding = 2
 click-left = xdotool key --delay 0 alt+space
 
 ;; click-left = herbstclient cycle_layout +1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/DnD]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/DnD.sh
+interval = 1
+format-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

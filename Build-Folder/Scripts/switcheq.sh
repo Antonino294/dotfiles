@@ -46,5 +46,6 @@ pkill -USR1 cava
 pactl set-sink-mute 0 toggle
 systemctl --user restart pulseaudio.service
 polybar-msg cmd restart > /dev/null 2>&1
+herbstclient pad 0 "29" "0" "0"
 pactl set-sink-mute 0 toggle
 [[ -n "$gstat" ]] && glava --desktop
