@@ -13,7 +13,7 @@ window {
 	transparency: "real";
 	fullscreen: false;
 	background-color: @background;
-	border-radius: 0.8%;
+	border-radius: 0.1%;
 	padding: 8;
 }
 

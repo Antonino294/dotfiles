@@ -20,5 +20,5 @@ Shutdown	poweroff
 Reboot		reboot
 
 BAT:$BAT VOL:$VOL BRI:$BRI%
-$(date +'%a %d/%m %R')
+$(date +'%a %R %d/%m')
 EOF

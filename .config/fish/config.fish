@@ -184,6 +184,8 @@ set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
 set -gx PATH $PATH /home/antonino/.gdrive-downloader/bin/
 set -gx PATH $PATH /home/antonino/Build-Folder/jdk-14.0.2+12-jre/bin/
 set -gx PATH $PATH /home/antonino/.nexustools/
+set -gx PATH $PATH /home/antonino/.spoof-dpi/bin
+set -gx PATH $PATH /home/antonino/Build-Folder/root_install/bin/
 
 set -gx EDITOR nvim
 

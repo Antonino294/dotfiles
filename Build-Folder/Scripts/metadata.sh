@@ -4,9 +4,9 @@ ps -C tauonmb > /dev/null || ps -C cmus > /dev/null || playerctl -l | grep kdeco
 
 kdedevice=$(playerctl -l | grep kdeconnect)
 
-status=$( playerctl --player=cmus,tauon,"$kdedevice" status )
-title=$( playerctl --player=cmus,tauon,"$kdedevice" metadata title )
-album=$( playerctl --player=cmus,tauon,"$kdedevice" metadata album )
+status=$(playerctl --player=cmus,tauon,"$kdedevice" status)
+title=$(playerctl --player=cmus,tauon,"$kdedevice" metadata title)
+album=$(playerctl --player=cmus,tauon,"$kdedevice" metadata album)
 
 lb=${#album}
 (( lb > 20)) && album=${album::$(( 20 ))}…
