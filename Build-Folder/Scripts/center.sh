@@ -1,7 +1,7 @@
 #!/bin/sh
 
-X=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
-Y=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+X=$(xrandr | grep ' connected' | cut -d' ' -f4 | sed 's/....$//' | cut -d 'x' -f1)
+Y=$(xrandr | grep ' connected' | cut -d' ' -f4 | sed 's/....$//' | cut -d 'x' -f2)
 
 width=$(xdotool getactivewindow getwindowgeometry | awk '/Geometry/{print $2}' | sed "s/x.*//g")
 height=$(xdotool getactivewindow getwindowgeometry | awk '/Geometry/{print $2}' | sed "s/.*x//g")
