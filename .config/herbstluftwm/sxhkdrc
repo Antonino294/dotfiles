@@ -41,7 +41,8 @@ ctrl + Return
 ## lock
 
 ctrl + alt + l
-	betterlockscreen -l blur && betterlockscreen -u ~/Immagini/Landscapes/ #-u -b 0.5 ~/Immagini/Landscapes/
+	betterlockscreen -l blur && cp /home/antonino/Build-Folder/Login_Images/$(ls -1 /home/antonino/Build-Folder/Login_Images | shuf -n1) /home/antonino/.cache/i3lock/1366x768/l_blur.png
+	#betterlockscreen -l blur && betterlockscreen -u ~/Immagini/Landscapes/ #-u -b 0.5 ~/Immagini/Landscapes/
 
 ## powermenu
 
@@ -213,7 +214,7 @@ super + minus
 	/home/antonino/Build-Folder/Scripts/gap.sh gap -
 
 super + BackSpace
-	herbstclient set window_gap 6
+	herbstclient set window_gap 12
 
 super + shift + plus
 	/home/antonino/Build-Folder/Scripts/gap.sh pad +
@@ -222,7 +223,7 @@ super + shift + minus
 	/home/antonino/Build-Folder/Scripts/gap.sh pad -
 
 super + shift + BackSpace
-	herbstclient set frame_gap 6
+	herbstclient set frame_gap 0
 
 # eq settings
 

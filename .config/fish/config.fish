@@ -58,6 +58,8 @@ abbr srvr "ssh antonino@192.168.1.192 -p 44619"
 
 abbr pix "wget --referer='https://pixiv.net' "
 
+abbr record "ffmpeg -f pulse -i 0 -f pulse -i 3 -filter_complex amix=inputs=2 -video_size 1366x768 -framerate 30 -probesize 42M -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast output.mp4"
+
 # aliases
 
 alias burp "java --illegal-access=permit -noverify -javaagent:'$HOME/Build-Folder/Burp Suite Pro/burploader.jar' -jar '$HOME/Build-Folder/Burp Suite Pro/burpsuite_pro_v2021.8.4.jar' 2>/dev/null"
@@ -115,9 +117,9 @@ alias sxiv "nsxiv"
 
 alias tickrs "tickrs -pxs XMR-EUR,GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
-alias rand16 "head -c 512 /dev/urandom | base64 | head -c 20 | tr -d \[:punct:\] ; echo"
+alias rand16 "head -c 512 /dev/urandom | base64 | tr -d \[:punct:\] | head -c 16; echo"
 
-alias rand32 "head -c 1024 /dev/urandom | base64 | shuf | head -c 64 | tr -d \[:punct:\] | shuf --random-source=(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1)"
+alias rand32 "head -c 1024 /dev/urandom | base64 | shuf | tr -d \[:punct:\] | shuf --random-source=(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) | head -c 32; echo"
 
 #Fisher Workaround
 if not functions -q fisher

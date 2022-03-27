@@ -1,8 +1,8 @@
 /* Note: to only render a single channel, see `setmirror` in `rc.glsl`. */
 #define ALPHA 0.9
 
-#define color1 #aca7a7
-#define color2 #375082
+#define color1 #e1e8eb
+#define color2 #6097ba
 
 /* Center line thickness (pixels) */
 #define C_LINE 0
@@ -19,7 +19,7 @@
    correctly on X11 with `"native"` transparency */
 #define USE_ALPHA 0
 /* How quickly the gradient transitions, in pixels */
-#define GRADIENT 120
+#define GRADIENT 50
 /* Bar color. By default this provides a blue-white gradient. */
 #define COLOR (@fg:mix(color2, color1, clamp(d / GRADIENT, 0, 1)))*ALPHA
 /* Outline color. By default this provides a 'glint' outline based on the bar color */
@@ -29,7 +29,7 @@
 /* Whether to switch left/right audio buffers */
 #define INVERT 0
 /* Whether to flip the output vertically */
-#define FLIP 1
+#define FLIP 0
 /* Whether to mirror output along `Y = X`, causing output to render on the left side of the window */
 /* Use with `FLIP 1` to render on the right side */
 #define MIRROR_YX 0
