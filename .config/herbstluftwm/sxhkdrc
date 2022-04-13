@@ -8,6 +8,11 @@ super + Escape
 super + shift + Return
 	konsole
 
+# krunner
+
+ctrl + alt + space
+	krunner
+
 # launch menus
 
 super + @space

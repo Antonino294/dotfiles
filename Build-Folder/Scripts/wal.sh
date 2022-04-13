@@ -40,12 +40,12 @@ feh --bg-"$mode" "$file"
 pkill -USR1 picom
 
 case "$b_flag" in
-	wal) wal --backend wal -i "$file" -sne --saturate 0.4 -q ;;
+	wal) wal --backend wal -i "$file" -sne --saturate 0.6 -q ;;
 	haishoku) wal --backend haishoku -i "$file" -sne -q ;;
 	colorz) wal --backend colorz -i "$file" -sne --saturate 0.6 -q ;;
 	colorthief) wal --backend colorthief -i "$file" -sne --saturate 1.0 -q ;;
 
-	auto)	wal --backend wal -i "$file" -sne --saturate 0.4 -q ||
+	auto)	wal --backend wal -i "$file" -sne --saturate 0.6 -q ||
 		wal --backend haishoku -i "$file" -sne -q ||
 		wal --backend colorz -i "$file" -sne --saturate 0.6 -q ||
 		wal --backend colorthief -i "$file" -sne -q ;;
