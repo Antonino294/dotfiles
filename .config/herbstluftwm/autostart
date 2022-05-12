@@ -201,6 +201,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'krunner' pseudotile=on
+hc rule class~'Tauon Music Box' pseudotile=on
 hc rule title~'Discord Updater' floating=on
 hc rule title~'Sayonara Player' floating=on
 hc rule title~'sxiv' floating=on

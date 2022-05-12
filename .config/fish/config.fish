@@ -130,37 +130,37 @@ end
 
 #Colors
 
-set fish_color_normal 305d87
+set fish_color_normal 305d87 # #305d87
 
-set fish_color_autosuggestion d65d0e
+set fish_color_autosuggestion d65d0e # #d65d0e
 
-set fish_color_param 4c8bd3
+set fish_color_param 4c8bd3 # #4c8bd3
 
-set fish_color_command 36648f
+set fish_color_command 36648f # #36648f
 
-set fish_color_comment 3b9d7c --bold
+set fish_color_comment 3b9d7c --bold # #3b9d7c
 
-set fish_color_error ff5500 --bold
+set fish_color_error ff5500 --bold # #ff5500
 
-set fish_color_end ffaa00
+set fish_color_end ffaa00 # #ffaa00
 
 set fish_color_escape d2a700 --bold
 
-set fish_color_operator cc241d
+set fish_color_operator cc241d # #cc241d
 
 #set fish_color_search_match d2a700
 
 set fish_color_search_match --background=1c1c1c
 
-set fish_color_match fb3333 --bold
+set fish_color_match fb3333 --bold # #fb3333
 
-set fish_color_redirection d2a700
+set fish_color_redirection d2a700 # #d2a700
 
-set fish_color_quote cc241d --bold
+set fish_color_quote cc241d --bold # #cc241d
 
-set fish_color_cancel fe8019 --bold
+set fish_color_cancel fe8019 --bold # #fe8019
 
-set fish_pager_color_progress a2a8ba --background=1c1c1c
+set fish_pager_color_progress a2a8ba --background=1c1c1c # #a2a8ba
 
 # Prompt
 
@@ -206,4 +206,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 zoxide init fish | source
 
 #thefuck --alias  | source
+
 "$HOME"/.cache/wal/colors-tty.sh
+
+source ~/.cache/wal/colors.fish
