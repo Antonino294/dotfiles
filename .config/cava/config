@@ -135,8 +135,8 @@ foreground = '#28a745'
 #gradient_color_1 = '#4568dc'
 #gradient_color_2 = '#b06ab3'
 
- gradient_color_1 = '#6aa1d9'
- gradient_color_2 = '#c8e4ed'
+ gradient_color_1 = '#93b8e4'
+ gradient_color_2 = '#dee3e7'
 
 
 [smoothing]

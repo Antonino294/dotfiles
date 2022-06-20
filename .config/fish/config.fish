@@ -44,7 +44,7 @@ abbr cam2 "ffmpeg -i /dev/videoX -vcodec rawvideo -pix_fmt yuyv422 -vsync 0 -map
 
 abbr cam3 "ffmpeg -loop 1 -re -i image.jpeg  -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video0"
 
-abbr ilossh "ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.11"
+abbr ilossh "ssh -i $HOME/.ssh/Administrator -oKexAlgorithms=+diffie-hellman-group1-sha1 Administrator@192.168.1.165"
 
 abbr getcompose "rsync -auP -e 'ssh -p 44619' antonino@192.168.1.192:docker-compose.yml /home/antonino/Build-Folder/docker-compose.yml"
 
@@ -59,6 +59,10 @@ abbr srvr "ssh antonino@192.168.1.192 -p 44619"
 abbr pix "wget --referer='https://pixiv.net' "
 
 abbr record "ffmpeg -f pulse -i 0 -f pulse -i 3 -filter_complex amix=inputs=2 -video_size 1366x768 -framerate 30 -probesize 42M -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast output.mp4"
+
+abbr hide 'convert -define fourier:normalize=forward orig.jpg -fft "(" -clone 0 "(" -define quantum:format=floating-point hidden.jpg -evaluate divide 6000 ")" -gravity west -compose plus -composite ")" -clone 1 -delete 0-1 -ift output.jpg'
+
+abbr reveal 'convert -define fourier:normalize=forward output.jpg -fft -delete 1 -evaluate multiply 6000 extracted.png'
 
 # aliases
 

@@ -235,10 +235,10 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 autocmd BufWritePost *.Rmd silent :RMarkdown pdf
 
 autocmd FileType markdown nnoremap <silent> <F5> :MarkdownPreview<CR>
-autocmd FileType markdown nnoremap <silent> <F7> :execute 'silent !pandoc % -o %:r.pdf'<CR>
 autocmd FileType markdown nnoremap <silent> <F6> :execute 'silent !pandoc -t html5 --css /home/antonino/Build-Folder/Unused-Stuff/M5.css % -o %:r.pdf --mathml'<CR>
-autocmd FileType markdown nnoremap <silent> <F11> :execute 'silent !zathura %:r.pdf &'<CR> :redraw!<CR>
+autocmd FileType markdown nnoremap <silent> <F7> :execute 'silent !pandoc % -o %:r.pdf'<CR>
 autocmd FileType markdown nnoremap <silent> <F9> :Goyo<CR>
+autocmd FileType markdown nnoremap <silent> <F11> :execute 'silent !zathura %:r.pdf &'<CR> :redraw!<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

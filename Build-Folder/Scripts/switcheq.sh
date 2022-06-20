@@ -4,6 +4,8 @@
 # If you for example plug in speakers: ./switcheq.sh 0 # this will disable any EQ.
 # If you plug in USB headset like the PC373d: ./switcheq.sh 3
 # Modify this script and your eq.txt files accordingly to your setup.
+pos=$(playerctl -p tauon position)
+playerctl -p tauon stop; sleep 1.25
 
 headphones=1
 echo -n "Setting EQ to "
@@ -40,12 +42,18 @@ if [[ ! -f $eqdir/$eqfile ]] || [[ ! -f $eqdir/config ]]; then
 fi
 
 sed -i "s/eq[0-9]*.txt/$eqfile/" $eqdir/config
-
+# Is glava running?
 gstat=$(pgrep -x glava)
 pkill -USR1 cava
+# 1 Prevent ear-shattering audio artifacts
 pactl set-sink-mute 0 toggle
+# Reload Pulseaudio
 systemctl --user restart pulseaudio.service
+# Reload Polybar and set
 polybar-msg cmd restart > /dev/null 2>&1
 herbstclient pad 0 "29" "0" "0"
+# 2 Prevent ear-shattering audio artifacts
 pactl set-sink-mute 0 toggle
 [[ -n "$gstat" ]] && glava --desktop
+# hacky thing to prevent Tauon from crashing upon switching
+playerctl -p tauon play && sleep 0.75 && playerctl -p tauon position $pos
