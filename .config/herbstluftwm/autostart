@@ -120,7 +120,8 @@ hc keybind $Mod-comma  use_index -1
 
 hc keybind Control-Shift-d use_index +1
 
-
+hc keybind $Mod-Shift-period move_index +1
+hc keybind $Mod-Shift-comma  move_index -1
 
 # layouting
 hc keybind $Mod-r remove
