@@ -118,3 +118,8 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #source /etc/bash_completion.d/climate_completion
+if test $UID -ne 0; then 
+    PS1='\[\033[01;32m\]\h\[\033[00m\] \[\033[01;34m\]\w >\[\033[00m\] '
+else
+    PS1='\[\033[01;31m\]\h\[\033[00m\] \[\033[01;34m\]\w #\[\033[00m\] '
+fi

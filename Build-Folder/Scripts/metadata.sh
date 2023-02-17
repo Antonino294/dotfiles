@@ -15,7 +15,7 @@ lt=${#title}
 (( lt > 22)) && title=${title::$(( 22 ))}…
 
 case $status in
-        Playing) echo "$title   $album" ;;
-        Paused) echo "$title   $album" ;;
-        Stopped) [[ $title ]] &&  echo "$title   $album" || echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮" ;;
+        Playing) echo "$title 契$album" ;;
+        Paused) echo "$title  $album" ;;
+        Stopped) [[ $title ]] &&  echo "$title 栗$album" || echo "𝅘𝅥𝅮 nothing is playing... 𝅘𝅥𝅮" ;;
 esac

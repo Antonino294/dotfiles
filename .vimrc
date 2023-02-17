@@ -30,6 +30,7 @@ set nu rnu
 set noru
 set nosmd   " short for 'showmode'
 "set laststatus=0
+set nrformats+=unsigned
 set noshowcmd
 set signcolumn=yes
 set cmdheight=1
@@ -53,6 +54,8 @@ filetype indent on
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'justmao945/vim-clang'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'vim-pandoc/vim-rmarkdown'
 "Plugin 'vim-syntastic/syntastic'
 "Plugin 'aperezdc/vim-template'
@@ -62,8 +65,6 @@ call vundle#end()            " required
 "Plug Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'farmergreg/vim-lastplace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'SidOfc/mkdx'
@@ -72,7 +73,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'voldikss/vim-floaterm'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'ryanoasis/vim-devicons'
@@ -87,8 +88,8 @@ call plug#end()
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-autocmd FileType * :silent CocDisable
-autocmd FileType cpp,c,py :silent CocEnable
+"autocmd FileType * :silent CocDisable
+"autocmd FileType cpp,c,py :silent CocEnable
 
 "let g:syntastic_cpp_checkers = ['clang_tidy']
 
@@ -171,8 +172,8 @@ nnoremap <silent> <F2> :set nu! rnu!<CR>
 nnoremap <silent> <F3> :set foldcolumn=0<CR>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-nmap <silent> <C-c> <Plug>(coc-cursors-position)
-nmap <silent> <C-d> <Plug>(coc-cursors-word)
+"nmap <silent> <C-c> <Plug>(coc-cursors-position)
+"nmap <silent> <C-d> <Plug>(coc-cursors-word)
 
 filetype plugin on
 set nocompatible
@@ -275,10 +276,10 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-let g:coc_node_path = '/usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/node'
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"let g:coc_node_path = '/home/antonino/Build-Folder/node-v19.6.0-linux-x64/bin/node'
 
 function AddTemplate(tmpl_file)
     exe "0read " . a:tmpl_file
@@ -336,7 +337,7 @@ let g:cpp_class_decl_highlight = 1
 
 au BufNewFile,BufRead /*.rasi setf css
 
-nmap <space>e :CocCommand explorer<CR>
+"nmap <space>e :CocCommand explorer<CR>
 
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE

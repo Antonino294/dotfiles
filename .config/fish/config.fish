@@ -16,13 +16,7 @@ abbr lotto "shuf -i 1-90 -n 5 | lolcat -a -t"
 
 abbr graphic "export DISPLAY=:0"
 
-abbr jf-start "sudo systemctl start jellyfin.service"
-
-abbr jf-stop "sudo systemctl stop jellyfin.service"
-
-abbr jf-restart "sudo systemctl restart jellyfin.service"
-
-abbr wt "curl 'it.wttr.in/~Solano Inferiore'"
+abbr wt "curl 'it.wttr.in/~Solano+Inferiore'"
 
 #abbr work "./Build-Folder/genact-linux"
 
@@ -63,6 +57,8 @@ abbr record "ffmpeg -f pulse -i 0 -f pulse -i 3 -filter_complex amix=inputs=2 -v
 abbr hide 'convert -define fourier:normalize=forward orig.jpg -fft "(" -clone 0 "(" -define quantum:format=floating-point hidden.jpg -evaluate divide 6000 ")" -gravity west -compose plus -composite ")" -clone 1 -delete 0-1 -ift output.jpg'
 
 abbr reveal 'convert -define fourier:normalize=forward output.jpg -fft -delete 1 -evaluate multiply 6000 extracted.png'
+
+abbr bk 'read -P "Title: " A && echo $A \; $(xclip -o -selection clipboard) >> $HOME/.snippets'
 
 # aliases
 
@@ -121,15 +117,19 @@ alias sxiv "nsxiv"
 
 alias tickrs "tickrs -pxs XMR-EUR,GME,AMC,PLTR,SLV,BB,AG,TSLA,BTC-USD,ETH-USD"
 
-alias rand16 "head -c 512 /dev/urandom | base64 | tr -d \[:punct:\] | head -c 16; echo"
+#alias rand16 "head -c 512 /dev/urandom | base64 | tr -d \[:punct:\] | head -c 16; echo"
 
-alias rand32 "head -c 1024 /dev/urandom | base64 | shuf | tr -d \[:punct:\] | shuf --random-source=(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) | head -c 32; echo"
+#alias rand32 "head -c 1024 /dev/urandom | base64 | shuf | tr -d \[:punct:\] | shuf --random-source=(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) | head -c 32; echo"
+
+alias rand16 "pwgen -s 16 1"
+
+alias rand32 "pwgen -sy 32 1"
 
 #Fisher Workaround
 if not functions -q fisher
-    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-    fish -c fisher
+set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+fish -c fisher
 end
 
 #Colors
@@ -180,18 +180,21 @@ end
 
 # Paths
 
-set -gx PATH $PATH /home/antonino/.local/bin
 set -gx PATH $PATH /usr/local/bin
 set -gx PATH $PATH /usr/sbin/
+set -gx PATH $PATH /home/antonino/.local/bin
+set -gx PATH $PATH /usr/games
 set -gx PATH $PATH /home/antonino/.cargo/bin
 set -gx PATH $PATH /usr/java/jre1.8.0_251/bin
 set -gx PATH $PATH /home/antonino/.local/kitty.app/bin/
-set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
+#set -gx PATH $PATH /usr/local/lib/nodejs/node-v12.18.1-linux-x64/bin/
+set -gx PATH $PATH /home/antonino/Build-Folder/node-v19.6.0-linux-x64/bin/
 set -gx PATH $PATH /home/antonino/.gdrive-downloader/bin/
 set -gx PATH $PATH /home/antonino/Build-Folder/jdk-14.0.2+12-jre/bin/
 set -gx PATH $PATH /home/antonino/.nexustools/
 set -gx PATH $PATH /home/antonino/.spoof-dpi/bin
 set -gx PATH $PATH /home/antonino/Build-Folder/root_install/bin/
+set -gx PATH $PATH /usr/lib/jvm/zulu-17-amd64/bin/
 
 set -gx EDITOR nvim
 

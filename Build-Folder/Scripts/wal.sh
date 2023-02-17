@@ -22,8 +22,9 @@ while getopts "hrm:b:" o; do
 done
 
 case "$r_flag" in
-	1) file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1) ;;
-	*) file=$(ls -c -- "$HOME"/Immagini/Landscapes/* | sxiv - -bto -g 470x470) ;;
+	#1) file=$(ls -d "$HOME"/Immagini/Landscapes/ | shuf -n 1) ;;
+	1) file=$(ls -d "$HOME"/Immagini/Landscapes/* | shuf | sxiv - -bfo) ;;
+	*) file=$(ls -c "$HOME"/Immagini/Landscapes/* | sxiv - -bto -g 470x470) ;;
 esac
 
 case "$m_flag" in
@@ -34,7 +35,7 @@ case "$m_flag" in
 	*) mode=$(printf "fill\ncenter\ntile\nscale" | rofi -dmenu) ;;
 esac
 
-[ -z "$file" ] && file=$(find "$HOME"/Immagini/Landscapes -type f | shuf -n 1)
+[ -z "$file" ] && exit 1
 
 feh --bg-"$mode" "$file"
 pkill -USR1 picom
@@ -43,7 +44,7 @@ case "$b_flag" in
 	wal) wal --backend wal -i "$file" -sne --saturate 0.6 -q ;;
 	haishoku) wal --backend haishoku -i "$file" -sne -q ;;
 	colorz) wal --backend colorz -i "$file" -sne --saturate 0.6 -q ;;
-	colorthief) wal --backend colorthief -i "$file" -sne --saturate 1.0 -q ;;
+	colorthief) wal --backend colorthief -i "$file" -sne -q ;;
 
 	auto)	wal --backend wal -i "$file" -sne --saturate 0.6 -q ||
 		wal --backend haishoku -i "$file" -sne -q ||
@@ -96,6 +97,7 @@ pywalfox update >/dev/null
 "$HOME"/Build-Folder/Scripts/walcopyq.sh >/dev/null &
 genzathurarc > "$HOME"/.config/zathura/zathurarc &
 herbstclient pad 0 "29" "0" "0" &
+wal-discord
 
 #pkill dunst ; { dunst & disown; } && dunstify -t 2500 "Reload Complete." "Applied changes."
 pkill dunst ; nohup dunst >/dev/null 2>&1 & sleep 0.10 && dunstify -t 2500 "Reload Complete." "Applied changes." # <- what in the fuck is this

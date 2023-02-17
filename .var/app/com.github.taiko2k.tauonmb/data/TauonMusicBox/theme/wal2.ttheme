@@ -18,15 +18,15 @@
 
 #-Playlist-------
 
-222,227,231 track line
+223,223,223		track line
 99,99,99		track time
 130,130,130		track index
-147,184,228 track artist
+223,128,128		track artist
 169,169,171		track album
 
-227,239,240 track playing
+227,239,240		track playing
 169,169,171		index playing
-147,184,228 artist playing
+223,128,128		artist playing
 169,169,171		album playing
 170,170,172		time playing
 
@@ -38,9 +38,9 @@
 
 255,255,255,5		playing highlight
 255,255,255,10		select highlight
-147,184,228 gallery highlight
+223,128,128		gallery highlight
 
-147,184,228 column bar background
+223,128,128		column bar background
 
 #-Bottom panel------
 
@@ -48,10 +48,10 @@
 235,235,235		buttons over
 225,225,225		buttons active
 
-155,158,161 playing time
+156,156,156		playing time
 
-126,178,222,200 seek bar
-147,184,228,180 volume bar
+217,112,106,200		seek bar
+223,128,128,180		volume bar
 30,30,30,40		seek bg
 30,30,30,40		volume bg
 40,40,40		scroll bar
@@ -70,7 +70,7 @@
 40,40,40		tab over
 45,45,45		tab active background
 
-206,61,123 music vis
+188,56,47		music vis
 
 #     window buttons background
 #     window buttons over
@@ -85,7 +85,7 @@
 40,40,40		menu highlight
 230,230,230		menu text
 150,150,150		menu disable text
-126,178,222,75 menu icons
+217,112,106,75		menu icons
 30,30,30 	 	menu border
 
 #-Dialog box---------
@@ -126,5 +126,5 @@
 #       mini border
 
 
-222,227,231 mini text 1
-147,184,228 mini text 2
+223,223,223		mini text 1
+223,128,128		mini text 2

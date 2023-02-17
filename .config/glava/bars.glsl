@@ -1,8 +1,8 @@
 /* Note: to only render a single channel, see `setmirror` in `rc.glsl`. */
 #define ALPHA 0.9
 
-#define color1 #dee3e7
-#define color2 #93b8e4
+#define color1 #dfdfdf
+#define color2 #df8080
 
 /* Center line thickness (pixels) */
 #define C_LINE 0

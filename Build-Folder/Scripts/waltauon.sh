@@ -11,18 +11,18 @@ color6=$(grep "Colour16" $src | cut -d\" -f4)
 #color7=$(grep "Colour18" $src | cut -d\" -f4)
 #color8=$(grep "Colour20" $src | cut -d\" -f4)
 
-sed -i -e "	s/.*track artist/$color6 track artist/g; \
-		s/.*artist playing/$color6 artist playing/g; \
-		s/.*playing time/$color2 playing time/g; \
-		s/.*menu icons/$color5,75 menu icons/g; \
-		s/.*gallery highlight/$color6 gallery highlight/g; \
-		s/.*seek bar/$color5,200 seek bar/g; \
-		s/.*volume bar/$color6,180 volume bar/g; \
-		s/.*music vis/$color3 music vis/g; \
-		s/.*track line/$color0 track line/g; \
-		s/.*mini text 1/$color0 mini text 1/g; \
-		s/.*mini text 2/$color6 mini text 2/g; \
-		s/.*column bar background/$color6 column bar background/g" \
+sed -i -e "	s/.*track artist/$color6\t\ttrack artist/g; \
+		s/.*artist playing/$color6\t\tartist playing/g; \
+		s/.*playing time/$color2\t\tplaying time/g; \
+		s/.*menu icons/$color5,75\t\tmenu icons/g; \
+		s/.*gallery highlight/$color6\t\tgallery highlight/g; \
+		s/.*seek bar/$color5,200\t\tseek bar/g; \
+		s/.*volume bar/$color6,180\t\tvolume bar/g; \
+		s/.*music vis/$color3\t\tmusic vis/g; \
+		s/.*track line/$color0\t\ttrack line/g; \
+		s/.*mini text 1/$color0\t\tmini text 1/g; \
+		s/.*mini text 2/$color6\t\tmini text 2/g; \
+		s/.*column bar background/$color6\t\tcolumn bar background/g" \
 		"$HOME"/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/wal2.ttheme
 
 #sed -i -e "s/.*track playing/$color0 track playing/g" $src2
