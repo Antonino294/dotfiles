@@ -3,10 +3,6 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# right click menu
-@Menu
-	/home/antonino/Build-Folder/Scripts/menu.sh
-
 ## clipboard
 ctrl + Insert
 	rofi -dmenu -i -sync -p Bookmarks < "$HOME"/.snippets | cut -d';' -f2 | tr -d \[:space:\] | xclip -d :0 -r -selection clipboard && xdotool key --delay 0 Ctrl+V

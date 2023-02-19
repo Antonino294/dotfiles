@@ -174,7 +174,7 @@ hc keybind Ctrl-Alt-b chain , spawn "$HOME"/Build-Folder/Scripts/toggleblur.sh ,
 hc keybind $Mod-b spawn "$HOME"/Build-Folder/Scripts/togglebar.sh
 hc keybind $Mod-z spawn "$HOME"/Build-Folder/Scripts/center.sh
 
-hc keybind Ctrl-Alt-c chain , spawn pkill glava , glava --desktop
+hc keybind Ctrl-Alt-c chain , spawn pkill glava , spawn glava --desktop
 hc keybind Ctrl-Alt-v spawn pkill glava
 
 # Utility
@@ -195,6 +195,7 @@ hc keybind Ctrl-Print spawn spectacle -r
 
 hc keybind $Mod-space spawn rofi -show drun -modi drun,filebrowser,window,run -show-icons
 hc keybind $Mod-Shift-p spawn rofi -show power-menu -modi power-menu:rofi-power-menu
+hc keybind Menu spawn "$HOME"/Build-Folder/Scripts/menu.sh
 
 # EQ
 for i in {1..4} ; do
