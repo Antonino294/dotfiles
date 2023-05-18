@@ -1,0 +1,347 @@
+#!/usr/bin/env bash
+
+# A customized configuration for herbstluftwm (http://www.herbstluftwm.org)
+
+hc() {
+	herbstclient "$@"
+}
+hc emit_hook reload
+
+setxkbmap -option caps:escape_shifted_capslock &
+xsetroot -cursor_name left_ptr &
+xrdb -load ~/.Xresources &
+xset -dpms s off &
+xset -r 135 &
+~/.fehbg &
+#kcminit kcm_touchpad &
+export XDG_CURRENT_DESKTOP=KDE
+
+# synclient LeftEdge=1559 RightEdge=5443 TopEdge=1389 BottomEdge=4573 \
+# 	FingerLow=25 FingerHigh=30 MaxTapTime=180 MaxTapMove=259 \
+# 	MaxDoubleTapTime=180 SingleTapTimeout=180 ClickTime=100 \
+# 	EmulateMidButtonTime=75 EmulateTwoFingerMinZ=282 EmulateTwoFingerMinW=7 \
+# 	VertScrollDelta=117 HorizScrollDelta=115 VertEdgeScroll=1 HorizEdgeScroll=0 \
+# 	CornerCoasting=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=0 MinSpeed=1 \
+# 	MaxSpeed=3.17769 AccelFactor=0.00949375 TouchpadOff=2 LockedDrags=0 \
+# 	LockedDragTimeout=5000 RTCornerButton=0 RBCornerButton=0 LTCornerButton=0 \
+# 	LBCornerButton=0 TapButton1=1 TapButton2=3 TapButton3=2 ClickFinger1=1 ClickFinger2=1 \
+# 	ClickFinger3=1 CircularScrolling=0 CircScrollDelta=0.1 CircScrollTrigger=0 CircularPad=0 \
+# 	PalmDetect=0 PalmMinWidth=10 PalmMinZ=200 CoastingSpeed=20 CoastingFriction=50 \
+# 	PressureMotionMinZ=30 PressureMotionMaxZ=160 PressureMotionMinFactor=1 \
+# 	PressureMotionMaxFactor=1 GrabEventDevice=0 TapAndDragGesture=1 AreaLeftEdge=0 \
+# 	AreaRightEdge=0 AreaTopEdge=0 AreaBottomEdge=0 HorizHysteresis=29 VertHysteresis=29 ClickPad=0 &
+
+
+pgrep -x sxhkd || sxhkd -c .config/herbstluftwm/sxhkdrc &
+pgrep -x redshift || redshift -t 6500:3500 -b 1.0:0.9 -l 39.0855:17.1268 &
+pgrep -x xclickroot || xclickroot /home/antonino/Build-Folder/Scripts/menu.sh &
+xrdb -load "$HOME"/.cache/wal/colors.Xresources &
+pgrep -x picom || picom --vsync --config .config/picom/picom.conf &
+pgrep -x openrgb || openrgb --startminimized --server &
+
+/usr/local/bin/dunst &
+klipper &
+#krunner -d &
+kdeconnect-cli --refresh &
+# copyq &
+#openrazer-daemon &
+pkill jellyfin-mpv-sh; pkill mpv; jellyfin-mpv-shim &
+#busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
+#nmtui connect TIM-23709550 #&& sudo dhclient &
+nmcli connection up TIM-23709550 passwd-file "$HOME"/.psk &
+
+#compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
+
+# Uncomment the following lines to use xmobar as the panel
+# Remember to comment out the last 8 lines of this config, so that
+# polybar will no longer launch on startup.
+# $HOME/.config/herbstluftwm/xmobar
+
+# remove all existing keybindings
+hc keyunbind --all
+
+# keybindings
+Mod=Mod4                            # Use the super key as the main modifier
+myTerm=kitty                    # Set my preferred terminal
+myEditor="nvim"  # Set my preferred editor
+
+hc keybind $Mod-Control-q quit
+hc keybind $Mod-Control-r reload
+hc keybind $Mod-w close
+hc keybind $Mod-Return spawn $myTerm
+hc keybind Control-Alt-t spawn xterm
+hc keybind $Mod-e spawn dolphin
+
+# rofi
+# hc keybind $Mod-space "rofi -show drun -modi run,drun -show-icons"
+
+# bolt
+# hc keybind $Mod-Shift-space "bolt --rofi-search"
+
+
+# My applications (Super+Alt+Key)
+#hc keybind $Mod-Mod1-c spawn $myTerm -e cmus
+
+# focusing clients
+hc keybind $Mod-Left          focus left
+hc keybind $Mod-Down          focus down
+hc keybind $Mod-Up            focus up
+hc keybind $Mod-Right         focus right
+hc keybind $Mod-h             focus left
+hc keybind $Mod-j             focus down
+hc keybind $Mod-k             focus up
+hc keybind $Mod-l             focus right
+
+# moving clients
+hc keybind $Mod-Shift-Left    shift left
+hc keybind $Mod-Shift-Down    shift down
+hc keybind $Mod-Shift-Up      shift up
+hc keybind $Mod-Shift-Right   shift right
+hc keybind $Mod-Shift-h       shift left
+hc keybind $Mod-Shift-j       shift down
+hc keybind $Mod-Shift-k       shift up
+hc keybind $Mod-Shift-l       shift right
+
+# splitting frames
+hc keybind $Mod-u             split  bottom  0.5
+hc keybind $Mod-o             split  right   0.5
+hc keybind $Mod-Control-space split explode
+
+# resizing frames
+resizestep=0.05
+hc keybind $Mod-Control-h      resize left +$resizestep
+hc keybind $Mod-Control-j      resize down +$resizestep
+hc keybind $Mod-Control-k      resize up +$resizestep
+hc keybind $Mod-Control-l      resize right +$resizestep
+hc keybind $Mod-Control-Left   resize left +$resizestep
+hc keybind $Mod-Control-Down   resize down +$resizestep
+hc keybind $Mod-Control-Up     resize up +$resizestep
+hc keybind $Mod-Control-Right  resize right +$resizestep
+
+
+# brightness
+hc keybind XF86MonBrightnessUp spawn lux -c intel_backlight -a 250
+
+hc keybind XF86MonBrightnessDown spawn lux -c intel_backlight -s 250
+
+
+# volume control
+
+hc keybind XF86AudioRaiseVolume chain , spawn amixer -q sset Master 5%+ , spawn "$HOME"/Build-Folder/Scripts/vol.sh
+
+hc keybind XF86AudioLowerVolume chain , spawn amixer -q sset Master 5%- , spawn "$HOME"/Build-Folder/Scripts/vol.sh
+
+hc keybind XF86AudioMute spawn amixer -D pulse set Master 1+ toggle
+
+# tags
+tag_names=("〇" "一" "二" "三" "四" "五" "六" "七" "八" "九")
+tag_keys=( {1..9} 0 )
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+	hc add "${tag_names[$i]}"
+	key="${tag_keys[$i]}"
+	if ! [ -z "$key" ] ; then
+		hc keybind "$Mod-$key" use_index "$i"
+		hc keybind "$Mod-Shift-$key" move_index "$i"
+	fi
+done
+
+
+# monitor
+
+hc keybind $Mod-Alt-1	    shift_to_monitor 0
+hc keybind $Mod-Alt-2	    shift_to_monitor 1
+
+# cycle through tags
+hc keybind $Mod-period use_index +1
+hc keybind $Mod-comma  use_index -1
+
+hc keybind Control-Shift-d use_index +1
+
+hc keybind $Mod-Shift-period chain , move_index +1 , use_index +1
+hc keybind $Mod-Shift-comma chain , move_index -1 , use_index -1
+
+# layouting
+hc keybind $Mod-r remove
+#hc keybind $Mod-s floating toggle
+hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-s chain , attr clients.focus.floating toggle , emit_hook toggle
+hc keybind $Mod-Control-m jumpto last-minimized
+
+hc keybind $Mod-plus spawn "$HOME"/Build-Folder/Scripts/gap.sh gap +
+hc keybind $Mod-minus spawn "$HOME"/Build-Folder/Scripts/gap.sh gap -
+hc keybind $Mod-BackSpace set window_gap 12
+
+hc keybind $Mod-Shift-plus spawn "$HOME"/Build-Folder/Scripts/gap.sh pad +
+hc keybind $Mod-Shift-minus spawn "$HOME"/Build-Folder/Scripts/gap.sh pad -
+hc keybind $Mod-Shift-BackSpace set frame_gap 0
+
+# MPRIS controls
+
+hc keybind XF86AudioPlay spawn ""$HOME/Build-Folder/Scripts/play.sh play
+hc keybind XF86AudioNext spawn "$HOME"/Build-Folder/Scripts/play.sh next
+hc keybind XF86AudioPrev spawn "$HOME"/Build-Folder/Scripts/play.sh prev
+
+hc keybind Ctrl-Shift-p spawn "$HOME"/Build-Folder/Scripts/play.sh play
+hc keybind Ctrl-Shift-l spawn "$HOME"/Build-Folder/Scripts/play.sh next
+hc keybind Ctrl-Shift-j spawn "$HOME"/Build-Folder/Scripts/play.sh prev
+hc keybind Ctrl-Shift-m spawn "$HOME"/Build-Folder/Scripts/play.sh forw
+hc keybind Ctrl-Shift-n spawn "$HOME"/Build-Folder/Scripts/play.sh back
+
+# Wallpaper
+hc keybind $Mod-Ctrl-Shift-p spawn wal.sh -rm fill -b auto
+hc keybind $Mod-Ctrl-p spawn wal.sh -m fill -b auto
+
+# Cosmetic
+hc keybind Ctrl-Alt-b chain , spawn "$HOME"/Build-Folder/Scripts/toggleblur.sh , spawn notify-send -t 1500 "Blur." "Blur Toggled."
+hc keybind $Mod-b spawn "$HOME"/Build-Folder/Scripts/togglebar.sh
+hc keybind $Mod-z spawn "$HOME"/Build-Folder/Scripts/center.sh
+
+hc keybind Ctrl-Alt-c chain , spawn pkill glava , spawn glava --desktop
+hc keybind Ctrl-Alt-v spawn pkill glava
+
+# Utility
+#hc keybind Ctrl-Return spawn copyq toggle
+
+hc keybind $Mod-Alt-w spawn "$HOME"/Build-Folder/nmcli-rofi/nmcli-rofi
+
+hc keybind XF86Display spawn dunstctl set-paused toggle
+
+hc keybind $Mod-Ctrl-c chain , spawn pkill -USR1 picom , spawn picom --vsync --config .config/picom/picom.conf
+
+# Screenshots
+
+hc keybind Print spawn spectacle
+hc keybind Ctrl-Print spawn spectacle -r
+
+# Menus
+
+hc keybind $Mod-space spawn rofi -show drun -modi drun,filebrowser,window,run -show-icons
+hc keybind $Mod-Shift-p spawn rofi -show power-menu -modi power-menu:rofi-power-menu
+hc keybind Menu spawn "$HOME"/Build-Folder/Scripts/menu.sh
+
+# EQ
+for i in {1..4} ; do
+	hc keybind $Mod-Ctrl-$i spawn "$HOME"/Build-Folder/Scripts/switcheq.sh $(($i-1))
+done
+
+# The following cycles through the available layouts within a frame, but skips
+# layouts, if the layout change wouldn't affect the actual window positions.
+# I.e. if there are two windows within a frame, the grid layout is skipped.
+hc keybind Mod1-space                                                           \
+	or , and . compare tags.focus.curframe_wcount = 2                   \
+	. cycle_layout +1 vertical horizontal max vertical grid    \
+	, cycle_layout +1
+
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
+# focus
+#hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-Tab         cycle_all +1
+hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-c cycle +1
+hc keybind $Mod-Shift-c cycle -1
+hc keybind $Mod-i jumpto urgent
+
+# theme
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+hc set frame_border_active_color '#222222'
+hc set frame_border_normal_color '#101010'
+hc set frame_bg_normal_color '#565656'
+hc set frame_bg_active_color '#345F0C'
+hc set frame_border_width 0
+hc set always_show_frame 0
+hc set frame_bg_transparent 1
+hc set frame_transparent_width 0
+hc set frame_padding 0
+hc set focus_follows_mouse 1
+hc set frame_gap 0
+
+hc attr theme.active.color '#d24b57'
+hc attr theme.floating.active.color '#d24b57'
+hc attr theme.normal.color '#eae2e8'
+hc attr theme.urgent.color orange
+hc attr theme.inner_width 0
+hc attr theme.inner_color black
+hc attr theme.border_width 0
+hc attr theme.floating.border_width 2
+hc attr theme.floating.outer_width 0
+hc attr theme.floating.outer_color black
+hc attr theme.active.inner_color '#a2a8ba'
+hc attr theme.active.outer_color '#a2a8ba'
+hc attr theme.background_color '#141414'
+
+hc set window_gap 12
+hc set smart_window_surroundings 0
+hc set smart_frame_surroundings 0
+hc set mouse_recenter_gap 0
+hc set focus_crosses_monitor_boundaries 1
+hc set swap_monitors_to_get_tag 1
+hc set auto_detect_monitors 1
+hc set auto_detect_panels 0
+hc set default_frame_layout 0
+hc set snap_gap 12
+
+
+# rules
+hc unrule -F
+#hc rule class=XTerm tag=3 # move all xterms to tag 3
+hc rule focus=on # normally focus new clients
+hc rule floatplacement=center
+#hc rule focus=off # normally do not focus new clients
+# give focus to most common terminals
+#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule class~'krunner' pseudotile=on
+hc rule class~'Tauon Music Box' pseudotile=on
+hc rule class~'com.github.taiko2k.tauonmb' pseudotile=on
+hc rule title~'Discord Updater' floating=on
+hc rule title~'Sayonara Player' floating=on
+hc rule title~'hydrus client media viewer' floating=on
+hc rule title~'sxiv' floating=on
+hc rule class~'Nsxiv' floating=on
+hc rule class~'X-terminal-emulator' floating=on
+hc rule class~'scrcpy' floating=on
+#hc rule class~'copyq' floating=on focus=on switchtag=on ewmhrequests=off
+#hc rule class~'clipstudiopaint.exe' manage=off
+hc rule fixedsize floating=on
+
+
+
+# unlock, just to be sure
+hc unlock
+
+herbstclient set tree_style '╾│ ├└╼─┐'
+
+# do multi monitor setup here, e.g.:
+# hc set_monitors 1280x1024+0+0 1280x1024+1280+0
+# or simply:
+# hc detect_monitors
+
+# hc set_monitors 1366x768+0+0
+
+# find the panel
+panel=~/.config/herbstluftwm/panel.sh
+# [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+# for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+#     # start it on each monitor
+#     "$panel" $monitor &
+# done
+
+"$panel" 0 &
+
+hc pad 0 "29" "0" "0"
+hc pad 1 "29" "0" "0"
+
+kcminit kcm_touchpad &
+
+kill $(($(pgrep -o polybar)+1)) &

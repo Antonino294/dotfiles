@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/antonino/.var/app/com.github.iwalton3.jellyfin-mpv-shim/config/jellyfin-mpv-shim'
+let g:netrw_dirhist_9='/home/antonino/.config/glava'
+let g:netrw_dirhist_8='/home/antonino/.config/glava/test'
+let g:netrw_dirhist_7='/home/antonino/Build-Folder/Scripts'
+let g:netrw_dirhist_6='/home/antonino/.cache/wal'
+let g:netrw_dirhist_5='/home/antonino/.config/bspwm'
+let g:netrw_dirhist_4='/var/log/letsencrypt'
+let g:netrw_dirhist_3='/home/antonino/Documenti/Cartella-Scuola/CPP'
+let g:netrw_dirhist_2='/home/antonino'
+let g:netrw_dirhist_1='/home/antonino/.local/share/kwin/scripts'
