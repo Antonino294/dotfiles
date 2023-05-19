@@ -17,4 +17,4 @@ herbstclient reload
 
 xrandr | grep "VGA-1 connected" &> /dev/null && connect || disconnect
 xrdb -load "$HOME"/.cache/wal/colors.Xresources
-kill $(($(pgrep -o polybar)+1))
+#kill $(($(pgrep -o polybar)+1))
