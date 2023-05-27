@@ -2,7 +2,7 @@
 src=$HOME/.cache/wal/colors-putty.reg
 
 color0=$(grep "Colour0" $src | cut -d\" -f4)
-#color1=$(grep "Colour2\"" $src | cut -d\" -f4)
+color1=$(grep "Colour2\"" $src | cut -d\" -f4)
 color2=$(grep "Colour7" $src | cut -d\" -f4)
 color3=$(grep "Colour8" $src | cut -d\" -f4)
 #color4=$(grep "Colour10" $src | cut -d\" -f4)
@@ -18,10 +18,14 @@ sed -i -e "	s/.*track artist/$color6\t\ttrack artist/g; \
 		s/.*gallery highlight/$color6\t\tgallery highlight/g; \
 		s/.*seek bar/$color5,200\t\tseek bar/g; \
 		s/.*volume bar/$color6,180\t\tvolume bar/g; \
+		s/.*buttons active/$color6,180\t\tbuttons active/g; \
+		s/.*mode on/$color6,180\t\tmode on/g; \
 		s/.*music vis/$color3\t\tmusic vis/g; \
 		s/.*track line/$color0\t\ttrack line/g; \
 		s/.*mini text 1/$color0\t\tmini text 1/g; \
 		s/.*mini text 2/$color6\t\tmini text 2/g; \
+		s/.*bottom panel/$color1\t\tbottom panel/g; \
+		s/.*top panel/$color1\t\ttop panel/g; \
 		s/.*column bar background/$color6\t\tcolumn bar background/g" \
 		"$HOME"/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/wal2.ttheme
 
