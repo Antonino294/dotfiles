@@ -5,7 +5,7 @@ B="$(cat /sys/class/backlight/intel_backlight/brightness)"
 BRI="$(echo "scale=2; ($B/4437)*100" | bc | sed 's!\.0*$!!' )"
 
 cat <<EOF | xmenu | sh &
-Rofi		rofi -show drun -modi run,drun -show-icons
+Apps		rofi -show drun -modi run,drun -show-icons
 Browser		brave-browser
 Music		flatpak run com.github.taiko2k.tauonmb & disown
 Terminal	kitty
