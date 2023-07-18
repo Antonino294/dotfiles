@@ -10,9 +10,10 @@ Browser		brave-browser
 Music		flatpak run com.github.taiko2k.tauonmb & disown
 Terminal	kitty
 Discord		discord
+Minecraft	MC
 
 File Manager	dolphin
-Minecraft	MC
+Clipboard	copyq menu
 Kill Program	xkill
 
 Shutdown	poweroff

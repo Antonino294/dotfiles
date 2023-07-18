@@ -212,6 +212,8 @@ hc keybind XF86Display spawn dunstctl set-paused toggle
 
 hc keybind $Mod-Ctrl-c chain , spawn pkill -USR1 picom , spawn picom --vsync --config .config/picom/picom.conf
 
+hc keybind $Mod-e dolphin
+
 # Screenshots
 
 hc keybind Print spawn spectacle
