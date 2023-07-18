@@ -221,6 +221,7 @@ hc keybind Ctrl-Print spawn spectacle -r
 hc keybind $Mod-space spawn rofi -show drun -modi drun,filebrowser,window,run -show-icons
 hc keybind $Mod-Shift-p spawn rofi -show power-menu -modi power-menu:rofi-power-menu
 hc keybind Menu spawn "$HOME"/Build-Folder/Scripts/menu.sh
+hc keybind $Mod-Alt-w spawn rofi-wifi-menu
 
 # EQ
 for i in {1..4} ; do
@@ -264,9 +265,9 @@ hc set frame_padding 0
 hc set focus_follows_mouse 1
 hc set frame_gap 0
 
-hc attr theme.active.color '#ce443b'
-hc attr theme.floating.active.color '#ce443b'
-hc attr theme.normal.color '#ea9f97'
+hc attr theme.active.color '#279c94'
+hc attr theme.floating.active.color '#279c94'
+hc attr theme.normal.color '#b1bab9'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black

@@ -159,8 +159,8 @@ data_format = ascii
 #gradient_color_1 = '#4568dc'
 #gradient_color_2 = '#b06ab3'
 
- gradient_color_1 = '#ce443b'
- gradient_color_2 = '#ea9f97'
+ gradient_color_1 = '#279c94'
+ gradient_color_2 = '#b1bab9'
 
 
 [smoothing]
