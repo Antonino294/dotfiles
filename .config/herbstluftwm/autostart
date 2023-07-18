@@ -198,6 +198,7 @@ hc keybind $Mod-Ctrl-p spawn wal.sh -m fill -b auto
 # Cosmetic
 hc keybind Ctrl-Alt-b chain , spawn "$HOME"/Build-Folder/Scripts/toggleblur.sh , spawn notify-send -t 1500 "Blur." "Blur Toggled."
 hc keybind $Mod-b spawn "$HOME"/Build-Folder/Scripts/togglebar.sh
+hc keybind $Mod-v spawn "$HOME"/Build-Folder/Scripts/toggletray.sh
 hc keybind $Mod-z spawn "$HOME"/Build-Folder/Scripts/center.sh
 
 hc keybind Ctrl-Alt-c chain , spawn pkill glava , spawn glava --desktop
