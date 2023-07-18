@@ -20,8 +20,7 @@
 "               |__________\  /__________|
 "                           ++
 
-"vnoremap <C-c> "+y
-"set clipboard+=unnamedplus
+set clipboard+=unnamedplus
 autocmd FileType markdown setlocal spell
 set mouse=
 set spelllang=it,en

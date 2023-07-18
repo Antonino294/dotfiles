@@ -43,12 +43,13 @@ pgrep -x openrgb || openrgb --startminimized --server &
 klipper &
 #krunner -d &
 kdeconnect-cli --refresh &
-# copyq &
+pgrep -x copyq || copyq &
 #openrazer-daemon &
 pkill jellyfin-mpv-sh; pkill mpv; jellyfin-mpv-shim &
 #busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
 #nmtui connect TIM-23709550 #&& sudo dhclient &
-nmcli connection up TIM-23709550 passwd-file "$HOME"/.psk &
+
+#nmcli connection up TIM-23709550 passwd-file "$HOME"/.psk &
 
 #compton --paint-on-overlay --vsync opengl-swc --config .config/compton/compton.conf &
 
@@ -203,7 +204,7 @@ hc keybind Ctrl-Alt-c chain , spawn pkill glava , spawn glava --desktop
 hc keybind Ctrl-Alt-v spawn pkill glava
 
 # Utility
-#hc keybind Ctrl-Return spawn copyq toggle
+hc keybind Ctrl-Return spawn copyq toggle
 
 hc keybind $Mod-Alt-w spawn "$HOME"/Build-Folder/nmcli-rofi/nmcli-rofi
 
@@ -312,7 +313,7 @@ hc rule title~'sxiv' floating=on
 hc rule class~'Nsxiv' floating=on
 hc rule class~'X-terminal-emulator' floating=on
 hc rule class~'scrcpy' floating=on
-#hc rule class~'copyq' floating=on focus=on switchtag=on ewmhrequests=off
+hc rule class~'copyq' floating=on focus=on
 #hc rule class~'clipstudiopaint.exe' manage=off
 hc rule fixedsize floating=on
 
