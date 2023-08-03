@@ -35,7 +35,6 @@ export XDG_CURRENT_DESKTOP=KDE
 pgrep -x sxhkd || sxhkd -c .config/herbstluftwm/sxhkdrc &
 pgrep -x redshift || redshift -t 6500:3500 -b 1.0:0.9 -l 39.0855:17.1268 &
 pgrep -x xclickroot || xclickroot /home/antonino/Build-Folder/Scripts/menu.sh &
-xrdb -load "$HOME"/.cache/wal/colors.Xresources &
 pgrep -x picom || picom --vsync --config .config/picom/picom.conf &
 pgrep -x openrgb || openrgb --startminimized --server &
 
@@ -46,7 +45,7 @@ kdeconnect-cli --refresh &
 pgrep -x copyq || copyq &
 #openrazer-daemon &
 pkill jellyfin-mpv-sh; pkill mpv; jellyfin-mpv-shim &
-#busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
+busctl --user set-property org.clight.clight /org/clight/clight/Conf/Backlight org.clight.clight.Conf.Backlight NoAutoCalib "b" false &
 #nmtui connect TIM-23709550 #&& sudo dhclient &
 
 #nmcli connection up TIM-23709550 passwd-file "$HOME"/.psk &
@@ -347,6 +346,7 @@ panel=~/.config/herbstluftwm/panel.sh
 hc pad 0 "29" "0" "0"
 hc pad 1 "29" "0" "0"
 
-kcminit kcm_touchpad &
+synclient TouchpadOff=0
+xrdb -load "$HOME"/.cache/wal/colors.Xresources
 
 kill $(($(pgrep -o polybar)+1)) &
