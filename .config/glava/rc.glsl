@@ -13,7 +13,7 @@
    as a 2D sampler.
 
    See documentation for more details. */
-#request mod bars
+#request mod radial
 
 /* Window hints */
 #request setfloating  false
@@ -219,14 +219,14 @@
    embedding in the desktop.
 
    This routinely sends X11 events and should be avoided. */
-#request setforcegeometry false
+// #request setforcegeometry false
 
 /*                    ** DEPRECATED **
    Force window to be raised (focused in some WMs), useful for
    WMs that have their own stacking order for desktop windows.
 
    This routinely sends X11 events and should be avoided. */
-#request setforceraised false
+// #request setforceraised false
 
 /*                    ** DEPRECATED **
    Scale down the audio buffer before any operations are

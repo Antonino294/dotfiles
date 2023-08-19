@@ -60,6 +60,10 @@ sed -i -e "s/#define color1 #.*/#define color1 $color15/g; \
 	s/#define color2 #.*/#define color2 $color13/g" \
 	"$HOME"/.config/glava/bars.glsl
 
+sed -i -e "s/#define color1 #.*/#define color1 $color15/g; \
+	s/#define color2 #.*/#define color2 $color13/g" \
+	"$HOME"/.config/glava/radial.glsl
+
 sed -i -e "s/ gradient_color_1 = '#.*'/ gradient_color_1 = '$color13'/g; \
 	s/ gradient_color_2 = '#.*'/ gradient_color_2 = '$color15'/g" \
 	"$HOME"/.config/cava/config

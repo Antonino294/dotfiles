@@ -16,7 +16,7 @@
    - linear       not rounded at all; linear distance
    */
 
-#define ROUND_FORMULA sinusoidal
+#define ROUND_FORMULA linear
 
 /* The sampling mode for processing raw FFT input:
 
@@ -36,7 +36,7 @@
 
 /* Factor used to scale frequencies. Lower values allows lower
    frequencies to occupy more space. */
-#define SAMPLE_SCALE 10
+#define SAMPLE_SCALE 8
 
 /* The frequency range to sample. 1.0 would be the entire FFT output,
    and lower values reduce the displayed frequencies in a log-like
@@ -66,7 +66,7 @@
    in a rate independant method like so:
 
    val -= (gravitystep) * (seconds per update) */
-#request setgravitystep 3 * 1
+#request setgravitystep 3 * 2
 
 /* Smoothing factor. Larger values mean more smoothing in the output,
    however high values can be expensive to compute. Values are in
