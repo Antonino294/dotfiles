@@ -1,7 +1,7 @@
 #define ALPHA 1.00
 
-#define color1 #d9d4d8
-#define color2 #6687d8
+#define color1 #e7cadf
+#define color2 #619ad7
 
 /* center radius (pixels) */
 #define C_RADIUS 260

@@ -92,6 +92,8 @@ herbstclient attr theme.active.color "$color13"
 herbstclient attr theme.floating.active.color "$color13"
 herbstclient attr theme.normal.color "$color15"
 
+killall -10 kitty
+
 pgrep -x cava >/dev/null && pkill -USR1 cava
 pgrep -x glava >/dev/null && pkill -USR1 glava
 
@@ -101,6 +103,7 @@ pywalfox update >/dev/null
 "$HOME"/Build-Folder/Scripts/walbtop.sh >/dev/null &
 #"$HOME"/Build-Folder/Scripts/walcopyq.sh >/dev/null &
 # genzathurarc > "$HOME"/.config/zathura/zathurarc &
+xrdb -load "$HOME"/.cache/wal/colors.Xresources
 herbstclient pad 0 "29" "0" "0" &
 #wal-discord
 

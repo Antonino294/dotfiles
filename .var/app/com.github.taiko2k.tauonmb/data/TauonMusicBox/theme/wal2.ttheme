@@ -3,10 +3,10 @@
 
 #-Backgrounds-----
 
-19,17,18		top panel
+10,21,24		top panel
 18,18,18	  	tracklist panel
 18,18,18		side panel
-19,17,18		bottom panel
+10,21,24		bottom panel
 21,21,21		queue panel
 18,18,18		gallery background
 
@@ -18,15 +18,15 @@
 
 #-Playlist-------
 
-217,212,216		track line
+231,202,223		track line
 99,99,99		track time
 130,130,130		track index
-102,135,216		track artist
+97,154,215		track artist
 169,169,171		track album
 
 227,239,240		track playing
 169,169,171		index playing
-102,135,216		artist playing
+97,154,215		artist playing
 169,169,171		album playing
 170,170,172		time playing
 
@@ -38,27 +38,27 @@
 
 255,255,255,5		playing highlight
 255,255,255,10		select highlight
-102,135,216		gallery highlight
+97,154,215		gallery highlight
 
-102,135,216		column bar background
+97,154,215		column bar background
 
 #-Bottom panel------
 
 55,55,55		buttons off
 235,235,235		buttons over
-102,135,216,180		buttons active
+97,154,215,180		buttons active
 
-151,148,151		playing time
+161,141,156		playing time
 
-62,141,206,200		seek bar
-102,135,216,180		volume bar
+60,133,206,200		seek bar
+97,154,215,180		volume bar
 30,30,30,40		seek bg
 30,30,30,40		volume bg
 40,40,40		scroll bar
 
 50,50,50		mode off
 180,180,180		mode over
-102,135,216,180		mode on
+97,154,215,180		mode on
 
 250,250,250		bottom title
 
@@ -70,7 +70,7 @@
 40,40,40		tab over
 45,45,45		tab active background
 
-192,52,48		music vis
+49,123,198		music vis
 
 #     window buttons background
 #     window buttons over
@@ -85,7 +85,7 @@
 40,40,40		menu highlight
 230,230,230		menu text
 150,150,150		menu disable text
-62,141,206,75		menu icons
+60,133,206,75		menu icons
 30,30,30 	 	menu border
 
 #-Dialog box---------
@@ -126,5 +126,5 @@
 #       mini border
 
 
-217,212,216		mini text 1
-102,135,216		mini text 2
+231,202,223		mini text 1
+97,154,215		mini text 2
